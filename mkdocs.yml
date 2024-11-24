@@ -12,9 +12,9 @@ extra_css:
     - stylesheets/custom.css
 nav:
 - Home: index.md
-- Profile:
+- Profile: profile/resume.md
 - Language:
-    - Java:
+    - Java: language/java/java.md
     - Python and Web:
         - Introduction: level101/python_web/intro.md
         - Some Python Concepts: level101/python_web/python-concepts.md
