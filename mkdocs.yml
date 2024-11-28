@@ -14,7 +14,8 @@ nav:
 - Home: index.md
 - Profile: profile/resume.md
 - Language:
-    - Java: language/java/java.md
+    - Java: 
+        - language/java/introduction.md
     - Python and Web:
         - Introduction: level101/python_web/intro.md
         - Some Python Concepts: level101/python_web/python-concepts.md
