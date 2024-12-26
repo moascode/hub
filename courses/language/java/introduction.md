@@ -1,4 +1,4 @@
-# The Java Language
+# Intorduction
 
 Assuming you know a little bit of C/C++ and Python, let's discuss how Java differs from these languages, particularly in its compilation, execution, and overall design philosophy. Java is often described as a statically typed, compiled, and interpreted language, which might sound contradictory at first. Let's break this down.
 
