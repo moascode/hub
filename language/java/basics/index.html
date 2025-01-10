@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://moascode.github.io/hub/language/java/basics/">
       
       
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../jvm/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -257,6 +261,8 @@
   <!-- Determine classes -->
   
   
+    
+  
 
   <!-- Determine active page for paginated views -->
   
@@ -282,7 +288,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
 
@@ -294,7 +300,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_3"
-          
+          checked
         />
 
         <!-- Toggle to expand nested items -->
@@ -330,7 +336,7 @@
           class="md-nav"
           data-md-level="1"
           aria-labelledby="__nav_3_label"
-          aria-expanded="false"
+          aria-expanded="true"
         >
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
@@ -345,6 +351,8 @@
 
   <!-- Determine classes -->
   
+  
+    
   
 
   <!-- Determine active page for paginated views -->
@@ -368,7 +376,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
 
@@ -380,7 +388,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_3_1"
-          
+          checked
         />
 
         <!-- Toggle to expand nested items -->
@@ -416,7 +424,7 @@
           class="md-nav"
           data-md-level="2"
           aria-labelledby="__nav_3_1_label"
-          aria-expanded="false"
+          aria-expanded="true"
         >
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
@@ -465,14 +473,53 @@
   <!-- Determine classes -->
   
   
+    
+  
 
   <!-- Determine active page for paginated views -->
   
 
   <!-- Navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../types.md" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- State toggle -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Navigation link to table of contents -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Java Basics
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
 
   <!-- Navigation link icon -->
@@ -480,7 +527,382 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    None
+    Java Basics
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+
+      <!-- Table of contents -->
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primitive-and-wrapper-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primitive and Wrapper Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-operands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Operands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Operands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Operators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operator-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operator Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Casting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type Casting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeric-promotion-auto-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numeric Promotion (Auto Casting)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicit-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicit Casting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-special-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Special Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Special Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    <span class="md-ellipsis">
+      String
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="String">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      String Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-string-vs-stringbuilder-vs-stringbuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison: String vs. StringBuilder vs. StringBuffer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-string-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common String Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reflection-and-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection and Metadata
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reflection and Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflection-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection Classes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-and-time-javatime" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date and Time (java.time)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Date and Time (java.time)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#period-and-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Period and Duration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditional-constructs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Constructs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interview-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interview notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+
+  <!-- Navigation item -->
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../jvm/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Garbage Collection
   </span>
 
   <!-- Navigation link status -->
