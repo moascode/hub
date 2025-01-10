@@ -16,7 +16,8 @@ nav:
 - Language:
     - Java: 
         - language/java/introduction.md
-        - language/java/types.md
+        - language/java/basics.md
+        - language/java/jvm.md
     - Python and Web:
         - Introduction: level101/python_web/intro.md
         - Some Python Concepts: level101/python_web/python-concepts.md
