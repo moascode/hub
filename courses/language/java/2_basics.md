@@ -90,8 +90,11 @@ Long z = (long) x //explicit casting - ok
 ### Notes
 
 - **What is the problem with double precision in Java, and what are the alternatives to handle it efficiently in terms of memory and performance?**
+
   - **Problem:** `double` has precision limitations due to floating-point representation in binary. Not all decimal numbers can be exactly represented in binary, leading to rounding errors in calculations.
+  
   - **Solution:**
+  
     - Alternative - BigDecimal: `BigDecimal` provides arbitrary precision but is slower and more memory-intensive than `double`.
     - Efficient Alternative - Fixed-Point Arithmetic: Fixed-point arithmetic scales decimals to integers (e.g., multiplying by 100) to avoid floating-point errors while maintaining performance and memory efficiency, similar to `double`.
 
@@ -111,10 +114,13 @@ Variables are containers for storing values during program execution. Their beha
 ## Operators
 
 - Operator Types
+  
   - **Unary**: Requires a single operand (e.g., `!`, `++`, `--`).
   - **Binary**: Operates on two operands (e.g., `+`, `-`, `*`, `/`).
   - **Ternary**: Simplifies conditional expressions (e.g., `x = (a > b) ? a : b;`).
+  
 - Special Operators
+  
   - **`instanceof` operator**: Determines if an object is an instance of a class or subclass.
   - **`==` operator**: Determines if values are equal in primitive and if references are equal in object.
 
@@ -126,6 +132,7 @@ Variables are containers for storing values during program execution. Their beha
 
 - **`if-else`**: Basic decision-making structure.
 - **`switch`**:
+  
   - Supports `byte`, `short`, `char`, `int`, `String`, and enums.
   - Uses `yield` for returning values from a switch block.
   - Example:
@@ -141,10 +148,13 @@ Variables are containers for storing values during program execution. Their beha
 ### Loops
 
 - **For Loops**:
+
   - Infinite loop: `for(;;)`
   - Multiple indices: `for (int i = 0, j = 5; i < j; i++, j--)`
+  
 - **While Loop**: Repeats as long as the condition is `true`.
 - **Break and Continue**:
+
   - Labeled breaks to exit nested loops.
 
 ## Special Keywords
@@ -161,6 +171,7 @@ Variables are containers for storing values during program execution. Their beha
 - `static final field` must be initialized before use.
 - `static block` is used to initialize static variables. It runs once when the class is loaded.
 - `static method` can only call static field/method
+  
   - fix1: make all field and method static
   - fix2: create instance every time to access non-statis field and method
   - fix3: create a static instance and use it everywhere

@@ -13,17 +13,20 @@ Fields represent data or state within a class. Setter methods can be used to set
 #### Types of Fields  
 
 - **Local Variable**
+  
   - Must be initialized before use.  
   - Can only be marked as `final`.  
   - Can be **effectively final** if its value is not modified after initialization.  
 
 - **Instance Variable**
+  
   - Automatically assigned default values if not initialized.  
   - Can have all access modifiers: `private`, `protected`, `public`.  
   - Can be marked as `final`, `volatile`, or `transient`.  
   - A `final` variable must be intialized inline or using constructor
 
 - **Varargs (Variable Arguments)**
+  
   - Accepts any number of parameters of the same type.  
   - Only one varargs parameter is allowed, and it must be the last parameter.  
   - Arrays can be passed to varargs.  
