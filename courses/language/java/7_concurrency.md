@@ -1,6 +1,6 @@
 # Java Threads
 
-Java is a multi-threaded programming language. There are two ways to create a thread. 
+Java is a multi-threaded programming language. There are two ways to create a thread.
 
 - One is to Extend the Thread class. Every Java thread is prioritized to help the operating system determine the order in which to schedule threads. The priorities range from 1 to 10, with each thread defaulting to priority 5. You can set the thread priority with the setPriority() method.
 

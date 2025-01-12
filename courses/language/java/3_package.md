@@ -142,3 +142,69 @@ Common Methods
   `2022-11-02T13:50+05:30` → GMT: `2022-11-02T07:20`.  
 
 ---
+
+#### 3. `java.io`
+
+Files: The java.io package includes a File class that allows you to work with files. exists() method determines whether a file exists. getName() method returns the name of the file. double backslashes is used in the path
+
+```java
+import java.io.File;
+//...
+ File x = new File("C:\\sololearn\\test.txt");    
+if(x.exists()) {     
+System.out.println(x.getName() +  "exists!");    
+}    else {     
+ System.out.println("The file does not exist");   
+}
+```
+
+Reading a file: Scanner class from the java.util.Scanner package is used to read the files. We can use the Scanner object's next() method to read the file's contents.
+
+```java
+import java.util.Scanner;
+//..
+try {  
+  File x = new File("C:\\sololearn\\test.txt");  
+  Scanner sc = new Scanner(x);  
+  while(sc.hasNext()) {    
+    System.out.println(sc.next());  
+  }  
+  sc.close();
+} 
+catch (FileNotFoundException e) {  
+  System.out.println("Error");
+}
+```
+
+Creating a file: Formatter, another useful class in the java.util.Formatter package, is used to create content and write it to files. If the file already exists, this will overwrite it.
+
+```java
+import java.util.Formatter;
+
+public class MyClass {
+   public static void main(String[ ] args) {
+  try {
+    Formatter f = new Formatter("C:\\sololearn\\test.txt");
+  } catch (Exception e) {
+      System.out.println("Error");
+  }
+  }
+}
+```
+
+Writing to a file: format() method of Formatter class is used to write content to files. \r\n is the newline symbol in Windows. \r = return, moves all the way to the left, but doesn't move down, \n = newline, moves down but not horizontally. %s mean a string and get's replaced by the first parameter
+
+```java
+import java.util.Formatter;
+//... 
+try {
+    Formatter f = new Formatter("C:\\sololearn\\test.txt");
+    f.format("%s %s %s", "1","John", "Smith \r\n");
+    f.format("%s %s %s", "2","Amy", "Brown");
+    f.close();    
+  } catch (Exception e) {
+    System.out.println("Error");
+  }
+  ```
+
+---
