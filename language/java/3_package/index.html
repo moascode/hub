@@ -665,6 +665,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-javaio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. java.io
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -905,7 +914,7 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    Data structure
+    Java Data Structure
   </span>
 
   <!-- Navigation link status -->
@@ -6707,6 +6716,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3-javaio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. java.io
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6848,6 +6866,58 @@ while (it.hasNext()) {
 <li><strong>Converting to GMT</strong> (example conversion):<br />
 <code>2022-11-02T13:50+05:30</code> → GMT: <code>2022-11-02T07:20</code>.  </li>
 </ul>
+<hr />
+<h4 id="3-javaio">3. <code>java.io</code></h4>
+<p>Files: The java.io package includes a File class that allows you to work with files. exists() method determines whether a file exists. getName() method returns the name of the file. double backslashes is used in the path</p>
+<pre><code class="language-java">import java.io.File;
+//...
+ File x = new File(&quot;C:\\sololearn\\test.txt&quot;);    
+if(x.exists()) {     
+System.out.println(x.getName() +  &quot;exists!&quot;);    
+}    else {     
+ System.out.println(&quot;The file does not exist&quot;);   
+}
+</code></pre>
+<p>Reading a file: Scanner class from the java.util.Scanner package is used to read the files. We can use the Scanner object's next() method to read the file's contents.</p>
+<pre><code class="language-java">import java.util.Scanner;
+//..
+try {  
+  File x = new File(&quot;C:\\sololearn\\test.txt&quot;);  
+  Scanner sc = new Scanner(x);  
+  while(sc.hasNext()) {    
+    System.out.println(sc.next());  
+  }  
+  sc.close();
+} 
+catch (FileNotFoundException e) {  
+  System.out.println(&quot;Error&quot;);
+}
+</code></pre>
+<p>Creating a file: Formatter, another useful class in the java.util.Formatter package, is used to create content and write it to files. If the file already exists, this will overwrite it.</p>
+<pre><code class="language-java">import java.util.Formatter;
+
+public class MyClass {
+   public static void main(String[ ] args) {
+  try {
+    Formatter f = new Formatter(&quot;C:\\sololearn\\test.txt&quot;);
+  } catch (Exception e) {
+      System.out.println(&quot;Error&quot;);
+  }
+  }
+}
+</code></pre>
+<p>Writing to a file: format() method of Formatter class is used to write content to files. \r\n is the newline symbol in Windows. \r = return, moves all the way to the left, but doesn't move down, \n = newline, moves down but not horizontally. %s mean a string and get's replaced by the first parameter</p>
+<p><code>java
+import java.util.Formatter;
+//... 
+try {
+    Formatter f = new Formatter("C:\\sololearn\\test.txt");
+    f.format("%s %s %s", "1","John", "Smith \r\n");
+    f.format("%s %s %s", "2","Amy", "Brown");
+    f.close();    
+  } catch (Exception e) {
+    System.out.println("Error");
+  }</code></p>
 <hr />
 
 
