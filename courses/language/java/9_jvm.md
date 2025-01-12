@@ -1,4 +1,7 @@
-# Garbage Collection
+# JVM
+
+## Garbage Collection
+
 - all obejcts are stored in memory called heap
 - autometically free up memory when objects are no longer rechable in the program
     - object has no reference pointing to it

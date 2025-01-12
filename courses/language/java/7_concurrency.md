@@ -1,4 +1,4 @@
-# Java Threads
+# Concurrency
 
 Java is a multi-threaded programming language. There are two ways to create a thread.
 

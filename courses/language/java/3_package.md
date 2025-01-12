@@ -1,4 +1,4 @@
-# Java Package
+# Package
 
 Packages are used to avoid name conflicts and control access to classes. To import classes from other packages, use the `import` keyword.  
 

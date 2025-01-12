@@ -1,4 +1,4 @@
-# Java Basics
+# Basics
 
 ## Data Types
 

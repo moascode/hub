@@ -1,4 +1,4 @@
-# Java Exceptions
+# Exceptions
 
 Exceptions are caused by user error, programmer error, or physical resource issues. A try/catch block is placed around the code that might generate an exception.  The Exception type can be used to catch all possible exceptions. If an exception is created using thorws, this exception must be managed in the caller program using try/catch block. A single try block can contain multiple catch blocks that handle different exceptions separately. 'finally' is added after 'try' and 'catch' to execute some code whether the exception happened or not.
 
