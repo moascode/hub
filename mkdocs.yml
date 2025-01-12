@@ -15,9 +15,24 @@ nav:
 - Profile: profile/resume.md
 - Language:
     - Java: 
-        - language/java/introduction.md
-        - language/java/basics.md
-        - language/java/jvm.md
+        - language/java/1_introduction.md
+        - language/java/2_basics.md
+        - language/java/3_package.md
+        - language/java/4_class.md
+        - language/java/5_oop.md
+        - language/java/6_exceptions.md
+        - language/java/8_generics.md
+        - language/java/9_jvm.md
+        - language/java/10_design_pattern.md
+        - language/java/data_structure.md
+        - language/java/algorithm.md
+        - Framework:
+            - language/java/framework/spring.md
+            - language/java/framework/springboot.md
+            - language/java/framework/spring_data.md
+            - language/java/framework/hibernate.md
+            - language/java/framework/junit.md
+            - anguage/java/framework/jboss_wildfly.md
     - Python and Web:
         - Introduction: level101/python_web/intro.md
         - Some Python Concepts: level101/python_web/python-concepts.md
