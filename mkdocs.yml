@@ -10,6 +10,8 @@ theme:
     - navigation.sections
 extra_css:
     - stylesheets/custom.css
+markdown_extensions:
+  - mdx_truly_sane_lists
 nav:
 - Home: index.md
 - Profile: profile/resume.md

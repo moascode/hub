@@ -37,11 +37,36 @@ A method performs actions defined by its body. **Method Signature** includes the
 
 ---
 
+Here’s a simplified version that retains clarity:  
+
+---
+
 ## Constructor
 
-Constructors are special methods invoked when an object is created and are used to initialize object attributes. It must be same with class name and no return type. The constructor is called when you create an object using the new keyword. A single class can have multiple constructors with different numbers of parameters. The setter methods inside the class can be used to set the attribute values. Java automatically provides a default constructor, so all classes have a constructor. Constructors are not inherited by subclasses. All the constructor of the superclass/superclasses is called when the subclass is instantiated.
+A **constructor** is a special method used to initialize an object when it is created. It has the same name as the class and no return type.  
 
-**Super**:  if you want to pass arguments to superclass' constructor then you must use Super(var). To access a variable of super class - Supar.var
+### Key Points
+
+- A class can have multiple constructors (overloading).  
+- If no constructor is defined, a **default constructor** is automatically provided.  
+- Constructors are not inherited.  
+- Access modifiers (`private`, `protected`, `public`) can be used.
+  
+  - **Private constructors** prevent direct object creation and are often used with static factory methods.  
+- **`this`**: Refers to the current object. It is used to access instance variable.
+
+  - `this()` calls another constructor in the same class and must be the first statement.  
+- **`super`**: Refers to the superclass. It is used to access super class variable.
+  
+  - `super()` calls the superclass constructor.  
+  - If not explicitly used, a no-arg `super()` is added automatically. Compilation fails if no matching constructor exists.  
+
+### Initialization Order
+
+1. Superclass constructor.  
+2. Static variables and initializers.  
+3. Instance variables and initializers.  
+4. Constructor body.  
 
 ```java
 public class Animal {
@@ -95,7 +120,8 @@ Java supports automatic type casting of integers to floating points, since there
 
 ### JDK-Defined Classes
 
-- **`Math` Class**:  
+- **`Math` Class**:
+  
   - `Math.abs(x)`: Absolute value.  
   - `Math.max(a, b)`: Maximum of two values.  
   - `Math.pow(a, b)`: `a` raised to the power `b`.  
