@@ -2,8 +2,6 @@
 
 A **class** is a blueprint for creating objects. It defines behavior (methods) and attributes (fields or variables).  
 
----
-
 ## Class Members
 
 ### 1. Fields (Variables)
@@ -13,20 +11,15 @@ Fields represent data or state within a class. Setter methods can be used to set
 #### Types of Fields  
 
 - **Local Variable**
-  
   - Must be initialized before use.  
   - Can only be marked as `final`.  
   - Can be **effectively final** if its value is not modified after initialization.  
-
 - **Instance Variable**
-  
   - Automatically assigned default values if not initialized.  
   - Can have all access modifiers: `private`, `protected`, `public`.  
   - Can be marked as `final`, `volatile`, or `transient`.  
   - A `final` variable must be intialized inline or using constructor
-
 - **Varargs (Variable Arguments)**
-  
   - Accepts any number of parameters of the same type.  
   - Only one varargs parameter is allowed, and it must be the last parameter.  
   - Arrays can be passed to varargs.  
@@ -34,10 +27,6 @@ Fields represent data or state within a class. Setter methods can be used to set
 ### 2. Methods
 
 A method performs actions defined by its body. **Method Signature** includes the method's name, the number and types of parameters, and the return type.  
-
----
-
-Here’s a simplified version that retains clarity:  
 
 ---
 
@@ -51,13 +40,10 @@ A **constructor** is a special method used to initialize an object when it is cr
 - If no constructor is defined, a **default constructor** is automatically provided.  
 - Constructors are not inherited.  
 - Access modifiers (`private`, `protected`, `public`) can be used.
-  
   - **Private constructors** prevent direct object creation and are often used with static factory methods.  
 - **`this`**: Refers to the current object. It is used to access instance variable.
-
   - `this()` calls another constructor in the same class and must be the first statement.  
 - **`super`**: Refers to the superclass. It is used to access super class variable.
-  
   - `super()` calls the superclass constructor.  
   - If not explicitly used, a no-arg `super()` is added automatically. Compilation fails if no matching constructor exists.  
 
@@ -121,13 +107,10 @@ Java supports automatic type casting of integers to floating points, since there
 ### JDK-Defined Classes
 
 - **`Math` Class**:
-  
   - `Math.abs(x)`: Absolute value.  
   - `Math.max(a, b)`: Maximum of two values.  
   - `Math.pow(a, b)`: `a` raised to the power `b`.  
   - `Math.sqrt(x)`: Square root.
-
----
 
 ### Special Classes
 
