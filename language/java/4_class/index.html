@@ -6932,36 +6932,25 @@
 
 <h1 id="class">Class</h1>
 <p>A <strong>class</strong> is a blueprint for creating objects. It defines behavior (methods) and attributes (fields or variables).  </p>
-<hr />
 <h2 id="class-members">Class Members</h2>
 <h3 id="1-fields-variables">1. Fields (Variables)</h3>
 <p>Fields represent data or state within a class. Setter methods can be used to set field values.</p>
 <h4 id="types-of-fields">Types of Fields</h4>
 <ul>
-<li>
-<p><strong>Local Variable</strong></p>
-<ul>
+<li><strong>Local Variable</strong><ul>
 <li>Must be initialized before use.  </li>
 <li>Can only be marked as <code>final</code>.  </li>
 <li>Can be <strong>effectively final</strong> if its value is not modified after initialization.  </li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>
-<p><strong>Instance Variable</strong></p>
-<ul>
+<li><strong>Instance Variable</strong><ul>
 <li>Automatically assigned default values if not initialized.  </li>
 <li>Can have all access modifiers: <code>private</code>, <code>protected</code>, <code>public</code>.  </li>
 <li>Can be marked as <code>final</code>, <code>volatile</code>, or <code>transient</code>.  </li>
 <li>A <code>final</code> variable must be intialized inline or using constructor</li>
 </ul>
 </li>
-</ul>
-<ul>
-<li>
-<p><strong>Varargs (Variable Arguments)</strong></p>
-<ul>
+<li><strong>Varargs (Variable Arguments)</strong><ul>
 <li>Accepts any number of parameters of the same type.  </li>
 <li>Only one varargs parameter is allowed, and it must be the last parameter.  </li>
 <li>Arrays can be passed to varargs.  </li>
@@ -6971,8 +6960,6 @@
 <h3 id="2-methods">2. Methods</h3>
 <p>A method performs actions defined by its body. <strong>Method Signature</strong> includes the method's name, the number and types of parameters, and the return type.  </p>
 <hr />
-<p>Here’s a simplified version that retains clarity:  </p>
-<hr />
 <h2 id="constructor">Constructor</h2>
 <p>A <strong>constructor</strong> is a special method used to initialize an object when it is created. It has the same name as the class and no return type.  </p>
 <h3 id="key-points">Key Points</h3>
@@ -6980,17 +6967,15 @@
 <li>A class can have multiple constructors (overloading).  </li>
 <li>If no constructor is defined, a <strong>default constructor</strong> is automatically provided.  </li>
 <li>Constructors are not inherited.  </li>
-<li>
-<p>Access modifiers (<code>private</code>, <code>protected</code>, <code>public</code>) can be used.</p>
-<ul>
+<li>Access modifiers (<code>private</code>, <code>protected</code>, <code>public</code>) can be used.<ul>
 <li><strong>Private constructors</strong> prevent direct object creation and are often used with static factory methods.  </li>
-<li><strong><code>this</code></strong>: Refers to the current object. It is used to access instance variable.</li>
 </ul>
-<ul>
+</li>
+<li><strong><code>this</code></strong>: Refers to the current object. It is used to access instance variable.<ul>
 <li><code>this()</code> calls another constructor in the same class and must be the first statement.  </li>
-<li><strong><code>super</code></strong>: Refers to the superclass. It is used to access super class variable.</li>
 </ul>
-<ul>
+</li>
+<li><strong><code>super</code></strong>: Refers to the superclass. It is used to access super class variable.<ul>
 <li><code>super()</code> calls the superclass constructor.  </li>
 <li>If not explicitly used, a no-arg <code>super()</code> is added automatically. Compilation fails if no matching constructor exists.  </li>
 </ul>
@@ -7044,9 +7029,7 @@ public boolean equals(Object o) {
 <h2 id="class-types">Class Types</h2>
 <h3 id="jdk-defined-classes">JDK-Defined Classes</h3>
 <ul>
-<li>
-<p><strong><code>Math</code> Class</strong>:</p>
-<ul>
+<li><strong><code>Math</code> Class</strong>:<ul>
 <li><code>Math.abs(x)</code>: Absolute value.  </li>
 <li><code>Math.max(a, b)</code>: Maximum of two values.  </li>
 <li><code>Math.pow(a, b)</code>: <code>a</code> raised to the power <code>b</code>.  </li>
@@ -7054,7 +7037,6 @@ public boolean equals(Object o) {
 </ul>
 </li>
 </ul>
-<hr />
 <h3 id="special-classes">Special Classes</h3>
 <h4 id="anonymous-classes">Anonymous Classes</h4>
 <p>Allows creating subclasses on the fly with overridden methods. The modification on the overriden method is applicable only to the current object, and not the class itself.</p>
