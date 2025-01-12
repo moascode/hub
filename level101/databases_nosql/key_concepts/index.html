@@ -6677,34 +6677,30 @@
 <h3 id="cap-theorem">CAP Theorem</h3>
 <p>In a keynote titled “<a href="https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/Brewer_podc_keynote_2000.pdf">Towards Robust Distributed Systems</a>” at ACM’s PODC symposium in 2000, Eric Brewer came up with the so-called CAP-theorem which is widely adopted today by large web companies as well as in the NoSQL community. The CAP acronym stands for <strong>C</strong>onsistency, <strong>A</strong>vailability &amp; <strong>P</strong>artition Tolerance.</p>
 <ul>
-<li>
-<p><strong>Consistency</strong></p>
-<p>It refers to how consistent a system is after an execution. A distributed system is called consistent when a write made by a source is available for all readers of that shared data. Different NoSQL systems support different levels of consistency.</p>
+<li><strong>Consistency</strong><p>It refers to how consistent a system is after an execution. A distributed system is called consistent when a write made by a source is available for all readers of that shared data. Different NoSQL systems support different levels of consistency.</p>
 </li>
-<li>
-<p><strong>Availability</strong></p>
-<p>It refers to how a system responds to loss of functionality of different systems due to hardware and software failures. A high availability implies that a system is still available to handle operations (reads and writes) when a certain part of the system is down due to a failure or upgrade.</p>
+</ul>
+<ul>
+<li><strong>Availability</strong><p>It refers to how a system responds to loss of functionality of different systems due to hardware and software failures. A high availability implies that a system is still available to handle operations (reads and writes) when a certain part of the system is down due to a failure or upgrade.</p>
 </li>
-<li>
-<p><strong>Partition Tolerance</strong></p>
-<p>It is the ability of the system to continue operations in the event of a network partition. A network partition occurs when a failure causes two or more islands of networks where the systems can’t talk to each other across the islands temporarily or permanently. </p>
+</ul>
+<ul>
+<li><strong>Partition Tolerance</strong><p>It is the ability of the system to continue operations in the event of a network partition. A network partition occurs when a failure causes two or more islands of networks where the systems can’t talk to each other across the islands temporarily or permanently. </p>
 </li>
 </ul>
 <p>Brewer alleges that one can at most choose two of these three characteristics in a shared-data system. The CAP-theorem states that a choice can only be made for two options out of consistency, availability and partition tolerance. A growing number of use cases in large scale applications tend to value reliability implying that availability &amp; redundancy are more valuable than consistency. As a result these systems struggle to meet ACID properties. They attain this by loosening on the consistency requirement,  i.e Eventual Consistency.                     </p>
 <p><strong>Eventual Consistency</strong> means that all readers will see writes, as time goes on: “In a steady state, the system will eventually return the last written value”. Clients therefore may face an inconsistent state of data as updates are in progress. For instance, in a replicated database updates may go to one node which replicates the latest version to all other nodes that contain a replica of the modified dataset so that the replica nodes eventually will have the latest version. </p>
 <p>NoSQL systems support different levels of eventual consistency models. For example:</p>
 <ul>
-<li>
-<p><strong>Read Your Own Writes Consistency</strong></p>
-<p>Clients will see their updates immediately after they are written. The reads can hit nodes other than the one where it was written. However, they might not see updates by other clients immediately.</p>
+<li><strong>Read Your Own Writes Consistency</strong><p>Clients will see their updates immediately after they are written. The reads can hit nodes other than the one where it was written. However, they might not see updates by other clients immediately.</p>
 </li>
-<li>
-<p><strong>Session Consistency</strong></p>
-<p>Clients will see the updates to their data within a session scope. This generally indicates that reads &amp; writes occur on the same server. Other clients using the same nodes will receive the same updates.</p>
+</ul>
+<ul>
+<li><strong>Session Consistency</strong><p>Clients will see the updates to their data within a session scope. This generally indicates that reads &amp; writes occur on the same server. Other clients using the same nodes will receive the same updates.</p>
 </li>
-<li>
-<p><strong>Casual Consistency</strong></p>
-<p>A system provides causal consistency if the following condition holds: write operations that are related by potential causality are seen by each process of the system in order. Different processes may observe concurrent writes in different orders </p>
+</ul>
+<ul>
+<li><strong>Casual Consistency</strong><p>A system provides causal consistency if the following condition holds: write operations that are related by potential causality are seen by each process of the system in order. Different processes may observe concurrent writes in different orders </p>
 </li>
 </ul>
 <p>Eventual consistency is useful if concurrent updates of the same partitions of data are unlikely and if clients do not immediately depend on reading updates issued by themselves or by other clients.</p>
@@ -6764,17 +6760,15 @@ Web caching
 <h3 id="versioning-of-data-in-distributed-systems">Versioning of Data in distributed systems</h3>
 <p>When data is distributed across nodes, it can be modified on different nodes at the same time (assuming strict consistency is enforced). Questions arise on conflict resolution for concurrent updates. Some of the popular conflict resolution mechanism are</p>
 <ul>
-<li>
-<p><strong>Timestamps</strong></p>
-<p>This is the most obvious solution. You sort updates based on chronological order and choose the latest update. However, this relies on clock synchronization across different parts of the infrastructure. This gets even more complicated when parts of systems are spread across different geographic locations. </p>
+<li><strong>Timestamps</strong><p>This is the most obvious solution. You sort updates based on chronological order and choose the latest update. However, this relies on clock synchronization across different parts of the infrastructure. This gets even more complicated when parts of systems are spread across different geographic locations. </p>
 </li>
-<li>
-<p><strong>Optimistic Locking</strong></p>
-<p>You associate a unique value like a clock or counter with every data update. When a client wants to update data, it has to specify which version of data needs to be updated. This would mean you need to keep track of history of the data versions. </p>
+</ul>
+<ul>
+<li><strong>Optimistic Locking</strong><p>You associate a unique value like a clock or counter with every data update. When a client wants to update data, it has to specify which version of data needs to be updated. This would mean you need to keep track of history of the data versions. </p>
 </li>
-<li>
-<p><strong>Vector Clocks</strong></p>
-<p>A vector clock is defined as a tuple of clock values from each node. In a distributed environment, each node maintains a tuple of such clock values which represent the state of the nodes itself and its peers/replicas. A clock value may be real timestamps derived from local clock or version no.  </p>
+</ul>
+<ul>
+<li><strong>Vector Clocks</strong><p>A vector clock is defined as a tuple of clock values from each node. In a distributed environment, each node maintains a tuple of such clock values which represent the state of the nodes itself and its peers/replicas. A clock value may be real timestamps derived from local clock or version no.  </p>
 </li>
 </ul>
 <p id="gdcalert1" ><span style="color: red; font-weight: bold" images/vector_clocks.png> </span></p>
@@ -6847,15 +6841,13 @@ n -&gt; no of nodes
 <p>Quorum is the minimum number of nodes in a cluster that must be online and be able to communicate with each other. If any additional node failure occurs beyond this threshold, the cluster will stop running.</p>
 <p>To attain a quorum, you need a majority of the nodes. Commonly, it is (N/2 + 1), where <em>N</em> is the total no of nodes in the system. For example, </p>
 <ul>
-<li>
-<p>In a 3-node cluster, you need 2 nodes for a majority.</p>
-</li>
-<li>
-<p>In a 5-node cluster, you need 3 nodes for a majority.</p>
-</li>
-<li>
-<p>In a 6-node cluster, you need 4 nodes for a majority. </p>
-</li>
+<li>In a 3-node cluster, you need 2 nodes for a majority.</li>
+</ul>
+<ul>
+<li>In a 5-node cluster, you need 3 nodes for a majority.</li>
+</ul>
+<ul>
+<li>In a 6-node cluster, you need 4 nodes for a majority. </li>
 </ul>
 <p id="gdcalert4" ><span style="color: red; font-weight: bold" images/Quorum.png > </span></p>
 

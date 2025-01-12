@@ -6685,9 +6685,11 @@
 <p>This utility is installed separately from the MySQL server and is open source, provided by Percona. It helps in getting the full or partial physical backup of the database. It provides online backup of the database, i.e. it will have the changes made to the database when the backup was going on as explained at the end of the previous section.</p>
 <ul>
 <li><strong>Full Backup</strong> - the complete backup of the database. </li>
-<li><strong>Partial Backup</strong> - Incremental </li>
+<li><strong>Partial Backup</strong> - Incremental <ul>
 <li><strong>Cumulative</strong> - After one full backup, the next backups will have changes post the full backup. For example, we took a full backup on Sunday, from Monday onwards every backup will have changes after Sunday; so, Tuesday’s backup will have Monday’s changes as well, Wednesday’s backup will have changes of Monday and Tuesday as well and so on.</li>
 <li><strong>Differential</strong> - After one full backup, the next backups will have changes post the previous incremental backup. For example, we took a full backup on Sunday, Monday will have changes done after Sunday, Tuesday will have changes done after Monday, and so on.</li>
+</ul>
+</li>
 </ul>
 <p><img alt="partial backups - differential and cummulative" src="../images/partial_backup.png" title="Differential and Cumulative Backups" /></p>
 <p>Percona XtraBackup allows us to get both full and incremental backups as we desire. However, incremental backups take less space than a full backup (if taken per day) but the restore time of incremental backups is more than that of full backups.</p>

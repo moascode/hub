@@ -6998,12 +6998,10 @@
 <p><img alt="" src="../images/image9.png" /></p>
 <p>Advantages</p>
 <ul>
-<li>
-<p>It can be easily implemented.</p>
-</li>
-<li>
-<p>Bottlenecks caused due to I/O operations from the same disk are avoided, increasing the performance of such operations.</p>
-</li>
+<li>It can be easily implemented.</li>
+</ul>
+<ul>
+<li>Bottlenecks caused due to I/O operations from the same disk are avoided, increasing the performance of such operations.</li>
 </ul>
 <p>Disadvantages</p>
 <ul>
@@ -7016,12 +7014,10 @@
 <p><img alt="" src="../images/image21.png" /></p>
 <p>Advantages</p>
 <ul>
-<li>
-<p>RAID 1 offers a better read performance than RAID 0 or single disk.</p>
-</li>
-<li>
-<p>It can survive multiple disk failures without the need for special data recovery algorithms</p>
-</li>
+<li>RAID 1 offers a better read performance than RAID 0 or single disk.</li>
+</ul>
+<ul>
+<li>It can survive multiple disk failures without the need for special data recovery algorithms</li>
 </ul>
 <p>Disadvantages</p>
 <ul>
@@ -7034,24 +7030,20 @@
 <p><img alt="" src="../images/image4.png" /></p>
 <p>Advantages</p>
 <ul>
-<li>
-<p>Each drive in a RAID 4 array operates independently so I/O requests take place in parallel, speeding up performance over previous RAID levels.</p>
-</li>
-<li>
-<p>It can survive multiple disk failures without the need for special data recovery algorithms</p>
-</li>
+<li>Each drive in a RAID 4 array operates independently so I/O requests take place in parallel, speeding up performance over previous RAID levels.</li>
+</ul>
+<ul>
+<li>It can survive multiple disk failures without the need for special data recovery algorithms</li>
 </ul>
 <p>Disadvantages</p>
 <ul>
-<li>
-<p>A minimum of 3 disks is required for setup.</p>
-</li>
-<li>
-<p>It needs hardware support for parity calculation.</p>
-</li>
-<li>
-<p>Write speeds are slow since parity relies on a single disk drive and carry out modifications of parity blocks for each I/O session.</p>
-</li>
+<li>A minimum of 3 disks is required for setup.</li>
+</ul>
+<ul>
+<li>It needs hardware support for parity calculation.</li>
+</ul>
+<ul>
+<li>Write speeds are slow since parity relies on a single disk drive and carry out modifications of parity blocks for each I/O session.</li>
 </ul>
 <p>Use cases</p>
 <p>Operations dealing with really large files – when sequential read and write data process is used</p>
@@ -7060,24 +7052,20 @@
 <p><img alt="" src="../images/image23.png" /></p>
 <p>Advantages</p>
 <ul>
-<li>
-<p>Read data transactions are fast as compared to write data transactions that are somewhat slow due to the calculation of parity.</p>
-</li>
-<li>
-<p>Data remains accessible even after drive failure and during replacement of a failed hard drive because the storage controller rebuilds the data on the new drive.</p>
-</li>
+<li>Read data transactions are fast as compared to write data transactions that are somewhat slow due to the calculation of parity.</li>
+</ul>
+<ul>
+<li>Data remains accessible even after drive failure and during replacement of a failed hard drive because the storage controller rebuilds the data on the new drive.</li>
 </ul>
 <p>Disadvantages</p>
 <ul>
-<li>
-<p>RAID 5 requires a minimum of 3 drives and can work up to a maximum of 16 drives</p>
-</li>
-<li>
-<p>It needs hardware support for parity calculation.</p>
-</li>
-<li>
-<p>More than two drive failures can cause data loss.</p>
-</li>
+<li>RAID 5 requires a minimum of 3 drives and can work up to a maximum of 16 drives</li>
+</ul>
+<ul>
+<li>It needs hardware support for parity calculation.</li>
+</ul>
+<ul>
+<li>More than two drive failures can cause data loss.</li>
 </ul>
 <p>Use cases</p>
 <p>File storage and application servers, such as email, general storage servers, etc.</p>
@@ -7086,24 +7074,20 @@
 <p><img alt="" src="../images/image5.png" /></p>
 <p>Advantages</p>
 <ul>
-<li>
-<p>Read data transactions are fast.</p>
-</li>
-<li>
-<p>This provides a fault tolerance up to 2 failed drives.</p>
-</li>
-<li>
-<p>RAID 6 is more resilient than RAID 5.</p>
-</li>
+<li>Read data transactions are fast.</li>
+</ul>
+<ul>
+<li>This provides a fault tolerance up to 2 failed drives.</li>
+</ul>
+<ul>
+<li>RAID 6 is more resilient than RAID 5.</li>
 </ul>
 <p>Disadvantages</p>
 <ul>
-<li>
-<p>Write data transactions are slow due to double parity.</p>
-</li>
-<li>
-<p>Rebuilding the RAID array takes a longer time because of complex structure.</p>
-</li>
+<li>Write data transactions are slow due to double parity.</li>
+</ul>
+<ul>
+<li>Rebuilding the RAID array takes a longer time because of complex structure.</li>
 </ul>
 <p>Use cases</p>
 <p>Office automation, online customer service, and applications that require very high availability.</p>
@@ -7112,21 +7096,17 @@
 <p><img alt="" src="../images/image3.png" /></p>
 <p>Advantages</p>
 <ul>
-<li>
-<p>Rebuilding the RAID array is fast.</p>
-</li>
-<li>
-<p>Read and write operations performance are good.</p>
-</li>
+<li>Rebuilding the RAID array is fast.</li>
+</ul>
+<ul>
+<li>Read and write operations performance are good.</li>
 </ul>
 <p>Disadvantages</p>
 <ul>
-<li>
-<p>Just like RAID 1, only half the drive capacity is available.</p>
-</li>
-<li>
-<p>It can be expensive to implement RAID 10.</p>
-</li>
+<li>Just like RAID 1, only half the drive capacity is available.</li>
+</ul>
+<ul>
+<li>It can be expensive to implement RAID 10.</li>
 </ul>
 <p>Use cases</p>
 <p>Transactional databases with sensitive information that require high performance and high data security.</p>

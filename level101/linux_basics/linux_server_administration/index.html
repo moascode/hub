@@ -7270,14 +7270,14 @@ examples. Do keep in mind that it's very important to practice the Linux
 commands on your own.</p>
 <h2 id="lab-environment-setup">Lab Environment Setup</h2>
 <ul>
-<li>
-<p>Install docker on your system - <a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a> OR you can use online <a href="https://labs.play-with-docker.com/">Docker playground</a></p>
-</li>
+<li>Install docker on your system - <a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a> OR you can use online <a href="https://labs.play-with-docker.com/">Docker playground</a></li>
+</ul>
+<ul>
 <li>
 <p>We will be running all the commands on Red Hat Enterprise Linux (RHEL) 8 system.</p>
+<p><img alt="" src="../images/linux/admin/image19.png" /></p>
 </li>
 </ul>
-<p><img alt="" src="../images/linux/admin/image19.png" /></p>
 <ul>
 <li>We will run most of the commands used in this module in the above Docker container.</li>
 </ul>
@@ -7287,18 +7287,16 @@ commands on your own.</p>
 <p>Since Linux supports multiple users, we need to have a method which can protect the users from each other. One user should not be able to access and modify files of other users</p>
 <h2 id="usergroup-management">User/Group Management</h2>
 <ul>
-<li>
-<p>Users in Linux has an associated user ID called UID attached to them.</p>
-</li>
-<li>
-<p>Users also has a home directory and a login shell associated with them.</p>
-</li>
-<li>
-<p>A group is a collection of one or more users. A group makes it easier to share permissions among a group of users.</p>
-</li>
-<li>
-<p>Each group has a group ID called GID associated with it.</p>
-</li>
+<li>Users in Linux has an associated user ID called UID attached to them.</li>
+</ul>
+<ul>
+<li>Users also has a home directory and a login shell associated with them.</li>
+</ul>
+<ul>
+<li>A group is a collection of one or more users. A group makes it easier to share permissions among a group of users.</li>
+</ul>
+<ul>
+<li>Each group has a group ID called GID associated with it.</li>
 </ul>
 <h3 id="id-command">id command</h3>
 <p><code>id</code> command can be used to find the <code>uid</code> and <code>gid</code> associated with an user.
@@ -7339,12 +7337,10 @@ command.</p>
 <p>If you want to understand each field discussed in the above outputs, you can go
 through below links:</p>
 <ul>
-<li>
-<p><a href="https://tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html">https://tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html</a></p>
-</li>
-<li>
-<p><a href="https://tldp.org/HOWTO/User-Authentication-HOWTO/x71.html">https://tldp.org/HOWTO/User-Authentication-HOWTO/x71.html</a></p>
-</li>
+<li><a href="https://tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html">https://tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html</a></li>
+</ul>
+<ul>
+<li><a href="https://tldp.org/HOWTO/User-Authentication-HOWTO/x71.html">https://tldp.org/HOWTO/User-Authentication-HOWTO/x71.html</a></li>
 </ul>
 <h2 id="important-commands-for-managing-users">Important commands for managing users</h2>
 <p>Some of the commands which are used frequently to manage users/groups
@@ -7603,19 +7599,19 @@ Let's not get into the details of how this authentication works. You can read mo
 <p>Install <code>openssh</code> package which contains all the commands related to <code>ssh</code>.</p>
 <p><img alt="" src="../images/linux/admin/image49.png" /></p>
 <p>Generate a key pair using the <code>ssh-keygen</code> command. One can choose the
-default values for all prompts.</p>
+  default values for all prompts.</p>
 <p><img alt="" src="../images/linux/admin/image47.png" /></p>
 <p>After running the <code>ssh-keygen</code> command successfully, we should see two
-keys present in the <code>~/.ssh</code> directory. <code>id_rsa</code> is the private key and
-<code>id_rsa.pub</code> is the public key. Do note that the private key can only be
-read and modified by you.</p>
+  keys present in the <code>~/.ssh</code> directory. <code>id_rsa</code> is the private key and
+  <code>id_rsa.pub</code> is the public key. Do note that the private key can only be
+  read and modified by you.</p>
 <p><img alt="" src="../images/linux/admin/image7.png" /></p>
 </li>
 <li>
 <p>Transferring the public key to the remote host</p>
 <p>There are multiple ways to transfer the public key to the remote server.
-We will look at one of the most common ways of doing it using the
-<code>ssh-copy-id</code> command.</p>
+  We will look at one of the most common ways of doing it using the
+  <code>ssh-copy-id</code> command.</p>
 <p><img alt="" src="../images/linux/admin/image11.png" /></p>
 <p>Install the <code>openssh-clients</code> package to use <code>ssh-copy-id</code> command.</p>
 <p><img alt="" src="../images/linux/admin/image46.png" /></p>
@@ -7626,8 +7622,8 @@ We will look at one of the most common ways of doing it using the
 <p>Our public key should be there in <code>~/.ssh/authorized_keys</code> now.</p>
 <p><img alt="" src="../images/linux/admin/image4.png" /></p>
 <p><code>~/.ssh/authorized_key</code> contains a list of public keys. The users
-associated with these public keys have the <code>ssh</code> access into the remote
-host.</p>
+  associated with these public keys have the <code>ssh</code> access into the remote
+  host.</p>
 </li>
 </ol>
 <h3 id="how-to-run-commands-on-a-remote-host">How to run commands on a remote host ?</h3>

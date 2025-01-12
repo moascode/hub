@@ -6660,19 +6660,19 @@ public Class Dog extends Mammal {} //transitive inheritance of Animal
 <h2 id="polymorphism">Polymorphism</h2>
 <p>one method, with different implementations. There are two types of polymorphism in Java: compile-time polymorphism and runtime polymorphism. We can perform polymorphism in java by method overloading (compile time) and method overriding (runtime).</p>
 <ul>
-<li>
-<p>Method overloading: Methods have the same name, but different parameters. Another name for method overloading is compile-time polymorphism.</p>
-</li>
-<li>
-<p>Method overriding: Implementation of same function from superclass to subclass.  Should have the same return type and arguments. The access level cannot be more restrictive than the overridden method.  A method declared final or static cannot be overridden.  If a method cannot be inherited, it cannot be overridden. Method overriding is also known as runtime polymorphism.</p>
-</li>
-<li>
-<p>method overloading: same method name, different parameters (number of parameters/ type)</p>
-</li>
+<li>Method overloading: Methods have the same name, but different parameters. Another name for method overloading is compile-time polymorphism.</li>
+</ul>
+<ul>
+<li>Method overriding: Implementation of same function from superclass to subclass.  Should have the same return type and arguments. The access level cannot be more restrictive than the overridden method.  A method declared final or static cannot be overridden.  If a method cannot be inherited, it cannot be overridden. Method overriding is also known as runtime polymorphism.</li>
+</ul>
+<ul>
+<li>method overloading: same method name, different parameters (number of parameters/ type)<ul>
 <li>If exact method not found, java will look for method with primitive type</li>
 <li>If primitive method found, java will look for larger primitive type</li>
 <li>If primitive method not found, java will do autoboxing to wrapper type</li>
 <li>If exact wrapper type not found, java will look for immediate super type (ex: last resort is Object)</li>
+</ul>
+</li>
 <li>method overriding: same method, different implementation in subclasses</li>
 </ul>
 <h2 id="abstraction">Abstraction</h2>

@@ -6771,38 +6771,40 @@
 <p>The brain of Kubernetes which responds to events from the node plane (e.g create a pod, replicas mismatch) and does the main orchestration is called the control plane. All control plane components are typically installed in a master node. This master node does not run any user containers.</p>
 <p>The Kubernetes components themselves are run as containers wrapped in Pods (which is the most basic kubernetes resource object).</p>
 <ul>
-<li>Control plane components:</li>
+<li>Control plane components:<ul>
 <li>kube-apiserver</li>
 <li>etcd</li>
 <li>kube-scheduler</li>
 <li>kube-controller-manager</li>
-<li>Node plane components</li>
+</ul>
+</li>
+<li>Node plane components<ul>
 <li>kubelet</li>
 <li>kube-proxy</li>
 </ul>
+</li>
+</ul>
 <p>This workflow might help you understand the working on components better:</p>
 <ul>
-<li>
-<p>An SRE installs <code>kubectl</code> in their local machine. This is the client which interacts with the Kubernetes control plane (and hence the cluster).</p>
-</li>
-<li>
-<p>They create a YAML file, called manifest which specifies the desired state of the resource (e.g a deployment names “frontend” needs 3 pods to always be running)</p>
-</li>
-<li>
-<p>When they issue a command to create objects based in the YAML file, the kubectl CLI tool sends a rest API request to the <code>kube-apiserver</code>.</p>
-</li>
-<li>
-<p>If the manifest is valid, it is stored as key value pairs in the <code>etcd</code> server on the control plane.</p>
-</li>
-<li>
-<p><code>kube-scheduler</code> chooses which nodes to put the containers on (basically schedules them)</p>
-</li>
-<li>
-<p>There are controller processes (managed by <code>kube-controller</code> manager) which makes sure the current state of the cluster is equivalent to the desired state (here, 3 pods are indeed running in the cluster -&gt; all is fine).</p>
-</li>
-<li>
-<p>On the node plane side, <code>kubelet</code> makes sure that pods are locally kept in running state.</p>
-</li>
+<li>An SRE installs <code>kubectl</code> in their local machine. This is the client which interacts with the Kubernetes control plane (and hence the cluster).</li>
+</ul>
+<ul>
+<li>They create a YAML file, called manifest which specifies the desired state of the resource (e.g a deployment names “frontend” needs 3 pods to always be running)</li>
+</ul>
+<ul>
+<li>When they issue a command to create objects based in the YAML file, the kubectl CLI tool sends a rest API request to the <code>kube-apiserver</code>.</li>
+</ul>
+<ul>
+<li>If the manifest is valid, it is stored as key value pairs in the <code>etcd</code> server on the control plane.</li>
+</ul>
+<ul>
+<li><code>kube-scheduler</code> chooses which nodes to put the containers on (basically schedules them)</li>
+</ul>
+<ul>
+<li>There are controller processes (managed by <code>kube-controller</code> manager) which makes sure the current state of the cluster is equivalent to the desired state (here, 3 pods are indeed running in the cluster -&gt; all is fine).</li>
+</ul>
+<ul>
+<li>On the node plane side, <code>kubelet</code> makes sure that pods are locally kept in running state.</li>
 </ul>
 <h2 id="lab">LAB</h2>
 <h3 id="prerequisites">Prerequisites</h3>
@@ -6856,14 +6858,14 @@ spec:                           #[6]
 <p><img alt="" src="../images/kube4.png" /></p>
 <p>Here, this is 10.244.1.3 </p>
 <ul>
-<li>
-<p>Issue a curl request from the host <code>curl 10.244.1.3:80</code>. You will get the welcome page!</p>
-</li>
+<li>Issue a curl request from the host <code>curl 10.244.1.3:80</code>. You will get the welcome page!</li>
+</ul>
+<ul>
 <li>
 <p>Let’s say we want to use a specific tag of nginx (say 1.20.1) in the same pod i.e we want to modify some property of the pod. You can try editing nginx-pod.yaml (image: nginx:1.20.1 in #[9])and reapplying (step 2.). It will create a new container in the same pod with the new image.</p>
+<p>A container is created within the pod but the pod is the same. You can verify by checking the pod start time in describe command. It would show a much older time.</p>
 </li>
 </ul>
-<p>A container is created within the pod but the pod is the same. You can verify by checking the pod start time in describe command. It would show a much older time.</p>
 <p>What if we want to change the image to 1.20.1 for 1000 nginx pods? Stepping a little back, what if we want to create 1000 nginx pods. Of course, we can write a script but Kubernetes already offers a resource type called “deployment” to manage large scale deployments better.</p>
 <hr />
 <h4 id="lab-2">Lab 2:</h4>

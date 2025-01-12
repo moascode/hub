@@ -6971,9 +6971,11 @@
 <h4 id="string">String</h4>
 <ul>
 <li>Strings in Java are immutable, meaning once created, their values cannot be changed. Any modification (e.g., concatenation or replacement) creates a new <code>String</code> object.</li>
-<li>The <strong>String Pool</strong> is a special memory region in the heap where <strong>string literals</strong> are stored. The pool is created at <strong>runtime</strong>, but its content is determined by <strong>compile-time literals</strong> and runtime additions via <code>intern()</code>. When a string literal is created (e.g., <code>String str = "Hello";</code>), Java checks the pool:</li>
+<li>The <strong>String Pool</strong> is a special memory region in the heap where <strong>string literals</strong> are stored. The pool is created at <strong>runtime</strong>, but its content is determined by <strong>compile-time literals</strong> and runtime additions via <code>intern()</code>. When a string literal is created (e.g., <code>String str = "Hello";</code>), Java checks the pool:<ul>
 <li><strong>If the string already exists in the pool</strong>, its reference is reused.</li>
 <li><strong>If not</strong>, a new string is added to the pool.</li>
+</ul>
+</li>
 <li>Strings created with the <code>new</code> keyword are stored in the heap, not the pool. However, these can be added to the pool manually using the <code>intern()</code> method.</li>
 </ul>
 <pre><code class="language-java">String str = &quot;first&quot; //create string &quot;first&quot; and point str to it
@@ -7059,15 +7061,17 @@ Long z = (long) x //explicit casting - ok
 <ul>
 <li>
 <p><strong>What is the problem with double precision in Java, and what are the alternatives to handle it efficiently in terms of memory and performance?</strong></p>
-</li>
-<li>
-<p><strong>Problem:</strong> <code>double</code> has precision limitations due to floating-point representation in binary. Not all decimal numbers can be exactly represented in binary, leading to rounding errors in calculations.</p>
-</li>
+<ul>
+<li><strong>Problem:</strong> <code>double</code> has precision limitations due to floating-point representation in binary. Not all decimal numbers can be exactly represented in binary, leading to rounding errors in calculations.</li>
+</ul>
+<ul>
 <li>
 <p><strong>Solution:</strong></p>
 <ul>
 <li>Alternative - BigDecimal: <code>BigDecimal</code> provides arbitrary precision but is slower and more memory-intensive than <code>double</code>.</li>
 <li>Efficient Alternative - Fixed-Point Arithmetic: Fixed-point arithmetic scales decimals to integers (e.g., multiplying by 100) to avoid floating-point errors while maintaining performance and memory efficiency, similar to <code>double</code>.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -7085,21 +7089,21 @@ Long z = (long) x //explicit casting - ok
 <ul>
 <li>
 <p>Operator Types</p>
-</li>
-<li>
-<p><strong>Unary</strong>: Requires a single operand (e.g., <code>!</code>, <code>++</code>, <code>--</code>).</p>
-</li>
+<ul>
+<li><strong>Unary</strong>: Requires a single operand (e.g., <code>!</code>, <code>++</code>, <code>--</code>).</li>
 <li><strong>Binary</strong>: Operates on two operands (e.g., <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>).</li>
-<li>
-<p><strong>Ternary</strong>: Simplifies conditional expressions (e.g., <code>x = (a &gt; b) ? a : b;</code>).</p>
+<li><strong>Ternary</strong>: Simplifies conditional expressions (e.g., <code>x = (a &gt; b) ? a : b;</code>).</li>
+</ul>
 </li>
+</ul>
+<ul>
 <li>
 <p>Special Operators</p>
-</li>
-<li>
-<p><strong><code>instanceof</code> operator</strong>: Determines if an object is an instance of a class or subclass.</p>
-</li>
+<ul>
+<li><strong><code>instanceof</code> operator</strong>: Determines if an object is an instance of a class or subclass.</li>
 <li><strong><code>==</code> operator</strong>: Determines if values are equal in primitive and if references are equal in object.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="flow-control">Flow Control</h2>
@@ -7108,10 +7112,8 @@ Long z = (long) x //explicit casting - ok
 <li><strong><code>if-else</code></strong>: Basic decision-making structure.</li>
 <li>
 <p><strong><code>switch</code></strong>:</p>
-</li>
-<li>
-<p>Supports <code>byte</code>, <code>short</code>, <code>char</code>, <code>int</code>, <code>String</code>, and enums.</p>
-</li>
+<ul>
+<li>Supports <code>byte</code>, <code>short</code>, <code>char</code>, <code>int</code>, <code>String</code>, and enums.</li>
 <li>Uses <code>yield</code> for returning values from a switch block.</li>
 <li>
 <p>Example:</p>
@@ -7123,25 +7125,25 @@ String dayType = switch(day) {
 };</code></p>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="loops">Loops</h3>
 <ul>
 <li>
 <p><strong>For Loops</strong>:</p>
+<ul>
+<li>Infinite loop: <code>for(;;)</code></li>
+<li>Multiple indices: <code>for (int i = 0, j = 5; i &lt; j; i++, j--)</code></li>
+</ul>
 </li>
-<li>
-<p>Infinite loop: <code>for(;;)</code></p>
-</li>
-<li>
-<p>Multiple indices: <code>for (int i = 0, j = 5; i &lt; j; i++, j--)</code></p>
-</li>
-<li>
-<p><strong>While Loop</strong>: Repeats as long as the condition is <code>true</code>.</p>
-</li>
+</ul>
+<ul>
+<li><strong>While Loop</strong>: Repeats as long as the condition is <code>true</code>.</li>
 <li>
 <p><strong>Break and Continue</strong>:</p>
-</li>
-<li>
-<p>Labeled breaks to exit nested loops.</p>
+<ul>
+<li>Labeled breaks to exit nested loops.</li>
+</ul>
 </li>
 </ul>
 <h2 id="special-keywords">Special Keywords</h2>
@@ -7187,14 +7189,14 @@ String dayType = switch(day) {
 <li><code>static block</code> is used to initialize static variables. It runs once when the class is loaded.</li>
 <li>
 <p><code>static method</code> can only call static field/method</p>
-</li>
-<li>
-<p>fix1: make all field and method static</p>
-</li>
+<ul>
+<li>fix1: make all field and method static</li>
 <li>fix2: create instance every time to access non-statis field and method</li>
 <li>fix3: create a static instance and use it everywhere</li>
 <li><code>static import</code> is used to import static members of another class, enabling direct access without class reference (e.g., <code>import static java.lang.Math.pow</code>).</li>
 <li><code>void</code> indicates that a method does not need to return any value</li>
+</ul>
+</li>
 </ul>
 <h3 id="access-modifier">Access Modifier</h3>
 <table>

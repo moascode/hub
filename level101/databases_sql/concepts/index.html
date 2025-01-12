@@ -6567,47 +6567,39 @@
   <h1>Key Concepts</h1>
 
 <ul>
-<li>Relational DBs are used for data storage. Even a file can be used to store data, but relational DBs are designed with specific goals:<ul>
-<li>Efficiency</li>
-<li>Ease of access and management</li>
-<li>Organized</li>
-<li>Handle relations between data (represented as tables)</li>
-</ul>
-</li>
+<li>Relational DBs are used for data storage. Even a file can be used to store data, but relational DBs are designed with specific goals:
+    *   Efficiency
+    *   Ease of access and management
+    *   Organized
+    *   Handle relations between data (represented as tables)</li>
 <li>Transaction: a unit of work that can comprise multiple statements, executed together</li>
-<li>
-<p>ACID properties</p>
-<p>Set of properties that guarantee data integrity of DB transactions</p>
-<ul>
-<li>Atomicity: Each transaction is atomic (succeeds or fails completely)</li>
-<li>Consistency: Transactions only result in valid state (which includes rules, constraints, triggers etc.)</li>
-<li>Isolation: Each transaction is executed independently of others safely within a concurrent system</li>
-<li>Durability: Completed transactions will not be lost due to any later failures</li>
-</ul>
+<li>ACID properties<p>Set of properties that guarantee data integrity of DB transactions</p>
+<p>*   Atomicity: Each transaction is atomic (succeeds or fails completely)
+  *   Consistency: Transactions only result in valid state (which includes rules, constraints, triggers etc.)
+  *   Isolation: Each transaction is executed independently of others safely within a concurrent system
+  *   Durability: Completed transactions will not be lost due to any later failures</p>
 <p>Let’s take some examples to illustrate the above properties.</p>
-<ul>
-<li>Account A has a balance of ₹200 &amp; B has ₹400. Account A is transferring ₹100 to Account B. This transaction has a deduction from sender and an addition into the recipient’s balance. If the first operation passes successfully while the second fails, A’s balance would be ₹100 while B would be having ₹400 instead of ₹500. <strong>Atomicity</strong> in a DB ensures this partially failed transaction is rolled back.</li>
-<li>If the second operation above fails, it leaves the DB inconsistent (sum of balance of accounts before and after the operation is not the same). <strong>Consistency</strong> ensures that this does not happen.</li>
-<li>There are three operations, one to calculate interest for A’s account,  another to add that to A’s account, then transfer ₹100 from B to A. Without <strong>isolation</strong> guarantees, concurrent execution of these 3 operations may lead to a different outcome every time.</li>
-<li>What happens if the system crashes before the transactions are written to disk? <strong>Durability</strong> ensures that the changes are applied correctly during recovery.</li>
-<li>Relational data</li>
-<li>Tables represent relations</li>
-<li>Columns (fields) represent attributes</li>
-<li>Rows are individual records</li>
-<li>Schema describes the structure of DB</li>
-<li>SQL</li>
-</ul>
+<p>*   Account A has a balance of ₹200 &amp; B has ₹400. Account A is transferring ₹100 to Account B. This transaction has a deduction from sender and an addition into the recipient’s balance. If the first operation passes successfully while the second fails, A’s balance would be ₹100 while B would be having ₹400 instead of ₹500. <strong>Atomicity</strong> in a DB ensures this partially failed transaction is rolled back.
+  *   If the second operation above fails, it leaves the DB inconsistent (sum of balance of accounts before and after the operation is not the same). <strong>Consistency</strong> ensures that this does not happen.
+  *   There are three operations, one to calculate interest for A’s account,  another to add that to A’s account, then transfer ₹100 from B to A. Without <strong>isolation</strong> guarantees, concurrent execution of these 3 operations may lead to a different outcome every time.
+  *   What happens if the system crashes before the transactions are written to disk? <strong>Durability</strong> ensures that the changes are applied correctly during recovery.
+*   Relational data
+  *   Tables represent relations
+  *   Columns (fields) represent attributes
+  *   Rows are individual records
+  *   Schema describes the structure of DB
+*   SQL</p>
 <p>A query language to interact with and manage data.</p>
 <p><a href="https://stackify.com/what-are-crud-operations/">CRUD operations</a>&mdash;create, read, update, delete queries</p>
 <p>Management operations&mdash;create DBs/tables/indexes, backup, import/export, users, access controls, etc</p>
 <p><em>Exercise</em>: Classify the below queries into the four types&mdash;DDL (definition), DML (manipulation), DCL (control) and TCL (transactions) and explain in detail.</p>
-<pre><code>insert, create, drop, delete, update, commit, rollback, truncate, alter, grant, revoke
+<pre><code>  insert, create, drop, delete, update, commit, rollback, truncate, alter, grant, revoke
 </code></pre>
 <p>You can practise these in the <a href="https://linkedin.github.io/school-of-sre/level101/databases_sql/lab/">lab section</a>.</p>
 </li>
-<li>
-<p>Constraints</p>
-<p>Rules for data that can be stored. Query fails if you violate any of these defined on a table.</p>
+</ul>
+<ul>
+<li>Constraints<p>Rules for data that can be stored. Query fails if you violate any of these defined on a table.</p>
 <p><em>Primary key</em>: One or more columns that contain UNIQUE values, and cannot contain NULL values. A table can have only ONE primary key. An index on it is created by default.</p>
 <p><em>Foreign key</em>: Links two tables together. Its value(s) match a primary key in a different table</p>
 <p><em>Not null</em>: Does not allow null values</p>
@@ -6615,20 +6607,20 @@
 <p><em>Default</em>: Provides a default value for a column if none is specified during insert</p>
 <p><em>Check</em>: Allows only particular values (like Balance &gt;= 0)</p>
 </li>
-<li>
-<p><a href="https://datageek.blog/en/2018/06/05/rdbms-basics-indexes-and-clustered-indexes/">Indexes</a></p>
-<p>Most indexes use B+ tree structure.</p>
+</ul>
+<ul>
+<li><a href="https://datageek.blog/en/2018/06/05/rdbms-basics-indexes-and-clustered-indexes/">Indexes</a><p>Most indexes use B+ tree structure.</p>
 <p>Why use them: Speeds up queries (in large tables that fetch only a few rows, min/max queries, by eliminating rows from consideration, etc)</p>
 <p><em>Types of indexes</em>: unique, primary key, fulltext, secondary</p>
 <p>Write-heavy loads, mostly full table scans or accessing large number of rows, etc. do not benefit from indexes</p>
 </li>
-<li>
-<p><a href="https://www.sqlservertutorial.net/sql-server-basics/sql-server-joins/">Joins</a></p>
-<p>Allows you to fetch related data from multiple tables, linking them together with some common field. Powerful but also resource-intensive and makes scaling databases difficult. This is the cause of many slow performing queries when run at scale, and the solution is almost always to find ways to reduce the joins.</p>
+</ul>
+<ul>
+<li><a href="https://www.sqlservertutorial.net/sql-server-basics/sql-server-joins/">Joins</a><p>Allows you to fetch related data from multiple tables, linking them together with some common field. Powerful but also resource-intensive and makes scaling databases difficult. This is the cause of many slow performing queries when run at scale, and the solution is almost always to find ways to reduce the joins.</p>
 </li>
-<li>
-<p><a href="https://dev.mysql.com/doc/refman/8.0/en/access-control.html">Access control</a></p>
-<p>DBs have privileged accounts for admin tasks, and regular accounts for clients. There are fine-grained controls on what actions (DDL, DML, etc. discussed earlier) are allowed for these accounts.</p>
+</ul>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/access-control.html">Access control</a><p>DBs have privileged accounts for admin tasks, and regular accounts for clients. There are fine-grained controls on what actions (DDL, DML, etc. discussed earlier) are allowed for these accounts.</p>
 <p>DB first verifies the user credentials (authentication), and then examines whether this user is permitted to perform the request (authorization) by looking up these information in some internal tables.</p>
 <p>Other controls include activity auditing that allows examining the history of actions done by a user, and resource limits which define the number of queries, connections, etc. allowed.</p>
 </li>

@@ -6863,36 +6863,26 @@ implemented in different ways</p>
 flow, and looks at the layer 3 and layer 4 information in an incoming
 packet. Then determine the set of real hosts, to which the connections
 are to be redirected. As covered in the <a href="https://linkedin.github.io/school-of-sre/level102/networking/scale/#load-balancer">Scale</a> topic, these load balancers can be set up in two ways,</p>
-<ul>
-<li>
-<p>Single-arm mode: In this mode, the load balancer handles only the
+<p>- Single-arm mode: In this mode, the load balancer handles only the
 incoming requests to the VIP. The response from the server goes directly
 to the clients. There are two ways to implement this,</p>
-<ul>
-<li>
-<p>L2 DSR: Where the load balancer and the real servers remain in the
-same VLAN. Upon getting an incoming request, the load balancer
+<pre><code>  * L2 DSR: Where the load balancer and the real servers remain in the
+</code></pre>
+<p>same VLAN. Upon getting an incoming request, the load balancer
 identifies the real server to redirect the request and then modifies the
 destination mac address of that Ethernet frame. Upon processing this
 packet, the real server responds directly to the client.</p>
-</li>
-<li>
-<p><a href="https://github.com/yahoo/l3dsr">L3 DSR</a>: In this case, the load balancer and real servers need not be
-in the same VLAN (does away with layer 2 complexities like running STP,
+<pre><code>  * [L3 DSR](https://github.com/yahoo/l3dsr): In this case, the load balancer and real servers need not be
+</code></pre>
+<p>in the same VLAN (does away with layer 2 complexities like running STP,
 managing wider broadcast domain, etc). Upon incoming request, the load
 balancer redirects to the real server, by modifying the destination IP
 address of the packet. Along with this, the DSCP value of the packet is
 set to a predefined value (mapped for that VIP). Upon receipt of this
 packet, the real server uses the DSCP value to determine the loopback
 address (VIP address). The response again goes directly to the client.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Two arm mode: In this case, the load balancer is in line for incoming
+<p>- Two arm mode: In this case, the load balancer is in line for incoming
 and outgoing traffic.</p>
-</li>
-</ul>
 </li>
 <li>
 <p>DNS based load balancer: Here the DNS servers keep a check of the

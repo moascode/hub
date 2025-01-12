@@ -6762,10 +6762,12 @@
 <h4 id="1-javalang">1. <code>java.lang</code></h4>
 <ul>
 <li>Automatically imported by default.  </li>
-<li><strong><code>System.out.println()</code></strong>:  </li>
+<li><strong><code>System.out.println()</code></strong>:  <ul>
 <li><code>System</code>: A final class in the <code>java.lang</code> package.  </li>
 <li><code>out</code>: A static member of the <code>System</code> class, of type <code>PrintStream</code>.  </li>
 <li><code>println()</code>: A method of the <code>PrintStream</code> class used for output.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h4 id="2-javautil">2. <code>java.util</code></h4>
@@ -6776,7 +6778,9 @@
 <h5 id="22-collections">2.2 Collections</h5>
 <p>The <code>java.util.Collections</code> class provides utility methods for working with collections. All methods are static, so you don’t need to create a <code>Collections</code> object to use them.</p>
 <ul>
-<li><strong>Common Methods</strong>:</li>
+<li>
+<p><strong>Common Methods</strong>:</p>
+<ul>
 <li><code>max(Collection c)</code>: Returns the maximum element based on natural ordering.</li>
 <li><code>min(Collection c)</code>: Returns the minimum element.</li>
 <li><code>reverse(List list)</code>: Reverses the elements in the list.</li>
@@ -6784,15 +6788,17 @@
 <li><code>sort(List list)</code>: Sorts elements in natural order.</li>
 </ul>
 <p>```java
-  import java.util.Collections;
-  import java.util.ArrayList;</p>
+import java.util.Collections;
+import java.util.ArrayList;</p>
 <p>ArrayList<String> animals = new ArrayList&lt;&gt;();
-  animals.add("tiger");
-  // Sort in ascending order
-  Collections.sort(animals);
-  // Sort in descending order
-  Collections.sort(animals, Collections.reverseOrder());
-  ```</p>
+animals.add("tiger");
+// Sort in ascending order
+Collections.sort(animals);
+// Sort in descending order
+Collections.sort(animals, Collections.reverseOrder());
+```</p>
+</li>
+</ul>
 <h5 id="23-iterators">2.3 Iterators</h5>
 <p>The <code>Iterator</code> interface provides methods to traverse collections.  </p>
 <ul>
@@ -6823,45 +6829,57 @@ while (it.hasNext()) {
 </ul>
 <p>Common Methods</p>
 <ul>
-<li><strong>Current Date/Time</strong>:  </li>
-</ul>
-<p><code>java
-  LocalDate.now();
-  LocalTime.now();</code></p>
-<ul>
-<li><strong>Custom Date/Time</strong>:  </li>
-</ul>
-<p><code>java
-  LocalDateTime.of(2024, 12, 26, 14, 30);</code></p>
-<ul>
-<li><strong>Date/Time Manipulation</strong>:  </li>
-<li><code>plusDays()</code>, <code>minusWeeks()</code>.  </li>
 <li>
-<p>Compare with <code>isBefore()</code>, <code>isAfter()</code>, <code>isEqual()</code>.</p>
+<p><strong>Current Date/Time</strong>:  </p>
+<p><code>java
+LocalDate.now();
+LocalTime.now();</code></p>
 </li>
+</ul>
+<ul>
+<li>
+<p><strong>Custom Date/Time</strong>:  </p>
+<p><code>java
+LocalDateTime.of(2024, 12, 26, 14, 30);</code></p>
+</li>
+</ul>
+<ul>
+<li><strong>Date/Time Manipulation</strong>:  <ul>
+<li><code>plusDays()</code>, <code>minusWeeks()</code>.  </li>
+<li>Compare with <code>isBefore()</code>, <code>isAfter()</code>, <code>isEqual()</code>.</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li>
 <p><strong>Periods</strong>:  </p>
+<p><code>java
+Period.between(startDate, endDate);</code></p>
 </li>
 </ul>
-<p><code>java
-  Period.between(startDate, endDate);</code></p>
 <ul>
-<li><strong>Durations</strong>:  </li>
-</ul>
+<li>
+<p><strong>Durations</strong>:  </p>
 <p><code>java
-  Duration.between(startTime, endTime);</code></p>
+Duration.between(startTime, endTime);</code></p>
+</li>
+</ul>
 <ul>
-<li><strong><code>ChronoUnit</code></strong>:  </li>
-</ul>
+<li>
+<p><strong><code>ChronoUnit</code></strong>:  </p>
 <p><code>java
-  ChronoUnit.HOURS.between(time1, time2);</code></p>
+ChronoUnit.HOURS.between(time1, time2);</code></p>
+</li>
+</ul>
 <ul>
-<li><strong>Timestamps with <code>Instant</code></strong>:  </li>
-</ul>
+<li>
+<p><strong>Timestamps with <code>Instant</code></strong>:  </p>
 <p><code>java
-  Instant before = Instant.now();
-  Duration timeTaken = Duration.between(before, Instant.now());
-  System.out.println(timeTaken.toMillis());</code></p>
+Instant before = Instant.now();
+Duration timeTaken = Duration.between(before, Instant.now());
+System.out.println(timeTaken.toMillis());</code></p>
+</li>
+</ul>
 <ul>
 <li><strong>Converting to GMT</strong> (example conversion):<br />
 <code>2022-11-02T13:50+05:30</code> → GMT: <code>2022-11-02T07:20</code>.  </li>

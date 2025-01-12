@@ -6743,29 +6743,25 @@
 <h3 id="delivery-guarantees">Delivery guarantees</h3>
 <p>One of the essential aspects of messaging services is ensuring that messages are delivered to their intended recipients. Different systems offer varying levels of delivery guarantees, and it is crucial to understand these guarantees to choose the right messaging service for your needs.</p>
 <ul>
-<li>
-<p><strong>at-most-once-delivery</strong>  This guarantee ensures that a message is delivered at most once to its intended recipient. In other words, messages may be lost, but they will never be delivered more than once. This approach is suitable for scenarios where message loss is tolerable and duplication is not desired.</p>
-</li>
-<li>
-<p><strong>at-lesat-once-delivery</strong>  Under this guarantee, a message will be delivered to its intended recipient at least once, but it may be delivered multiple times in case of failures. This approach is appropriate for situations where message loss is unacceptable, but duplication can be managed by the recipient.</p>
-</li>
-<li>
-<p><strong>exactly-once-delivery</strong>  This guarantee ensures that a message is delivered exactly once to its intended recipient, with no loss or duplication. This is the most stringent level of delivery guarantee and is suitable for applications where both message loss and duplication are unacceptable. However, it's important to note that it is challenging, if not impossible, for any messaging system to guarantee exactly-once delivery due to the inherent complexities and potential failures in distributed systems.</p>
-</li>
+<li><strong>at-most-once-delivery</strong>  This guarantee ensures that a message is delivered at most once to its intended recipient. In other words, messages may be lost, but they will never be delivered more than once. This approach is suitable for scenarios where message loss is tolerable and duplication is not desired.</li>
+</ul>
+<ul>
+<li><strong>at-lesat-once-delivery</strong>  Under this guarantee, a message will be delivered to its intended recipient at least once, but it may be delivered multiple times in case of failures. This approach is appropriate for situations where message loss is unacceptable, but duplication can be managed by the recipient.</li>
+</ul>
+<ul>
+<li><strong>exactly-once-delivery</strong>  This guarantee ensures that a message is delivered exactly once to its intended recipient, with no loss or duplication. This is the most stringent level of delivery guarantee and is suitable for applications where both message loss and duplication are unacceptable. However, it's important to note that it is challenging, if not impossible, for any messaging system to guarantee exactly-once delivery due to the inherent complexities and potential failures in distributed systems.</li>
 </ul>
 <p>Selecting the right delivery guarantee depends on the specific requirements of your application. For example, in financial transactions, an exactly-once delivery guarantee is essential to avoid double-processing of payments or missed transactions. In contrast, a log monitoring system may only require at-most-once delivery to reduce system overhead.</p>
 <h3 id="messages-ordering-and-parallelism">Messages ordering and parallelism</h3>
 <p>Ensuring the correct order of messages and processing them in parallel can be a challenge in distributed messaging systems. The following strategies help maintain order and ensure parallelism:</p>
 <ul>
-<li>
-<p><strong>Strict ordering</strong>:  In some cases, maintaining strict order is essential, such as when processing financial transactions. This may require additional overhead, such as sequencing numbers, buffering, and reordering messages.</p>
-</li>
-<li>
-<p><strong>Partial ordering</strong>:  Partial ordering can be used when only a subset of messages must be ordered. For example, messages within a specific group or partition must be processed in order, but messages between groups or partitions can be processed independently.</p>
-</li>
-<li>
-<p><strong>Unordered processing</strong>:  In some scenarios, processing messages in any order is acceptable. This approach reduces complexity and enables higher parallelism, improving overall system performance.</p>
-</li>
+<li><strong>Strict ordering</strong>:  In some cases, maintaining strict order is essential, such as when processing financial transactions. This may require additional overhead, such as sequencing numbers, buffering, and reordering messages.</li>
+</ul>
+<ul>
+<li><strong>Partial ordering</strong>:  Partial ordering can be used when only a subset of messages must be ordered. For example, messages within a specific group or partition must be processed in order, but messages between groups or partitions can be processed independently.</li>
+</ul>
+<ul>
+<li><strong>Unordered processing</strong>:  In some scenarios, processing messages in any order is acceptable. This approach reduces complexity and enables higher parallelism, improving overall system performance.</li>
 </ul>
 <p>Strategies to maintain order and ensure parallelism:
 Partitioning messages by a key, using sequencing numbers, and buffering can help maintain order while still allowing parallel processing. It is crucial to strike the right balance between ordering requirements and parallelism to optimize system performance.</p>
