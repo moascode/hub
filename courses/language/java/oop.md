@@ -42,6 +42,9 @@ Data abstraction provides the outside world with only essential information with
 
 Abstract class: An abstract class is defined using the abstract keyword. If a class is declared abstract it cannot be instantiated (you cannot create objects of that type), but they can be subclassed. To use an abstract class, you have to inherit it from another class. Any class that contains an abstract method should be defined as abstract. An abstract class may or may not include abstract methods, if a method is not abstract, implementation can be done within the class. When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class.
 
+abstract class can have constrcutor but can only called from subclass using super().
+abstract method can not be private, final or static.
+
 abstract classes are very useful, because in Java you can inherit just one super class, implementation of multiple abstract classes makes it easier to overcome the problem.
 
 ```java
@@ -67,6 +70,9 @@ An interface is a completely abstract class that contains only abstract methods.
 - An interface is implicitly abstract. You do not need to use the abstract keyword while declaring an interface.
 - Each method in an interface is also implicitly abstract, so the abstract keyword is not needed.
 - Methods in an interface are implicitly public.
+- Interface can have static method but can not be overriden
+- Interface can have private method and can only be used within the interface
+- default and private non-static method can call abstract methods in the interface
 
 ```java
 interface Animal {

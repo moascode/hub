@@ -4,7 +4,7 @@ A **class** is a blueprint for creating objects. It defines behavior (methods) a
 
 ## Class Members
 
-### 1. Fields (Variables)
+### Fields (Variables)
 
 Fields represent data or state within a class. Setter methods can be used to set field values.
 
@@ -24,17 +24,22 @@ Fields represent data or state within a class. Setter methods can be used to set
   - Only one varargs parameter is allowed, and it must be the last parameter.  
   - Arrays can be passed to varargs.  
 
-### 2. Methods
+### Methods
 
 A method performs actions defined by its body. **Method Signature** includes the method's name, the number and types of parameters, and the return type.  
+
+#### Mehtod Overriding
+
+Subclass can override method from super class. The overridden method needs to be at least as acceesible as the original method. The return type can be subtype for overriden method. 
+The exception thrown can also be subtype of the original exception.
+Private and static method can not be overrriden but can be hidden. That means you can have the same mthod name in the subclass which will belong to the class.
+Final method can not be overriden.
 
 ---
 
 ## Constructor
 
 A **constructor** is a special method used to initialize an object when it is created. It has the same name as the class and no return type.  
-
-### Key Points
 
 - A class can have multiple constructors (overloading).  
 - If no constructor is defined, a **default constructor** is automatically provided.  
@@ -104,17 +109,7 @@ Java supports automatic type casting of integers to floating points, since there
 
 ## Class Types
 
-### JDK-Defined Classes
-
-- **`Math` Class**:
-  - `Math.abs(x)`: Absolute value.  
-  - `Math.max(a, b)`: Maximum of two values.  
-  - `Math.pow(a, b)`: `a` raised to the power `b`.  
-  - `Math.sqrt(x)`: Square root.
-
-### Special Classes
-
-#### Anonymous Classes
+### Anonymous Classes
 
 Allows creating subclasses on the fly with overridden methods. The modification on the overriden method is applicable only to the current object, and not the class itself.
 
@@ -128,7 +123,7 @@ Machine m = new Machine() {
 m.start();  // Outputs "Wooooo"
 ```
 
-#### Inner Classes
+### Inner Classes
 
 A class within another class. It Can be private, providing encapsulation. Once you declare an inner class private, it cannot be accessed from an object outside the class.
 
@@ -148,12 +143,10 @@ class Robot {
 }
 ```
 
-#### Sealed and Non-Sealed Classes
+### Sealed and Non-Sealed Classes
 
 - **Sealed Classes**: Restrict which other classes can extend them.  
 - **Non-Sealed Classes**: Allow unrestricted inheritance.
-
----
 
 ### Reflection Classes
 

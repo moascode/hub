@@ -17,15 +17,16 @@ nav:
 - Profile: profile/resume.md
 - Language:
     - Java: 
-        - language/java/1_introduction.md
-        - language/java/2_basics.md
-        - language/java/3_package.md
-        - language/java/4_class.md
-        - language/java/5_oop.md
-        - language/java/6_exceptions.md
-        - language/java/8_generics.md
-        - language/java/9_jvm.md
-        - language/java/10_design_pattern.md
+        - language/java/introduction.md
+        - language/java/basics.md
+        - language/java/package.md
+        - language/java/class.md
+        - language/java/oop.md
+        - language/java/functional_programming.md
+        - language/java/exceptions.md
+        - language/java/generics.md
+        - language/java/jvm.md
+        - language/java/design_pattern.md
         - language/java/data_structure.md
         - language/java/algorithm.md
         - Framework:

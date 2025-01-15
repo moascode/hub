@@ -24,6 +24,12 @@ import java.awt.*;  // The wildcard (*) imports all classes in the package
   - `out`: A static member of the `System` class, of type `PrintStream`.  
   - `println()`: A method of the `PrintStream` class used for output.
 
+- **`Math` Class**:
+  - `Math.abs(x)`: Absolute value.  
+  - `Math.max(a, b)`: Maximum of two values.  
+  - `Math.pow(a, b)`: `a` raised to the power `b`.  
+  - `Math.sqrt(x)`: Square root.
+
 ---
 
 #### 2. `java.util`
