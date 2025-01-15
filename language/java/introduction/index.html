@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://moascode.github.io/hub/language/java/6_exceptions/">
+        <link rel="canonical" href="https://moascode.github.io/hub/language/java/introduction/">
       
       
-        <link rel="prev" href="../5_oop/">
+        <link rel="prev" href="../../../profile/resume/">
       
       
-        <link rel="next" href="../8_generics/">
+        <link rel="next" href="../basics/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Exceptions - Knowledge Hub</title>
+        <title>Intorduction - Knowledge Hub</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exceptions" class="md-skip">
+        <a href="#intorduction" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
           </span>
           <span class="md-header__topic md-ellipsis">
             
-              Exceptions
+              Intorduction
             
           </span>
         </div>
@@ -440,14 +440,53 @@
   <!-- Determine classes -->
   
   
+    
+  
 
   <!-- Determine active page for paginated views -->
   
 
   <!-- Navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../1_introduction/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- State toggle -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Navigation link to table of contents -->
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Intorduction
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
 
   <!-- Navigation link icon -->
@@ -462,7 +501,85 @@
   
 
       </a>
+
+      <!-- Table of contents -->
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compiled-vs-interpreted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiled vs. Interpreted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-typing-in-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Typing in Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-via-the-jvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution via the JVM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-java-with-cc-and-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Java with C/C++ and Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
+
+  <!-- Navigation item -->
   
 
               
@@ -480,7 +597,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2_basics/" class="md-nav__link">
+      <a href="../basics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -513,7 +630,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../3_package/" class="md-nav__link">
+      <a href="../package/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -546,7 +663,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../4_class/" class="md-nav__link">
+      <a href="../class/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -579,7 +696,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../5_oop/" class="md-nav__link">
+      <a href="../oop/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -605,36 +722,14 @@
   <!-- Determine classes -->
   
   
-    
-  
 
   <!-- Determine active page for paginated views -->
   
 
   <!-- Navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- State toggle -->
-      <input
-        class="md-nav__toggle md-toggle"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-        
-      
-
-      <!-- Navigation link to table of contents -->
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../functional_programming/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -642,19 +737,14 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    Exceptions
+    Functiona Interface
   </span>
 
   <!-- Navigation link status -->
   
 
       </a>
-
-      <!-- Table of contents -->
-      
     </li>
-
-  <!-- Navigation item -->
   
 
               
@@ -672,7 +762,40 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../8_generics/" class="md-nav__link">
+      <a href="../exceptions/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../generics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -705,7 +828,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../9_jvm/" class="md-nav__link">
+      <a href="../jvm/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -738,7 +861,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../10_design_pattern/" class="md-nav__link">
+      <a href="../design_pattern/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -863,7 +986,7 @@
         <input
           class="md-nav__toggle md-toggle "
           type="checkbox"
-          id="__nav_3_1_12"
+          id="__nav_3_1_13"
           
         />
 
@@ -872,8 +995,8 @@
           
           <label
             class="md-nav__link"
-            for="__nav_3_1_12"
-            id="__nav_3_1_12_label"
+            for="__nav_3_1_13"
+            id="__nav_3_1_13_label"
             tabindex="0"
           >
             
@@ -899,10 +1022,10 @@
         <nav
           class="md-nav"
           data-md-level="3"
-          aria-labelledby="__nav_3_1_12_label"
+          aria-labelledby="__nav_3_1_13_label"
           aria-expanded="false"
         >
-          <label class="md-nav__title" for="__nav_3_1_12">
+          <label class="md-nav__title" for="__nav_3_1_13">
             <span class="md-nav__icon md-icon"></span>
             Framework
           </label>
@@ -6495,6 +6618,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compiled-vs-interpreted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiled vs. Interpreted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-typing-in-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static Typing in Java
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-via-the-jvm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution via the JVM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-java-with-cc-and-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Java with C/C++ and Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6508,22 +6693,123 @@
                   
 
 
-<h1 id="exceptions">Exceptions</h1>
-<p>Exceptions are caused by user error, programmer error, or physical resource issues. A try/catch block is placed around the code that might generate an exception.  The Exception type can be used to catch all possible exceptions. If an exception is created using thorws, this exception must be managed in the caller program using try/catch block. A single try block can contain multiple catch blocks that handle different exceptions separately. 'finally' is added after 'try' and 'catch' to execute some code whether the exception happened or not.</p>
-<pre><code class="language-java">public class MyClass {
-    public static void main(String[ ] args) {
-        try {
-            int a[ ] = new int[2];
-            System.out.println(a[5]);
-        } catch (Exception e) {
-            System.out.println(&quot;An error occurred&quot;);
-        }
-        finally {
-            System.out.println (&quot;I can run no matter what&quot;);
-        }
+<h1 id="intorduction">Intorduction</h1>
+<p>Assuming you know a little bit of C/C++ and Python, let's discuss how Java differs from these languages, particularly in its compilation, execution, and overall design philosophy. Java is often described as a statically typed, compiled, and interpreted language, which might sound contradictory at first. Let's break this down.</p>
+<h2 id="compiled-vs-interpreted">Compiled vs. Interpreted</h2>
+<p>Java occupies an interesting middle ground between compiled and interpreted languages. When writing a Java program, you first compile it using the <code>javac</code> command, which generates bytecode—a platform-independent representation of your program. This bytecode is then executed by the Java Virtual Machine (JVM), making Java both compiled (to bytecode) and interpreted (bytecode interpreted by the JVM).</p>
+<p>In comparison:
+- <strong>C/C++</strong> compiles directly to machine code, which is specific to the operating system and hardware.
+- <strong>Python</strong> compiles to bytecode as well, but this step happens transparently during execution and doesn't require a separate compilation step.</p>
+<p>Here’s how Java's process looks:</p>
+<pre><code class="language-java">// Save the following code as HelloWorld.java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(&quot;Hello, World!&quot;);
     }
 }
+
+// Compile the program
+$ javac HelloWorld.java
+
+// Run the compiled program
+$ java HelloWorld
+Hello, World!
 </code></pre>
+<p>Java's use of bytecode ensures portability, allowing the same compiled program to run on any system with a JVM.</p>
+<hr />
+<h2 id="static-typing-in-java">Static Typing in Java</h2>
+<p>Java is a statically typed language, which means types are explicitly declared and enforced at compile time. For example:</p>
+<pre><code class="language-java">int number = 10; // The variable 'number' is explicitly declared as an integer
+String message = &quot;Hello, Java!&quot;;
+</code></pre>
+<p>This contrasts with dynamically typed languages like Python, where types are inferred at runtime. Static typing enables Java's compiler to catch type-related errors early, leading to fewer runtime errors. However, this strictness can make Java more verbose compared to Python.</p>
+<hr />
+<h2 id="execution-via-the-jvm">Execution via the JVM</h2>
+<p>The Java Virtual Machine (JVM) is the cornerstone of Java's "write once, run anywhere" philosophy. It interprets the bytecode and translates it into machine code specific to the underlying system.</p>
+<p>Here’s an overview of the process:
+1. <strong>Compile</strong>: The <code>javac</code> compiler converts Java source code into <code>.class</code> files containing bytecode.
+2. <strong>Execute</strong>: The JVM loads the bytecode, verifies its validity, and interprets or compiles it to native machine code (just-in-time compilation) for execution.</p>
+<p>This architecture makes Java highly portable but introduces an additional layer of abstraction, leading to potential performance overhead compared to native machine code execution in C/C++.</p>
+<hr />
+<h2 id="comparing-java-with-cc-and-python">Comparing Java with C/C++ and Python</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Java</th>
+<th>C/C++</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Typing</strong></td>
+<td>Static</td>
+<td>Static</td>
+<td>Dynamic</td>
+</tr>
+<tr>
+<td><strong>Compilation</strong></td>
+<td>Bytecode via <code>javac</code></td>
+<td>Machine code via native compilers</td>
+<td>Bytecode via built-in compiler</td>
+</tr>
+<tr>
+<td><strong>Execution</strong></td>
+<td>JVM (interprets bytecode or JIT compiles)</td>
+<td>Native execution</td>
+<td>Python VM (interprets bytecode)</td>
+</tr>
+<tr>
+<td><strong>Portability</strong></td>
+<td>High (requires JVM)</td>
+<td>Low (platform-dependent binaries)</td>
+<td>High (requires Python runtime)</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Moderate (JIT optimizations)</td>
+<td>High</td>
+<td>Moderate to Low (dynamic overhead)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="execution-diagram">Execution Diagram</h2>
+<pre><code class="language-plaintext">                                                              The Operating System
+
+                                                              +------------------------------------+
+                                                              |                                    |
+                                                              |                                    |
+                                                              |                                    |
+HelloWorld.java                  Java bytecode                |         JVM Process                |
+                                                              |                                    |
++----------------+                +----------------+          |         +----------------+         |
+|class...        |   COMPILE      |LOAD_CONST...   |          |         |Reads bytecode  |         |
+|                +---------------&gt;+                +-------------------&gt;+line by line    |         |
+|                |                |                |          |         |and executes.   |         |
+|                |                |                |          |         |                |         |
++----------------+                +----------------+          |         +----------------+         |
+                                                              |                                    |
+                                                              |                                    |
+                                                              |                                    |
+hello_world.c                     OS Specific machinecode     |         A New Process              |
+                                                              |                                    |
++----------------+                +----------------+          |         +----------------+         |
+|void main() {   |   COMPILE      | binary contents|          |         | binary contents|         |
+|                +---------------&gt;+                +-------------------&gt;+                |         |
+|                |                |                |          |         |                |         |
+|                |                |                |          |         |                |         |
++----------------+                +----------------+          |         +----------------+         |
+                                                              |         (binary contents           |
+                                                              |         runs as is)                |
+                                                              |                                    |
+                                                              |                                    |
+                                                              +------------------------------------+
+</code></pre>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Java bridges the gap between compiled and interpreted languages, combining the portability of Python with the performance and type safety of C/C++. Its strict typing system and reliance on the JVM ensure robust, maintainable code that runs across diverse environments.</p>
 
 
 

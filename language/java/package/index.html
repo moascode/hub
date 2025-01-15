@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://moascode.github.io/hub/language/java/2_basics/">
+        <link rel="canonical" href="https://moascode.github.io/hub/language/java/package/">
       
       
-        <link rel="prev" href="../1_introduction/">
+        <link rel="prev" href="../basics/">
       
       
-        <link rel="next" href="../3_package/">
+        <link rel="next" href="../class/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Basics - Knowledge Hub</title>
+        <title>Package - Knowledge Hub</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basics" class="md-skip">
+        <a href="#package" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
           </span>
           <span class="md-header__topic md-ellipsis">
             
-              Basics
+              Package
             
           </span>
         </div>
@@ -447,7 +447,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../1_introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -456,6 +456,39 @@
   <!-- Navigation link title -->
   <span class="md-ellipsis">
     Intorduction
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Basics
   </span>
 
   <!-- Navigation link status -->
@@ -507,7 +540,7 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    Basics
+    Package
   </span>
 
   <!-- Navigation link status -->
@@ -527,7 +560,7 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    Basics
+    Package
   </span>
 
   <!-- Navigation link status -->
@@ -553,47 +586,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
+  <a href="#java-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Types
+      Java API
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Types">
+    <nav class="md-nav" aria-label="Java API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#primitive-types" class="md-nav__link">
+  <a href="#common-java-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Primitive Types
+      Common Java API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Java API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-javalang" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. java.lang
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#non-primitive-reference-types" class="md-nav__link">
+  <a href="#2-javautil" class="md-nav__link">
     <span class="md-ellipsis">
-      Non-Primitive/ Reference Types
+      2. java.util
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Non-Primitive/ Reference Types">
+    <nav class="md-nav" aria-label="2. java.util">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
+  <a href="#21-scanner-class" class="md-nav__link">
     <span class="md-ellipsis">
-      String
+      2.1 Scanner Class
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#comparison-string-vs-stringbuilder-vs-stringbuffer" class="md-nav__link">
+  <a href="#22-collections" class="md-nav__link">
     <span class="md-ellipsis">
-      Comparison: String vs. StringBuilder vs. StringBuffer
+      2.2 Collections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-iterators" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Iterators
     </span>
   </a>
   
@@ -605,27 +657,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-casting" class="md-nav__link">
+  <a href="#3-javatime" class="md-nav__link">
     <span class="md-ellipsis">
-      Type Casting
+      3. java.time
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#boxing-and-unboxing" class="md-nav__link">
+  <a href="#3-javaio" class="md-nav__link">
     <span class="md-ellipsis">
-      Boxing and Unboxing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
+      3. java.io
     </span>
   </a>
   
@@ -633,85 +676,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operators
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flow Control
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Flow Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conditional-constructs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditional Constructs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loops" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loops
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-keywords" class="md-nav__link">
-    <span class="md-ellipsis">
-      Special Keywords
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Special Keywords">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-specifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional specifier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-modifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access Modifier
-    </span>
-  </a>
   
 </li>
         
@@ -744,40 +708,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../3_package/" class="md-nav__link">
-        
-
-  <!-- Navigation link icon -->
-  
-
-  <!-- Navigation link title -->
-  <span class="md-ellipsis">
-    Package
-  </span>
-
-  <!-- Navigation link status -->
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-
-  <!-- Determine classes -->
-  
-  
-
-  <!-- Determine active page for paginated views -->
-  
-
-  <!-- Navigation item with nested items -->
-  
-    <li class="md-nav__item">
-      <a href="../4_class/" class="md-nav__link">
+      <a href="../class/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -810,7 +741,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../5_oop/" class="md-nav__link">
+      <a href="../oop/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -843,7 +774,40 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../6_exceptions/" class="md-nav__link">
+      <a href="../functional_programming/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Functiona Interface
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../exceptions/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -876,7 +840,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../8_generics/" class="md-nav__link">
+      <a href="../generics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -909,7 +873,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../9_jvm/" class="md-nav__link">
+      <a href="../jvm/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -942,7 +906,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../10_design_pattern/" class="md-nav__link">
+      <a href="../design_pattern/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1067,7 +1031,7 @@
         <input
           class="md-nav__toggle md-toggle "
           type="checkbox"
-          id="__nav_3_1_12"
+          id="__nav_3_1_13"
           
         />
 
@@ -1076,8 +1040,8 @@
           
           <label
             class="md-nav__link"
-            for="__nav_3_1_12"
-            id="__nav_3_1_12_label"
+            for="__nav_3_1_13"
+            id="__nav_3_1_13_label"
             tabindex="0"
           >
             
@@ -1103,10 +1067,10 @@
         <nav
           class="md-nav"
           data-md-level="3"
-          aria-labelledby="__nav_3_1_12_label"
+          aria-labelledby="__nav_3_1_13_label"
           aria-expanded="false"
         >
-          <label class="md-nav__title" for="__nav_3_1_12">
+          <label class="md-nav__title" for="__nav_3_1_13">
             <span class="md-nav__icon md-icon"></span>
             Framework
           </label>
@@ -6706,47 +6670,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
+  <a href="#java-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Types
+      Java API
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Types">
+    <nav class="md-nav" aria-label="Java API">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#primitive-types" class="md-nav__link">
+  <a href="#common-java-api" class="md-nav__link">
     <span class="md-ellipsis">
-      Primitive Types
+      Common Java API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Java API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-javalang" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. java.lang
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#non-primitive-reference-types" class="md-nav__link">
+  <a href="#2-javautil" class="md-nav__link">
     <span class="md-ellipsis">
-      Non-Primitive/ Reference Types
+      2. java.util
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Non-Primitive/ Reference Types">
+    <nav class="md-nav" aria-label="2. java.util">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
+  <a href="#21-scanner-class" class="md-nav__link">
     <span class="md-ellipsis">
-      String
+      2.1 Scanner Class
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#comparison-string-vs-stringbuilder-vs-stringbuffer" class="md-nav__link">
+  <a href="#22-collections" class="md-nav__link">
     <span class="md-ellipsis">
-      Comparison: String vs. StringBuilder vs. StringBuffer
+      2.2 Collections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-iterators" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Iterators
     </span>
   </a>
   
@@ -6758,27 +6741,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-casting" class="md-nav__link">
+  <a href="#3-javatime" class="md-nav__link">
     <span class="md-ellipsis">
-      Type Casting
+      3. java.time
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#boxing-and-unboxing" class="md-nav__link">
+  <a href="#3-javaio" class="md-nav__link">
     <span class="md-ellipsis">
-      Boxing and Unboxing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
+      3. java.io
     </span>
   </a>
   
@@ -6786,85 +6760,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operators
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flow Control
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Flow Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conditional-constructs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditional Constructs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loops" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loops
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-keywords" class="md-nav__link">
-    <span class="md-ellipsis">
-      Special Keywords
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Special Keywords">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-specifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional specifier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-modifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access Modifier
-    </span>
-  </a>
   
 </li>
         
@@ -6888,334 +6783,202 @@
                   
 
 
-<h1 id="basics">Basics</h1>
-<h2 id="data-types">Data Types</h2>
-<p>Java supports two categories of data types:</p>
-<h3 id="primitive-types">Primitive Types</h3>
-<p>Store simple values directly in memory. Primitive types are faster and memory efficient. (Ex: int, long, float, double, char, boolean..)</p>
-<h3 id="non-primitive-reference-types">Non-Primitive/ Reference Types</h3>
-<p>Objects contains addresses of locations in memory (Arrays, Strings, Object). It is useful for generics or allowing null values.</p>
+<h1 id="package">Package</h1>
+<p>Packages are used to avoid name conflicts and control access to classes. To import classes from other packages, use the <code>import</code> keyword.  </p>
+<pre><code class="language-java">import samples.Vehicle;
+</code></pre>
+<h2 id="java-api">Java API</h2>
+<p>The Java API is a collection of classes and interfaces provided by Java for common programming tasks. You need to import the relevant package to use them.  </p>
+<pre><code class="language-java">import java.awt.*;  // The wildcard (*) imports all classes in the package
+</code></pre>
+<h3 id="common-java-api">Common Java API</h3>
+<h4 id="1-javalang">1. <code>java.lang</code></h4>
 <ul>
-<li><strong>Wrapper Classes</strong>: Provide object equivalents of primitives. (Ex: Byte, Short, Integer..)</li>
-</ul>
-<p>Primitive and Wrapper Classes summary</p>
-<table>
-<thead>
-<tr>
-<th>Primitive Type</th>
-<th>Wrapper Class</th>
-<th>Range</th>
-<th>Primitive Example</th>
-<th>Wrapper Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>byte</code></td>
-<td><code>Byte</code></td>
-<td>-128 to 127</td>
-<td><code>byte b = 100;</code></td>
-<td><code>Byte bObj = Byte.valueOf("100");</code></td>
-</tr>
-<tr>
-<td><code>short</code></td>
-<td><code>Short</code></td>
-<td>-32,768 to 32,767</td>
-<td><code>short s = 20000;</code></td>
-<td><code>Short sObj = Short.valueOf("20000");</code></td>
-</tr>
-<tr>
-<td><code>int</code></td>
-<td><code>Integer</code></td>
-<td>-2^31 to 2^31-1</td>
-<td><code>int i = 12345;</code></td>
-<td><code>Integer iObj = Integer.valueOf("12345");</code></td>
-</tr>
-<tr>
-<td><code>long</code></td>
-<td><code>Long</code></td>
-<td>-2^63 to 2^63-1</td>
-<td><code>long l = 123456789L;</code></td>
-<td><code>Long lObj = Long.valueOf("123456789");</code></td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td><code>Float</code></td>
-<td>±1.4E-45 to ±3.4E38</td>
-<td><code>float f = 3.14f;</code></td>
-<td><code>Float fObj = Float.valueOf("3.14");</code></td>
-</tr>
-<tr>
-<td><code>double</code></td>
-<td><code>Double</code></td>
-<td>±4.9E-324 to ±1.7E308</td>
-<td><code>double d = 2.71828;</code></td>
-<td><code>Double dObj = Double.valueOf("2.71828");</code></td>
-</tr>
-<tr>
-<td><code>char</code></td>
-<td><code>Character</code></td>
-<td>0 to 65,535 (Unicode characters)</td>
-<td><code>char c = 'A';</code></td>
-<td><code>Character cObj = Character.valueOf('A');</code></td>
-</tr>
-<tr>
-<td><code>boolean</code></td>
-<td><code>Boolean</code></td>
-<td><code>true</code> or <code>false</code></td>
-<td><code>boolean b = true;</code></td>
-<td><code>Boolean bObj = Boolean.valueOf(true);</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="string">String</h4>
-<ul>
-<li>Strings in Java are immutable, meaning once created, their values cannot be changed. Any modification (e.g., concatenation or replacement) creates a new <code>String</code> object.</li>
-<li>The <strong>String Pool</strong> is a special memory region in the heap where <strong>string literals</strong> are stored. The pool is created at <strong>runtime</strong>, but its content is determined by <strong>compile-time literals</strong> and runtime additions via <code>intern()</code>. When a string literal is created (e.g., <code>String str = "Hello";</code>), Java checks the pool:<ul>
-<li><strong>If the string already exists in the pool</strong>, its reference is reused.</li>
-<li><strong>If not</strong>, a new string is added to the pool.</li>
+<li>Automatically imported by default.  </li>
+<li><strong><code>System.out.println()</code></strong>:  <ul>
+<li><code>System</code>: A final class in the <code>java.lang</code> package.  </li>
+<li><code>out</code>: A static member of the <code>System</code> class, of type <code>PrintStream</code>.  </li>
+<li><code>println()</code>: A method of the <code>PrintStream</code> class used for output.</li>
 </ul>
 </li>
-<li>Strings created with the <code>new</code> keyword are stored in the heap, not the pool. However, these can be added to the pool manually using the <code>intern()</code> method.</li>
 </ul>
-<pre><code class="language-java">String str = &quot;first&quot; //create string &quot;first&quot; and point str to it
-str.concat(&quot; second&quot;)//create string &quot;first second &quot; and nothing points at it, so no change to str!!
-str = str.concat(&quot; second&quot;) //create string &quot;first second&quot; and point str to it
-String str2 = &quot;  first  &quot;.trim().intern(); //points to &quot;first&quot; from string pool which was created with &quot;str&quot; 
-</code></pre>
-<h4 id="comparison-string-vs-stringbuilder-vs-stringbuffer">Comparison: <code>String</code> vs. <code>StringBuilder</code> vs. <code>StringBuffer</code></h4>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th><code>String</code></th>
-<th><code>StringBuilder</code></th>
-<th><code>StringBuffer</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Mutability</strong></td>
-<td>Immutable</td>
-<td>Mutable</td>
-<td>Mutable</td>
-</tr>
-<tr>
-<td><strong>Thread Safety</strong></td>
-<td>Thread-safe (immutability)</td>
-<td>Not thread-safe</td>
-<td>Thread-safe</td>
-</tr>
-<tr>
-<td><strong>Performance</strong></td>
-<td>Slower (due to immutability)</td>
-<td>Faster (no synchronization)</td>
-<td>Slower (synchronization overhead)</td>
-</tr>
-<tr>
-<td><strong>Use Case</strong></td>
-<td>Read-only strings or fewer modifications</td>
-<td>Frequent string operations in a single thread</td>
-<td>String operations in multi-threaded environments</td>
-</tr>
-<tr>
-<td><strong>Memory Usage</strong></td>
-<td>Creates new objects for modifications</td>
-<td>Modifies in place, reducing memory overhead</td>
-<td>Modifies in place with synchronization</td>
-</tr>
-</tbody>
-</table>
-<h3 id="type-casting">Type Casting</h3>
 <ul>
-<li><strong>Auto Casting/ Upcasting (Numeric Promotion):</strong> Numeric promotion automatically converts smaller data types into larger ones during operations. <code>byte</code>, <code>short</code>, and <code>char</code> are first promoted to <code>int</code> before any operation, and the result is <code>int</code>.</li>
-<li><strong>Explicit Casting/ Downcasting:</strong> Explicit casting is required when assigning a value of a larger data type to a smaller data type. Use explicit casting to avoid type mismatch errors. Possible loss of precision or overflow/underflow may occur.</li>
-</ul>
-<pre><code class="language-java">int x = 5;
-double y = 3.2;
-double result = x + y; // x is promoted to double
-
-double largeNumber = 123.45;
-int smallerNumber = (int) largeNumber; // Explicit cast
-System.out.println(smallerNumber); // Output: 123 (truncated)
-</code></pre>
-<h3 id="boxing-and-unboxing">Boxing and Unboxing</h3>
-<ul>
-<li><strong>Boxing</strong> is converting primitive into wrapper class</li>
-<li><strong>Unboxing</strong> is converting wrapper class into primitive</li>
-<li><strong>Autoboxing</strong> is when boxing is done autometically</li>
-<li><strong>Java can not do autocast and autobox at the same time</strong></li>
-</ul>
-<pre><code class="language-java">int a = 5;
-Integer b = Interger.valueOf(a) //boxing
-int c = b.intValue() //unboxing
-Integer d = c //autoboxing
-
-int x = 7;
-long y = x //autocasting - ok
-Long z = x //autocasting and autoboxing can not be done together - nok
-Long z = Long.valueOf(x) // explicit boxing - ok
-Long z = (long) x //explicit casting - ok
-</code></pre>
-<h3 id="notes">Notes</h3>
-<ul>
-<li><strong>What is the problem with double precision in Java, and what are the alternatives to handle it efficiently in terms of memory and performance?</strong><ul>
-<li><strong>Problem:</strong> <code>double</code> has precision limitations due to floating-point representation in binary. Not all decimal numbers can be exactly represented in binary, leading to rounding errors in calculations.</li>
-<li><strong>Solution:</strong><ul>
-<li>Alternative - BigDecimal: <code>BigDecimal</code> provides arbitrary precision but is slower and more memory-intensive than <code>double</code>.</li>
-<li>Efficient Alternative - Fixed-Point Arithmetic: Fixed-point arithmetic scales decimals to integers (e.g., multiplying by 100) to avoid floating-point errors while maintaining performance and memory efficiency, similar to <code>double</code>.</li>
-</ul>
-</li>
+<li><strong><code>Math</code> Class</strong>:<ul>
+<li><code>Math.abs(x)</code>: Absolute value.  </li>
+<li><code>Math.max(a, b)</code>: Maximum of two values.  </li>
+<li><code>Math.pow(a, b)</code>: <code>a</code> raised to the power <code>b</code>.  </li>
+<li><code>Math.sqrt(x)</code>: Square root.</li>
 </ul>
 </li>
 </ul>
 <hr />
-<h2 id="variables">Variables</h2>
-<p>Variables are containers for storing values during program execution. Their behavior and lifecycle are determined by their type and scope.</p>
+<h4 id="2-javautil">2. <code>java.util</code></h4>
+<h5 id="21-scanner-class">2.1 <strong>Scanner Class</strong></h5>
+<p>Used for reading user input.  </p>
+<pre><code class="language-java">import java.util.Scanner;  // From the utility package
+</code></pre>
+<h5 id="22-collections">2.2 Collections</h5>
+<p>The <code>java.util.Collections</code> class provides utility methods for working with collections. All methods are static, so you don’t need to create a <code>Collections</code> object to use them.</p>
 <ul>
-<li><strong>Local Variables</strong>: Must be initialized explicitly. Declared inside methods or blocks and destroyed after block execution.</li>
-<li><strong>Instance Variables</strong>: Exist as long as the object is alive.</li>
-<li><strong>Class Variables</strong>: Declared with the <code>static</code> keyword and exist throughout the program lifecycle.</li>
-<li><strong>Final Variables</strong>: Cannot reassign a reference, but the object contents can change.</li>
-</ul>
-<hr />
-<h2 id="operators">Operators</h2>
-<ul>
-<li>Operator Types<ul>
-<li><strong>Unary</strong>: Requires a single operand (e.g., <code>!</code>, <code>++</code>, <code>--</code>).</li>
-<li><strong>Binary</strong>: Operates on two operands (e.g., <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>).</li>
-<li><strong>Ternary</strong>: Simplifies conditional expressions (e.g., <code>x = (a &gt; b) ? a : b;</code>).</li>
-</ul>
-</li>
-<li>Special Operators<ul>
-<li><strong><code>instanceof</code> operator</strong>: Determines if an object is an instance of a class or subclass.</li>
-<li><strong><code>==</code> operator</strong>: Determines if values are equal in primitive and if references are equal in object.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="flow-control">Flow Control</h2>
-<h3 id="conditional-constructs">Conditional Constructs</h3>
-<ul>
-<li><strong><code>if-else</code></strong>: Basic decision-making structure.</li>
-<li><strong><code>switch</code></strong>:<ul>
-<li>Supports <code>byte</code>, <code>short</code>, <code>char</code>, <code>int</code>, <code>String</code>, and enums.</li>
-<li>Uses <code>yield</code> for returning values from a switch block.</li>
 <li>
-<p>Example:</p>
+<p><strong>Common Methods</strong>:</p>
+<ul>
+<li><code>max(Collection c)</code>: Returns the maximum element based on natural ordering.</li>
+<li><code>min(Collection c)</code>: Returns the minimum element.</li>
+<li><code>reverse(List list)</code>: Reverses the elements in the list.</li>
+<li><code>shuffle(List list)</code>: Randomizes the order of elements.</li>
+<li><code>sort(List list)</code>: Sorts elements in natural order.</li>
+</ul>
+<p>```java
+import java.util.Collections;
+import java.util.ArrayList;</p>
+<p>ArrayList<String> animals = new ArrayList&lt;&gt;();
+animals.add("tiger");
+// Sort in ascending order
+Collections.sort(animals);
+// Sort in descending order
+Collections.sort(animals, Collections.reverseOrder());
+```</p>
+</li>
+</ul>
+<h5 id="23-iterators">2.3 Iterators</h5>
+<p>The <code>Iterator</code> interface provides methods to traverse collections.  </p>
+<ul>
+<li><code>hasNext()</code>: Returns <code>true</code> if there are more elements.</li>
+<li><code>next()</code>: Returns the next element.  </li>
+<li><code>remove()</code>: Removes the last returned element.</li>
+</ul>
+<pre><code class="language-java">import java.util.Iterator;
+import java.util.LinkedList;
+
+LinkedList&lt;String&gt; animals = new LinkedList&lt;&gt;();
+animals.add(&quot;fox&quot;);
+
+Iterator&lt;String&gt; it = animals.iterator();    
+while (it.hasNext()) {      
+    String value = it.next();     
+    System.out.println(value);       
+}
+</code></pre>
+<hr />
+<h4 id="3-javatime">3. <code>java.time</code></h4>
+<p>The <code>java.time</code> package provides classes for date and time manipulation.</p>
+<ul>
+<li><code>LocalDate</code>: Represents a date.</li>
+<li><code>LocalTime</code>: Represents a time.</li>
+<li><code>LocalDateTime</code>: Combines date and time.</li>
+<li><code>ZonedDateTime</code>: Date and time with timezone information.</li>
+</ul>
+<p>Common Methods</p>
+<ul>
+<li>
+<p><strong>Current Date/Time</strong>:  </p>
 <p><code>java
-String dayType = switch(day) {
-    case MONDAY, TUESDAY, WEDNESDAY -&gt; "Weekday";
-    case SATURDAY, SUNDAY -&gt; "Weekend";
-    default -&gt; "Unknown";
-};</code></p>
+LocalDate.now();
+LocalTime.now();</code></p>
 </li>
 </ul>
-</li>
-</ul>
-<h3 id="loops">Loops</h3>
 <ul>
-<li><strong>For Loops</strong>:<ul>
-<li>Infinite loop: <code>for(;;)</code></li>
-<li>Multiple indices: <code>for (int i = 0, j = 5; i &lt; j; i++, j--)</code></li>
-</ul>
-</li>
-<li><strong>While Loop</strong>: Repeats as long as the condition is <code>true</code>.</li>
 <li>
-<p><strong>Break and Continue</strong>:</p>
+<p><strong>Custom Date/Time</strong>:  </p>
+<p><code>java
+LocalDateTime.of(2024, 12, 26, 14, 30);</code></p>
+</li>
+</ul>
 <ul>
-<li>Labeled breaks to exit nested loops.</li>
+<li><strong>Date/Time Manipulation</strong>:  <ul>
+<li><code>plusDays()</code>, <code>minusWeeks()</code>.  </li>
+<li>Compare with <code>isBefore()</code>, <code>isAfter()</code>, <code>isEqual()</code>.</li>
 </ul>
 </li>
+</ul>
+<ul>
+<li>
+<p><strong>Periods</strong>:  </p>
+<p><code>java
+Period.between(startDate, endDate);</code></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Durations</strong>:  </p>
+<p><code>java
+Duration.between(startTime, endTime);</code></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong><code>ChronoUnit</code></strong>:  </p>
+<p><code>java
+ChronoUnit.HOURS.between(time1, time2);</code></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Timestamps with <code>Instant</code></strong>:  </p>
+<p><code>java
+Instant before = Instant.now();
+Duration timeTaken = Duration.between(before, Instant.now());
+System.out.println(timeTaken.toMillis());</code></p>
+</li>
+</ul>
+<ul>
+<li><strong>Converting to GMT</strong> (example conversion):<br />
+<code>2022-11-02T13:50+05:30</code> → GMT: <code>2022-11-02T07:20</code>.  </li>
 </ul>
 <hr />
-<h2 id="special-keywords">Special Keywords</h2>
-<h3 id="optional-specifier">Optional specifier</h3>
-<table>
-<thead>
-<tr>
-<th><strong>Keyword</strong></th>
-<th><strong>Field</strong></th>
-<th><strong>Method</strong></th>
-<th><strong>Class</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>volatile</code></td>
-<td>Used to indicate that a variable's value may be changed by multiple threads. Guarantees visibility of changes to variables across threads.</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><code>transient</code></td>
-<td>Fields marked as <code>transient</code> are not serialized when an object is converted to a byte stream.</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>A static field belongs to the class, not instances. Changing its value affects all instances of the class.</td>
-<td>A static method belongs to the class and can be called without creating an instance. It can only access static fields or methods. The main method must always be static.</td>
-<td>A static class can only be a nested class (non-top-level), allowing organization of code.</td>
-</tr>
-<tr>
-<td><code>final</code></td>
-<td>A final field can only be assigned once. For reference types, the reference is constant, but the content can be modified.</td>
-<td>A final method cannot be overridden by subclasses.</td>
-<td>A final class cannot be subclassed (inherited from).</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><code>static final field</code> must be initialized before use.</li>
-<li><code>static block</code> is used to initialize static variables. It runs once when the class is loaded.</li>
-<li><code>static method</code> can only call static field/method<ul>
-<li>fix1: make all field and method static</li>
-<li>fix2: create instance every time to access non-statis field and method</li>
-<li>fix3: create a static instance and use it everywhere</li>
-</ul>
-</li>
-<li><code>static import</code> is used to import static members of another class, enabling direct access without class reference (e.g., <code>import static java.lang.Math.pow</code>).</li>
-<li><code>void</code> indicates that a method does not need to return any value</li>
-</ul>
-<h3 id="access-modifier">Access Modifier</h3>
-<table>
-<thead>
-<tr>
-<th><strong>Access Modifier</strong></th>
-<th><strong>Field</strong></th>
-<th><strong>Method</strong></th>
-<th><strong>Class</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>private</code></td>
-<td>Field can only be accessed within the same class.</td>
-<td>Method can only be accessed within the same class.</td>
-<td>Only inner/nested class can be declared <code>private</code> and it can only be accessed within the outer class</td>
-</tr>
-<tr>
-<td><code>default</code> (no modifier)</td>
-<td>Field can be accessed within the same package.</td>
-<td>Method can be accessed within the same package.</td>
-<td>Class can be accessed within the same package.</td>
-</tr>
-<tr>
-<td><code>protected</code></td>
-<td>Field can be accessed within the same package and by subclasses outside the package.</td>
-<td>Method can be accessed within the same package and by subclasses outside the package.</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><code>public</code></td>
-<td>Field can be accessed from anywhere in the program.</td>
-<td>Method can be accessed from anywhere in the program.</td>
-<td>Class can be accessed from anywhere in the program.</td>
-</tr>
-</tbody>
-</table>
+<h4 id="3-javaio">3. <code>java.io</code></h4>
+<p>Files: The java.io package includes a File class that allows you to work with files. exists() method determines whether a file exists. getName() method returns the name of the file. double backslashes is used in the path</p>
+<pre><code class="language-java">import java.io.File;
+//...
+ File x = new File(&quot;C:\\sololearn\\test.txt&quot;);    
+if(x.exists()) {     
+System.out.println(x.getName() +  &quot;exists!&quot;);    
+}    else {     
+ System.out.println(&quot;The file does not exist&quot;);   
+}
+</code></pre>
+<p>Reading a file: Scanner class from the java.util.Scanner package is used to read the files. We can use the Scanner object's next() method to read the file's contents.</p>
+<pre><code class="language-java">import java.util.Scanner;
+//..
+try {  
+  File x = new File(&quot;C:\\sololearn\\test.txt&quot;);  
+  Scanner sc = new Scanner(x);  
+  while(sc.hasNext()) {    
+    System.out.println(sc.next());  
+  }  
+  sc.close();
+} 
+catch (FileNotFoundException e) {  
+  System.out.println(&quot;Error&quot;);
+}
+</code></pre>
+<p>Creating a file: Formatter, another useful class in the java.util.Formatter package, is used to create content and write it to files. If the file already exists, this will overwrite it.</p>
+<pre><code class="language-java">import java.util.Formatter;
+
+public class MyClass {
+   public static void main(String[ ] args) {
+  try {
+    Formatter f = new Formatter(&quot;C:\\sololearn\\test.txt&quot;);
+  } catch (Exception e) {
+      System.out.println(&quot;Error&quot;);
+  }
+  }
+}
+</code></pre>
+<p>Writing to a file: format() method of Formatter class is used to write content to files. \r\n is the newline symbol in Windows. \r = return, moves all the way to the left, but doesn't move down, \n = newline, moves down but not horizontally. %s mean a string and get's replaced by the first parameter</p>
+<p><code>java
+import java.util.Formatter;
+//... 
+try {
+    Formatter f = new Formatter("C:\\sololearn\\test.txt");
+    f.format("%s %s %s", "1","John", "Smith \r\n");
+    f.format("%s %s %s", "2","Amy", "Brown");
+    f.close();    
+  } catch (Exception e) {
+    System.out.println("Error");
+  }</code></p>
+<hr />
 
 
 

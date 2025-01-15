@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://moascode.github.io/hub/language/java/4_class/">
+        <link rel="canonical" href="https://moascode.github.io/hub/language/java/oop/">
       
       
-        <link rel="prev" href="../3_package/">
+        <link rel="prev" href="../class/">
       
       
-        <link rel="next" href="../5_oop/">
+        <link rel="next" href="../functional_programming/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Class - Knowledge Hub</title>
+        <title>Object Oriented Programming - Knowledge Hub</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#class" class="md-skip">
+        <a href="#object-oriented-programming" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
           </span>
           <span class="md-header__topic md-ellipsis">
             
-              Class
+              Object Oriented Programming
             
           </span>
         </div>
@@ -447,7 +447,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../1_introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -480,7 +480,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../2_basics/" class="md-nav__link">
+      <a href="../basics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -513,7 +513,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../3_package/" class="md-nav__link">
+      <a href="../package/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -522,6 +522,39 @@
   <!-- Navigation link title -->
   <span class="md-ellipsis">
     Package
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../class/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Class
   </span>
 
   <!-- Navigation link status -->
@@ -573,7 +606,7 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    Class
+    Object Oriented Programming
   </span>
 
   <!-- Navigation link status -->
@@ -593,7 +626,7 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    Class
+    Object Oriented Programming
   </span>
 
   <!-- Navigation link status -->
@@ -619,191 +652,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class-members" class="md-nav__link">
+  <a href="#inheritance" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Members
+      inheritance
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Class Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-fields-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Fields (Variables)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Fields (Variables)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#types-of-fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of Fields
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Methods
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
+  <a href="#encapsulation" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructor
+      Encapsulation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Constructor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Points
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialization-order" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialization Order
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
+  <a href="#polymorphism" class="md-nav__link">
     <span class="md-ellipsis">
-      Objects
+      Polymorphism
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#object-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object Comparison
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-casting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Casting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-types" class="md-nav__link">
+  <a href="#abstraction" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Class Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jdk-defined-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      JDK-Defined Classes
+      Abstraction
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#special-classes" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Special Classes
+      interface
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Special Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anonymous Classes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inner-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inner Classes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sealed-and-non-sealed-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sealed and Non-Sealed Classes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reflection-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reflection Classes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -831,7 +720,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../5_oop/" class="md-nav__link">
+      <a href="../functional_programming/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -839,7 +728,7 @@
 
   <!-- Navigation link title -->
   <span class="md-ellipsis">
-    Object Oriented Programming
+    Functiona Interface
   </span>
 
   <!-- Navigation link status -->
@@ -864,7 +753,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../6_exceptions/" class="md-nav__link">
+      <a href="../exceptions/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -897,7 +786,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../8_generics/" class="md-nav__link">
+      <a href="../generics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -930,7 +819,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../9_jvm/" class="md-nav__link">
+      <a href="../jvm/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -963,7 +852,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../10_design_pattern/" class="md-nav__link">
+      <a href="../design_pattern/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1088,7 +977,7 @@
         <input
           class="md-nav__toggle md-toggle "
           type="checkbox"
-          id="__nav_3_1_12"
+          id="__nav_3_1_13"
           
         />
 
@@ -1097,8 +986,8 @@
           
           <label
             class="md-nav__link"
-            for="__nav_3_1_12"
-            id="__nav_3_1_12_label"
+            for="__nav_3_1_13"
+            id="__nav_3_1_13_label"
             tabindex="0"
           >
             
@@ -1124,10 +1013,10 @@
         <nav
           class="md-nav"
           data-md-level="3"
-          aria-labelledby="__nav_3_1_12_label"
+          aria-labelledby="__nav_3_1_13_label"
           aria-expanded="false"
         >
-          <label class="md-nav__title" for="__nav_3_1_12">
+          <label class="md-nav__title" for="__nav_3_1_13">
             <span class="md-nav__icon md-icon"></span>
             Framework
           </label>
@@ -6727,191 +6616,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#class-members" class="md-nav__link">
+  <a href="#inheritance" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Members
+      inheritance
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Class Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-fields-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Fields (Variables)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Fields (Variables)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#types-of-fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of Fields
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Methods
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#constructor" class="md-nav__link">
+  <a href="#encapsulation" class="md-nav__link">
     <span class="md-ellipsis">
-      Constructor
+      Encapsulation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Constructor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#key-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Points
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialization-order" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialization Order
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#objects" class="md-nav__link">
+  <a href="#polymorphism" class="md-nav__link">
     <span class="md-ellipsis">
-      Objects
+      Polymorphism
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Objects">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#object-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      Object Comparison
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-casting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Casting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#class-types" class="md-nav__link">
+  <a href="#abstraction" class="md-nav__link">
     <span class="md-ellipsis">
-      Class Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Class Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jdk-defined-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      JDK-Defined Classes
+      Abstraction
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#special-classes" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Special Classes
+      interface
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Special Classes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#anonymous-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Anonymous Classes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inner-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Inner Classes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sealed-and-non-sealed-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sealed and Non-Sealed Classes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reflection-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reflection Classes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -6930,180 +6675,84 @@
                   
 
 
-<h1 id="class">Class</h1>
-<p>A <strong>class</strong> is a blueprint for creating objects. It defines behavior (methods) and attributes (fields or variables).  </p>
-<h2 id="class-members">Class Members</h2>
-<h3 id="1-fields-variables">1. Fields (Variables)</h3>
-<p>Fields represent data or state within a class. Setter methods can be used to set field values.</p>
-<h4 id="types-of-fields">Types of Fields</h4>
+<h1 id="object-oriented-programming">Object Oriented Programming</h1>
+<h2 id="inheritance">inheritance</h2>
+<p>It is the process that enables one class to acquire the properties (methods and variables) of another. The class inheriting the properties of another is the subclass (also called derived class, or child class); the class whose properties are inherited is the superclass (base class, or parent class). To inherit from a class, use the extends keyword. A class can inherit from just one superclass, but can implement multiple interfaces!</p>
+<pre><code>- inheriting members (fields and methods) from superclass
+- java supports only single inheritance to avoid diamond problem, but can implement multiple interfaces
+- all java classes inherit from java.lang.Object class, means Object is the only class without any parent
+  - every class has access to methods defined in Object class (toString(), equals(), hashCode())
+</code></pre>
+<pre><code class="language-java">public Class Animal {} //parent or superclass
+public Class Mammal extends Animal {} //child or subclass
+public Class Dog extends Mammal {} //transitive inheritance of Animal
+</code></pre>
+<h2 id="encapsulation">Encapsulation</h2>
+<p>To ensure that implementation details are not visible to users. The variables of one class will be hidden from the other classes, accessible only through the methods of the current class. This is called data hiding.</p>
+<p>Getters &amp;&amp; Setters: It is used to protect your data, particularly when creating classes. Getters and Setters must be made public and used only for manipulating PRIVATE variables. Getters and setters are fundamental building blocks for encapsulation</p>
+<h2 id="polymorphism">Polymorphism</h2>
+<p>one method, with different implementations. There are two types of polymorphism in Java: compile-time polymorphism and runtime polymorphism. We can perform polymorphism in java by method overloading (compile time) and method overriding (runtime).</p>
 <ul>
-<li><strong>Local Variable</strong><ul>
-<li>Must be initialized before use.  </li>
-<li>Can only be marked as <code>final</code>.  </li>
-<li>Can be <strong>effectively final</strong> if its value is not modified after initialization.  </li>
+<li>Method overloading: Methods have the same name, but different parameters. Another name for method overloading is compile-time polymorphism.</li>
 </ul>
-</li>
-<li><strong>Instance Variable</strong><ul>
-<li>Automatically assigned default values if not initialized.  </li>
-<li>Can have all access modifiers: <code>private</code>, <code>protected</code>, <code>public</code>.  </li>
-<li>Can be marked as <code>final</code>, <code>volatile</code>, or <code>transient</code>.  </li>
-<li>A <code>final</code> variable must be intialized inline or using constructor</li>
-</ul>
-</li>
-<li><strong>Varargs (Variable Arguments)</strong><ul>
-<li>Accepts any number of parameters of the same type.  </li>
-<li>Only one varargs parameter is allowed, and it must be the last parameter.  </li>
-<li>Arrays can be passed to varargs.  </li>
-</ul>
-</li>
-</ul>
-<h3 id="2-methods">2. Methods</h3>
-<p>A method performs actions defined by its body. <strong>Method Signature</strong> includes the method's name, the number and types of parameters, and the return type.  </p>
-<hr />
-<h2 id="constructor">Constructor</h2>
-<p>A <strong>constructor</strong> is a special method used to initialize an object when it is created. It has the same name as the class and no return type.  </p>
-<h3 id="key-points">Key Points</h3>
 <ul>
-<li>A class can have multiple constructors (overloading).  </li>
-<li>If no constructor is defined, a <strong>default constructor</strong> is automatically provided.  </li>
-<li>Constructors are not inherited.  </li>
-<li>Access modifiers (<code>private</code>, <code>protected</code>, <code>public</code>) can be used.<ul>
-<li><strong>Private constructors</strong> prevent direct object creation and are often used with static factory methods.  </li>
+<li>Method overriding: Implementation of same function from superclass to subclass.  Should have the same return type and arguments. The access level cannot be more restrictive than the overridden method.  A method declared final or static cannot be overridden.  If a method cannot be inherited, it cannot be overridden. Method overriding is also known as runtime polymorphism.</li>
+</ul>
+<ul>
+<li>method overloading: same method name, different parameters (number of parameters/ type)<ul>
+<li>If exact method not found, java will look for method with primitive type</li>
+<li>If primitive method found, java will look for larger primitive type</li>
+<li>If primitive method not found, java will do autoboxing to wrapper type</li>
+<li>If exact wrapper type not found, java will look for immediate super type (ex: last resort is Object)</li>
 </ul>
 </li>
-<li><strong><code>this</code></strong>: Refers to the current object. It is used to access instance variable.<ul>
-<li><code>this()</code> calls another constructor in the same class and must be the first statement.  </li>
+<li>method overriding: same method, different implementation in subclasses</li>
 </ul>
-</li>
-<li><strong><code>super</code></strong>: Refers to the superclass. It is used to access super class variable.<ul>
-<li><code>super()</code> calls the superclass constructor.  </li>
-<li>If not explicitly used, a no-arg <code>super()</code> is added automatically. Compilation fails if no matching constructor exists.  </li>
+<h2 id="abstraction">Abstraction</h2>
+<p>Data abstraction provides the outside world with only essential information without including implementation details. Abstraction is achieved using abstract classes and interfaces.</p>
+<p>Abstract class: An abstract class is defined using the abstract keyword. If a class is declared abstract it cannot be instantiated (you cannot create objects of that type), but they can be subclassed. To use an abstract class, you have to inherit it from another class. Any class that contains an abstract method should be defined as abstract. An abstract class may or may not include abstract methods, if a method is not abstract, implementation can be done within the class. When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class.</p>
+<p>abstract class can have constrcutor but can only called from subclass using super().
+abstract method can not be private, final or static.</p>
+<p>abstract classes are very useful, because in Java you can inherit just one super class, implementation of multiple abstract classes makes it easier to overcome the problem.</p>
+<pre><code class="language-java">abstract class Animal {
+  int legs = 0;
+  abstract void makeSound();
+}
+class Cat extends Animal {
+  public void makeSound() {
+    System.out.println(&quot;Meow&quot;);
+  }
+}
+</code></pre>
+<p>Abstract method: An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon): abstract void walk();</p>
+<h2 id="interface">interface</h2>
+<p>binding contract</p>
+<p>An interface is a completely abstract class that contains only abstract methods. - Defined using the interface keyword.- May contain only static final variables.- Cannot contain a constructor because interfaces cannot be instantiated.- Interfaces can extend other interfaces.- A class can implement any number of interfaces. Use the implements keyword to use an interface with your class. When you implement an interface, you need to override all of its methods.</p>
+<ul>
+<li>An interface is implicitly abstract. You do not need to use the abstract keyword while declaring an interface.</li>
+<li>Each method in an interface is also implicitly abstract, so the abstract keyword is not needed.</li>
+<li>Methods in an interface are implicitly public.</li>
+<li>Interface can have static method but can not be overriden</li>
+<li>Interface can have private method and can only be used within the interface</li>
+<li>default and private non-static method can call abstract methods in the interface</li>
 </ul>
-</li>
-</ul>
-<h3 id="initialization-order">Initialization Order</h3>
-<ol>
-<li>Superclass constructor.  </li>
-<li>Static variables and initializers.  </li>
-<li>Instance variables and initializers.  </li>
-<li>Constructor body.  </li>
-</ol>
-<pre><code class="language-java">public class Animal {
-    Animal(String name) {
-        System.out.println(&quot;Animal name is: &quot; + name);
-    }
+<pre><code class="language-java">interface Animal {
+  public void eat();
+  public void makeSound();
 }
 
-public class Dog extends Animal {
-    Dog() {
-        super(&quot;Dog&quot;);
-    }
+class Cat implements Animal {
+  public void makeSound() {
+    System.out.println(&quot;Meow&quot;);
+  }
+  public void eat() {
+    System.out.println(&quot;omnomnom&quot;);
+  }
 }
 </code></pre>
-<hr />
-<h2 id="objects">Objects</h2>
-<p>An object is an instance of a class. Variables hold <strong>references</strong> to objects, not the actual object itself.</p>
-<h3 id="object-comparison">Object Comparison</h3>
-<ul>
-<li><code>==</code>: Compares object references (not values).  </li>
-<li><code>.equals()</code>: Compares object values for equality.  </li>
-<li>The automatically generated hashCode() method is used to determine where to store the object internally.</li>
-<li>Whenever you implement equals, you MUST also implement hashCode.</li>
-</ul>
-<p>Example of overriding <code>equals()</code>:</p>
-<pre><code class="language-java">@Override
-public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Person person = (Person) o;
-    return Objects.equals(firstName, person.firstName) &amp;&amp; Objects.equals(lastName, person.lastName);
-}
+<p>An interface with single abstract method is called functional interface. Lambda Expressions in Java 8: lambda expression to implement functional interface</p>
+<pre><code class="language-java">FuncInterface fobj = (int x)-&gt;System.out.println(2*x); 
 </code></pre>
-<h3 id="type-casting">Type Casting</h3>
-<p>Java supports automatic type casting of integers to floating points, since there is no loss of precision. On the other hand, type casting is mandatory when assigning floating point values to integer variables.</p>
-<ul>
-<li><strong>Upcasting</strong>: Casting an object of a subclass to its superclass is called Upcasting. Animal a = new Cat();</li>
-<li><strong>Downcasting</strong>: Casting an object of a superclass to its subclass is called downcasting.</li>
-</ul>
-<hr />
-<h2 id="class-types">Class Types</h2>
-<h3 id="jdk-defined-classes">JDK-Defined Classes</h3>
-<ul>
-<li><strong><code>Math</code> Class</strong>:<ul>
-<li><code>Math.abs(x)</code>: Absolute value.  </li>
-<li><code>Math.max(a, b)</code>: Maximum of two values.  </li>
-<li><code>Math.pow(a, b)</code>: <code>a</code> raised to the power <code>b</code>.  </li>
-<li><code>Math.sqrt(x)</code>: Square root.</li>
-</ul>
-</li>
-</ul>
-<h3 id="special-classes">Special Classes</h3>
-<h4 id="anonymous-classes">Anonymous Classes</h4>
-<p>Allows creating subclasses on the fly with overridden methods. The modification on the overriden method is applicable only to the current object, and not the class itself.</p>
-<pre><code class="language-java">Machine m = new Machine() {
-    @Override
-    public void start() {
-        System.out.println(&quot;Wooooo&quot;);
-    }
-};
-m.start();  // Outputs &quot;Wooooo&quot;
-</code></pre>
-<h4 id="inner-classes">Inner Classes</h4>
-<p>A class within another class. It Can be private, providing encapsulation. Once you declare an inner class private, it cannot be accessed from an object outside the class.</p>
-<pre><code class="language-java">class Robot {
-    int id;
-    Robot(int i) {
-        id = i;
-        Brain b = new Brain();
-        b.think();
-    }
-    private class Brain {
-        public void think() {
-            System.out.println(id + &quot; is thinking&quot;);
-        }
-    }
-}
-</code></pre>
-<h4 id="sealed-and-non-sealed-classes">Sealed and Non-Sealed Classes</h4>
-<ul>
-<li><strong>Sealed Classes</strong>: Restrict which other classes can extend them.  </li>
-<li><strong>Non-Sealed Classes</strong>: Allow unrestricted inheritance.</li>
-</ul>
-<hr />
-<h3 id="reflection-classes">Reflection Classes</h3>
-<p>Java's reflection API allows inspecting classes, methods, and fields at runtime.  </p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-<th>Example Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Class</code></td>
-<td>Represents a class definition.</td>
-<td><code>Class&lt;?&gt; clazz = String.class;</code></td>
-</tr>
-<tr>
-<td><code>Method</code></td>
-<td>Represents a method of a class.</td>
-<td><code>Method method = String.class.getMethod("length");</code></td>
-</tr>
-<tr>
-<td><code>Field</code></td>
-<td>Represents a class variable.</td>
-<td><code>Field field = String.class.getField("CASE_INSENSITIVE");</code></td>
-</tr>
-<tr>
-<td><code>Constructor</code></td>
-<td>Represents a constructor.</td>
-<td><code>Constructor&lt;String&gt; constructor = String.class.getConstructor();</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
 
 
 
