@@ -850,6 +850,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#arraylist" class="md-nav__link">
     <span class="md-ellipsis">
       ArrayList
@@ -6640,6 +6649,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#arraylist" class="md-nav__link">
     <span class="md-ellipsis">
       ArrayList
@@ -6724,15 +6742,49 @@
 
 
 <h1 id="data-structure">Data Structure</h1>
+<h2 id="collection">Collection</h2>
+<p>A set of interfaces commonly referred as Collection. </p>
+<p>List, Set, Queue implement Collection
+ArrayList implment List
+HashSet and TreeSet implement Set
+interface Deque implements Queue
+LinkedList implements Queue and List
+interface Map does not implement collection
+HashMap and TreeMap implement Map</p>
+<p>Methods in collection
+Collection.equals() - compares the type and contents of collection, implementations vary
+ArrayList checks order, Hashmap checks if contains same elements</p>
+<p>All collection interfaces are generic, therefore support all object types</p>
 <h2 id="arraylist">ArrayList</h2>
+<p>List is an ordered collection that can have duplicates. There are two implementation of the List interface - ArrayList and LinkedList.
+ArrayList is better for accessing data while LinkedList for inserting data.</p>
 <p>a resizable array. ArrayList class is in the java.util.ArrayList package. ArrayLists store objects. Thus, the type specified must be a class type. You cannot pass, for example, int as the objects' type. Instead, use the special class types that correspond to the desired value type, such as Integer for int, Double for double, and so on. The add() method adds new objects to the ArrayList. Conversely, the remove() methods remove objects from the ArrayList. Useful methods: get(int index), size(), clear(), contains().</p>
 <pre><code class="language-java">import java.util.ArrayList;
-//...
-ArrayList&lt;String&gt; colors = new ArrayList&lt;String&gt;(10);
+
+String[] names = new String[]{&quot;John&quot;, &quot;George&quot;, &quot;Luke&quot;};
+//Factory methods for creating List, size is fixed so you can not add/remove elements
+List&lt;String&gt; namesList = Arrays.asList(names) // elements can be modified
+List&lt;String&gt; namesOf = List.of(varargs) //immutable list
+List&lt;String&gt; namesCopyOf = List.copyOf(namesList) //immutable list with copy of original values
+
+
+ArrayList&lt;String&gt; colors = new ArrayList&lt;String&gt;(10); //initial size
+List&lt;String&gt; colors2 = new ArrayList&lt;&gt;();//can specify the interface List on the left, can ommit the type on the right side
+List&lt;String&gt; colors3 = new ArrayList&lt;&gt;(colors2) //creates copy of colors2
+var names = new ArrayList&lt;String&gt;(); //must specify the type on the right side for using var
+names.add(&quot;Spartan&quot;) //return true
+names.remove(&quot;Spartan&quot;) // return true, return false if not exist
+names.isEmpty() //returns true
+names.size() // returns size 0
+names.clear() // clear collection
+names.add(&quot;Spartan2&quot;)
+names.add(&quot;Spartan3&quot;)
+names.add(&quot;Spartan4&quot;)
+names.contains(&quot;Spartan2&quot;) //returns true
+names.removeIf(s -&gt; s.length() &gt; 4) //remove element Spartan2 since it's length is 8 : takes predicate as argument
+names.foreach(name -&gt; System.out.print(name + &quot;, &quot;)) //prints Spartan3, Spartan4 : takes consumer as argumenr
+names.equals() //comparing the type and contents of collection
 </code></pre>
-<p>Note:
-Every primitive type in Java has an equivalent wrapper class:</p>
-<p>byte has Byte, short has Short, int has Integer, long has Long, boolean has Boolean, char has Character, float has Float, double has Double.</p>
 <h2 id="linkedlist">Linkedlist</h2>
 <p>Linkedlist stores data and address of the next node which link each node with another. You cannot specify an initial capacity for the LinkedList.</p>
 <pre><code class="language-java">import java.util.LinkedList;
@@ -6751,7 +6803,7 @@ points.put(&quot;Amy&quot;, 154);
 <pre><code class="language-java">import java.util.HashSet;
 //...
 HashSet&lt;String&gt; set = new HashSet&lt;String&gt;();   
-set.add(&quot;A&quot;);
+set.add(&quot;A&quot;); //return true, return false if it's duplicate 
 </code></pre>
 <h3 id="linkedhashset">LinkedHashSet</h3>
 <p>LinkedHashSet maintains a linked list of the set's elements in the order in which they were inserted. A hash table stores information through a mechanism called hashing, in which a key's informational content is used to determine a unique value called a hash code. So, basically, each element in the HashSet is associated with its unique hash code to directly access the memory address.</p>
