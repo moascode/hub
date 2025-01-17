@@ -1,19 +1,57 @@
 # Data Structure
 
+## Collection
+
+A set of interfaces commonly referred as Collection. 
+
+List, Set, Queue implement Collection
+ArrayList implment List
+HashSet and TreeSet implement Set
+interface Deque implements Queue
+LinkedList implements Queue and List
+interface Map does not implement collection
+HashMap and TreeMap implement Map
+
+Methods in collection
+Collection.equals() - compares the type and contents of collection, implementations vary
+ArrayList checks order, Hashmap checks if contains same elements
+
+All collection interfaces are generic, therefore support all object types
+
 ## ArrayList
+
+List is an ordered collection that can have duplicates. There are two implementation of the List interface - ArrayList and LinkedList.
+ArrayList is better for accessing data while LinkedList for inserting data.
 
 a resizable array. ArrayList class is in the java.util.ArrayList package. ArrayLists store objects. Thus, the type specified must be a class type. You cannot pass, for example, int as the objects' type. Instead, use the special class types that correspond to the desired value type, such as Integer for int, Double for double, and so on. The add() method adds new objects to the ArrayList. Conversely, the remove() methods remove objects from the ArrayList. Useful methods: get(int index), size(), clear(), contains().
 
 ```java
 import java.util.ArrayList;
-//...
-ArrayList<String> colors = new ArrayList<String>(10);
+
+String[] names = new String[]{"John", "George", "Luke"};
+//Factory methods for creating List, size is fixed so you can not add/remove elements
+List<String> namesList = Arrays.asList(names) // elements can be modified
+List<String> namesOf = List.of(varargs) //immutable list
+List<String> namesCopyOf = List.copyOf(namesList) //immutable list with copy of original values
+
+
+ArrayList<String> colors = new ArrayList<String>(10); //initial size
+List<String> colors2 = new ArrayList<>();//can specify the interface List on the left, can ommit the type on the right side
+List<String> colors3 = new ArrayList<>(colors2) //creates copy of colors2
+var names = new ArrayList<String>(); //must specify the type on the right side for using var
+names.add("Spartan") //return true
+names.remove("Spartan") // return true, return false if not exist
+names.isEmpty() //returns true
+names.size() // returns size 0
+names.clear() // clear collection
+names.add("Spartan2")
+names.add("Spartan3")
+names.add("Spartan4")
+names.contains("Spartan2") //returns true
+names.removeIf(s -> s.length() > 4) //remove element Spartan2 since it's length is 8 : takes predicate as argument
+names.foreach(name -> System.out.print(name + ", ")) //prints Spartan3, Spartan4 : takes consumer as argumenr
+names.equals() //comparing the type and contents of collection
 ```
-
-Note:
-Every primitive type in Java has an equivalent wrapper class:
-
-byte has Byte, short has Short, int has Integer, long has Long, boolean has Boolean, char has Character, float has Float, double has Double.
 
 ## Linkedlist
 
@@ -44,7 +82,7 @@ A Set is a collection that cannot contain duplicate elements. One of the impleme
 import java.util.HashSet;
 //...
 HashSet<String> set = new HashSet<String>();   
-set.add("A");
+set.add("A"); //return true, return false if it's duplicate 
 ```
 
 ### LinkedHashSet
