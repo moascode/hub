@@ -214,3 +214,25 @@ try {
   ```
 
 ---
+
+#### 3. `java.Math`
+
+```java
+int a = Math.max(3, 11); //11
+in b = Math.min(-2, 0); //-2
+
+//aware of autocasting
+int x = 5; long y = 3;
+long z = Math.max(x, y); //5; x will be autocasted to long and the result will be long
+
+double d = 2.56;
+Math.round(d) // 3; decimal to integral; param float - return int, param double - return long
+
+//always return double
+Math.ceil(2.45) //3.0
+Math.floor(2.45); //2.0
+Math.pow(2, 5); //32.0
+math.random(); //random number between 0 and 1.0 (not included)
+```
+
+---
