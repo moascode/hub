@@ -664,6 +664,23 @@
 
       <!-- Navigation link to table of contents -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -684,6 +701,43 @@
       </a>
 
       <!-- Table of contents -->
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handling-exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      handling Exception
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-with-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try with Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
 
@@ -6528,6 +6582,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handling-exception" class="md-nav__link">
+    <span class="md-ellipsis">
+      handling Exception
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-with-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Try with Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6542,18 +6622,69 @@
 
 
 <h1 id="exceptions">Exceptions</h1>
+<h2 id="handling-exception">handling Exception</h2>
 <p>Exceptions are caused by user error, programmer error, or physical resource issues. A try/catch block is placed around the code that might generate an exception.  The Exception type can be used to catch all possible exceptions. If an exception is created using thorws, this exception must be managed in the caller program using try/catch block. A single try block can contain multiple catch blocks that handle different exceptions separately. 'finally' is added after 'try' and 'catch' to execute some code whether the exception happened or not.</p>
-<pre><code class="language-java">public class MyClass {
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Exception Tpes" src="../_img/exception_types.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Figure 1: Exception Types in java</em></td>
+</tr>
+</tbody>
+</table>
+<p>Checked exception: Can be determined at compile time. Must be decalred or handled by the code. Example: all exception except RuntimeException - IOException
+    - Decalred using 'throws' keyword
+    - Handled using try-catch block
+Unchecked exception: Can only determined at runtime. Example: java.lang.Error, java.lang.RuntimeException, ArithmeticException, NullPointerException, ClassCastException</p>
+<p>Manual exception can be trown using 'throw' keyword</p>
+<pre><code class="language-java">
+//dclare exception
+void firstByteFromFile(File filename) throws IOException {
+    FileInputStream file = new FileInputStream(filename);
+    byte x = (byte) file.read();
+}
+
+//throw exception
+if(x &gt; 5) throw new IllegalArgumentException();
+
+//handle excepption
+public class MyClass {
     public static void main(String[ ] args) {
         try {
             int a[ ] = new int[2];
             System.out.println(a[5]);
-        } catch (Exception e) {
+        } catch (Exception e) { //can catch multiple exception but catch subclass before parent class - &quot;IOException | NumberFormatExcpetion e&quot;
             System.out.println(&quot;An error occurred&quot;);
         }
         finally {
             System.out.println (&quot;I can run no matter what&quot;);
         }
+    }
+}
+
+//custom exception
+public class CustomException extends Exception{
+    public CustomException(String message){super(message)};
+}
+</code></pre>
+<h2 id="try-with-resources">Try with Resources</h2>
+<p>Ease for dealing with resources, especially closing the resources are autometically handled to prevent resource leak</p>
+<pre><code class="language-java">try(FileInputStream is = new FileInputStream(&quot;myfile.txt&quot;)) { //opening the resource, you can open multiple resources with &quot;;&quot;
+    //read the file
+} catch (IOException e) {
+    e.printStackTrace();
+}
+//no need finally block, the resource closed autometically
+</code></pre>
+<p>The only consition to use a class inside try is that it needs to implement AutoClosable</p>
+<pre><code class="language-java">public class myFileClass implements AutoClosable {
+    @Override
+    public void close(){ //closing the resource here, this method also can throw exception
+        System.out.println(&quot;Closing myFileClass&quot;); 
     }
 }
 </code></pre>
