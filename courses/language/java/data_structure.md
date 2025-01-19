@@ -2,7 +2,7 @@
 
 ## Collection
 
-A set of interfaces commonly referred as Collection. 
+A set of interfaces commonly referred as Collection.
 
 List, Set, Queue implement Collection
 ArrayList implment List
@@ -63,20 +63,70 @@ import java.util.LinkedList;
 LinkedList<String> c = new LinkedList<String>();
 ```
 
-## Hashmap
+## Queue
 
-HashMap is used for storing data collections as key and value pairs. The put, remove, and get methods are used to add, delete, and access values in the HashMap. Use  size() method to get the number of elements.
+Queue interface is implemnted by LinkedList class. It adds element at the back and reads from the front. The Queue interface has it's own method. The difference between the proper method and collection methods is that collection will throw exception while proper method will return false for unsuccessfull operation.
+
+```java
+Queue<string> colors = new LinkedList<>();
+colors.offer("blue"); //add element to the queue
+colors.offer("red");
+String first = colors.peek() //returns the first element in the queue
+colors.poll() //remove the first element in the queue
+```
+
+### Deque
+
+Deque interface is used to access element from both side of the queue, also called double ended queue. It can be also used as stack. It is implemnted by LinkedList and ArrayQueue.
+
+Stack: adds element from the back and reads from the back. Mthods - peek(), push(E e), pop()
+Double ended queue: methods - peekFirst(), pollFirst(), offerFirst(E e), peekLast(), pollLast(), offerLast(E e)
+
+```java
+Deque<String> colors = new ArrayQueue<>(); //used as stack
+Deque<Integer> nums = new LinkedList<>(); //used as double ended queue
+```
+
+## Map
+
+Map is used for storing data collections as key and value pairs. The put, remove, and get methods are used to add, delete, and access values in the HashMap. Use size() method to get the number of elements. There are two implementations of the map interface - HashMap and TreeMap. Hashmap does not maintain order while TreeMap maintains order but takes more time to add element.
 
 ```java
 import java.util.HashMap;
-//...
- HashMap<String, Integer> points = new HashMap<String, Integer>();   
-points.put("Amy", 154);
+
+Map<Integer, String> names = Map.of(1, "John", 2, "George");
+HashMap<Integer, String> names = new HashMap<>();   
+names.put(1, "Amy");
+names.put(5, "John");
+names.putIfAbsent(7, "Hero"); //put only if the key is absent
+
+String myName = names.get(1);
+String myName2 = names.getOrDefault(2, "NA");
+String myName3 = names.replace(5, "Gorge")//repalces with new value but returns old value "John"
+
+//merge() -- insert only if the name is longer than original name or key is absent
+BinFunction<string, String, String> longerName = (name1, name2) -> name1.length() > name2.length() ? name1 : name2;
+names.merge(7, "Heroine", longerName);
+names.merge(8, "Steve", longerName);
+
+
+
+//loop over all keys
+for(Integer key: names.keySet()){
+    System.out.println("Key: " + key + " Value: " + names.get(key))
+}
+//foreach
+names.forEach((k,v) -> System.out.println("Key: " + k + " Value: " + v));
+//entryset
+names.entrySet().forEach(e -> System.out.println("Key: " + e.getKey() + " Value: " + e.getValue()))
 ```
 
 ## Sets
 
-A Set is a collection that cannot contain duplicate elements. One of the implementations of the Set is the HashSet class.
+A Set is a collection that cannot contain duplicate elements. There are two implementation of the Set interface.
+
+- HashSet: stores hashcode as key and object as value. can not contain duplicate and does not maintain order
+- TreeSet: stores element in sorted order, default order is insertion order. insertion time is more than HashSet
 
 ```java
 import java.util.HashSet;
@@ -103,6 +153,46 @@ An Enum is a special type used to define collections of constants. values are co
 ```java
 enum Rank {  SOLDIER,  SERGEANT,  CAPTAIN}
 Rank a = Rank.SOLDIER;
+```
+
+## Sorting data in Collection
+
+Data is sorted using sort() method. 
+
+- For primitive, elements are sorted by natural order.
+- For String, numbers > uppercase lesster > lowercase letter
+- For Object, define criterie for sorting
+
+There are two ways to define sorting criteria for object
+    - use a class which implemetns Comparable<T> interface. It has one abstract method - int comapreTo(T o). It retuens an int based on following rules.
+      - if both objects are same, return 0
+      - if current object is smaller, return negative number
+      - if current object is larger, return positive number
+    - pass the implementation of Comparator<T> interface in sort() method. It has one mthod - compare(T o1, T o2). This is mainly used when ther are multiple sorting criteria
+
+```java
+public class Person implements Comparable<Person> {
+    private String name;
+    private String age;
+    public Person(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String getName(){return name;}
+    public String getAge(){return age;}
+    @Override
+    public int comapreTo(Person other) {
+        return this.age - other.age; //same? return 0; larger? return positive; smaller? return negative
+    }
+}
+//main method - using Comparator<T> interface
+List<Person> personList = Arrays.asList(new Person("John", 25), new Person("Amy", 20));
+Collections.sort(personList, (p1, p2) -> p1.getAge() - p2.getAge()); // sort by age
+Collections.sort(personList, (p1, p2) -> p1.getName().compareTo(p2.getName())) //sort by name
+//Comparator is in java.util package
+Collections.sort(personList, Comparator.comparing(Person::getName)); //sort using method reference
+Collections.sort(personList, Comparator.comparing(Person::getName).reversed()); //reverse sorting
+Collections.sort(personList, Comparator.comparing(Person::getName).thenComparingInt(Person::getAge)); //multiple comparison
 ```
 
 ## Summary
