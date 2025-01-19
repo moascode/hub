@@ -6967,17 +6967,39 @@ public class MyClass {
 }
 </code></pre>
 <p>Writing to a file: format() method of Formatter class is used to write content to files. \r\n is the newline symbol in Windows. \r = return, moves all the way to the left, but doesn't move down, \n = newline, moves down but not horizontally. %s mean a string and get's replaced by the first parameter</p>
-<p><code>java
-import java.util.Formatter;
+<pre><code class="language-java">import java.util.Formatter;
 //... 
 try {
-    Formatter f = new Formatter("C:\\sololearn\\test.txt");
-    f.format("%s %s %s", "1","John", "Smith \r\n");
-    f.format("%s %s %s", "2","Amy", "Brown");
+    Formatter f = new Formatter(&quot;C:\\sololearn\\test.txt&quot;);
+    f.format(&quot;%s %s %s&quot;, &quot;1&quot;,&quot;John&quot;, &quot;Smith \r\n&quot;);
+    f.format(&quot;%s %s %s&quot;, &quot;2&quot;,&quot;Amy&quot;, &quot;Brown&quot;);
     f.close();    
   } catch (Exception e) {
-    System.out.println("Error");
-  }</code></p>
+    System.out.println(&quot;Error&quot;);
+  }
+  ```
+
+---
+
+#### 3. `java.Math`
+
+```java
+int a = Math.max(3, 11); //11
+in b = Math.min(-2, 0); //-2
+
+//aware of autocasting
+int x = 5; long y = 3;
+long z = Math.max(x, y); //5; x will be autocasted to long and the result will be long
+
+double d = 2.56;
+Math.round(d) // 3; decimal to integral; param float - return int, param double - return long
+
+//always return double
+Math.ceil(2.45) //3.0
+Math.floor(2.45); //2.0
+Math.pow(2, 5); //32.0
+math.random(); //random number between 0 and 1.0 (not included)
+</code></pre>
 <hr />
 
 
