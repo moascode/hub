@@ -146,15 +146,6 @@ LinkedHashSet<String> set = new LinkedHashSet<String>();
 set.add("A");
 ```
 
-## Enum
-
-An Enum is a special type used to define collections of constants. values are comma-separated. Enums define variables that represent members of a fixed set. Enum values can be used for switch statement. an enum is a type of class that mainly contains static members. You should always use Enums when a variable (especially a method parameter) can only take one out of a small set of possible values.
-
-```java
-enum Rank {  SOLDIER,  SERGEANT,  CAPTAIN}
-Rank a = Rank.SOLDIER;
-```
-
 ## Sorting data in Collection
 
 Data is sorted using sort() method. 

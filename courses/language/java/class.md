@@ -145,8 +145,23 @@ class Robot {
 
 ### Sealed and Non-Sealed Classes
 
-- **Sealed Classes**: Restrict which other classes can extend them.  
+- **Sealed Classes**: Restrict which other classes can extend them. It must be declared in the same package as it's subclasses.  
 - **Non-Sealed Classes**: Allow unrestricted inheritance.
+
+```java
+public sealed class Car permits Ford, Renault, Fiat {}
+//each of the permitted class must extend Car
+//subclasses have to be either final, sealed or non-sealed
+
+public final class Ford extends Car {}
+//can not be further extended
+
+public non-sealed class Renault extends Car {}
+//can be extended by any other class
+
+public sealed class Fiat permits Uno, Punto {}
+//cn only be extended by Uno and Punto
+```
 
 ### Reflection Classes
 
@@ -160,3 +175,63 @@ Java's reflection API allows inspecting classes, methods, and fields at runtime.
 | `Constructor` | Represents a constructor.                 | `Constructor<String> constructor = String.class.getConstructor();` |
 
 ---
+
+## Special "Class"
+
+### Enum
+
+An Enum is a special type used to define collections of constants. values are comma-separated. Enums define variables that represent members of a fixed set. Enum values can be used for switch statement. an enum is a type of class that mainly contains static members. You should always use Enums when a variable (especially a method parameter) can only take one out of a small set of possible values.
+
+```java
+enum Rank {  SOLDIER,  SERGEANT,  CAPTAIN}
+Rank a = Rank.SOLDIER;
+for(var rank : Rank.values()) {
+  System.out.println(rank.ordinal() + ":" + rank.name()) //1 : SOLDIER
+}
+```
+
+Enum can have contructor and instance methods.
+Enums can implement anstract methods inside enum.
+
+```java
+enum Compass {
+  NORTH("america"), SOUTH("africa"), WEST("europe"), EAST("asia");
+  private final String continent;
+  private Compass(String continent) { //always private
+    this.continent = coontinent;
+  }
+  public getContinent() {
+    return this.continent;
+  }
+}
+//main method
+Compass.NORTH.getContinent(); //constrcutor is called for each enum once
+```
+
+Enums can implement interface.
+
+```java
+public interface Planet{
+  String getPlanetName();
+}
+enum Compass implements Planet {
+  //implement for specific enum
+  NORTH {
+    public String getPlanetName(){return "Earth in the North";}
+  },
+  SOUTH {
+    public String getPlanetName(){return "Earth in the South";}
+  }
+  //or can also implement as a generic one
+  public String getPlanetName(){return "Earth";}
+}
+//main method
+Compass.SOUTH.getPlanetName();
+```
+
+### Records
+
+Encapsulated classes but without boilerplate code. Encapsulation is secured. Constructor, getters, toStirng(), equals(), hashCode() are auto generated. Records can not have fields other than in constrcutor. Record can have static fields and methods.
+
+```java
+```
