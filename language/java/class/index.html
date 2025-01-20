@@ -789,6 +789,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#special-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special "Class"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special "Class"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#records" class="md-nav__link">
+    <span class="md-ellipsis">
+      Records
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6912,6 +6945,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#special-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special "Class"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special "Class"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#records" class="md-nav__link">
+    <span class="md-ellipsis">
+      Records
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7056,9 +7122,22 @@ m.start();  // Outputs &quot;Wooooo&quot;
 </code></pre>
 <h3 id="sealed-and-non-sealed-classes">Sealed and Non-Sealed Classes</h3>
 <ul>
-<li><strong>Sealed Classes</strong>: Restrict which other classes can extend them.  </li>
+<li><strong>Sealed Classes</strong>: Restrict which other classes can extend them. It must be declared in the same package as it's subclasses.  </li>
 <li><strong>Non-Sealed Classes</strong>: Allow unrestricted inheritance.</li>
 </ul>
+<pre><code class="language-java">public sealed class Car permits Ford, Renault, Fiat {}
+//each of the permitted class must extend Car
+//subclasses have to be either final, sealed or non-sealed
+
+public final class Ford extends Car {}
+//can not be further extended
+
+public non-sealed class Renault extends Car {}
+//can be extended by any other class
+
+public sealed class Fiat permits Uno, Punto {}
+//cn only be extended by Uno and Punto
+</code></pre>
 <h3 id="reflection-classes">Reflection Classes</h3>
 <p>Java's reflection API allows inspecting classes, methods, and fields at runtime.  </p>
 <table>
@@ -7093,6 +7172,51 @@ m.start();  // Outputs &quot;Wooooo&quot;
 </tbody>
 </table>
 <hr />
+<h2 id="special-class">Special "Class"</h2>
+<h3 id="enum">Enum</h3>
+<p>An Enum is a special type used to define collections of constants. values are comma-separated. Enums define variables that represent members of a fixed set. Enum values can be used for switch statement. an enum is a type of class that mainly contains static members. You should always use Enums when a variable (especially a method parameter) can only take one out of a small set of possible values.</p>
+<pre><code class="language-java">enum Rank {  SOLDIER,  SERGEANT,  CAPTAIN}
+Rank a = Rank.SOLDIER;
+for(var rank : Rank.values()) {
+  System.out.println(rank.ordinal() + &quot;:&quot; + rank.name()) //1 : SOLDIER
+}
+</code></pre>
+<p>Enum can have contructor and instance methods.
+Enums can implement anstract methods inside enum.</p>
+<pre><code class="language-java">enum Compass {
+  NORTH(&quot;america&quot;), SOUTH(&quot;africa&quot;), WEST(&quot;europe&quot;), EAST(&quot;asia&quot;);
+  private final String continent;
+  private Compass(String continent) { //always private
+    this.continent = coontinent;
+  }
+  public getContinent() {
+    return this.continent;
+  }
+}
+//main method
+Compass.NORTH.getContinent(); //constrcutor is called for each enum once
+</code></pre>
+<p>Enums can implement interface.</p>
+<pre><code class="language-java">public interface Planet{
+  String getPlanetName();
+}
+enum Compass implements Planet {
+  //implement for specific enum
+  NORTH {
+    public String getPlanetName(){return &quot;Earth in the North&quot;;}
+  },
+  SOUTH {
+    public String getPlanetName(){return &quot;Earth in the South&quot;;}
+  }
+  //or can also implement as a generic one
+  public String getPlanetName(){return &quot;Earth&quot;;}
+}
+//main method
+Compass.SOUTH.getPlanetName();
+</code></pre>
+<h3 id="records">Records</h3>
+<p>Encapsulated classes but without boilerplate code. Encapsulation is secured. Constructor, getters, toStirng(), equals(), hashCode() are auto generated. Records can not have fields other than in constrcutor. Record can have static fields and methods.</p>
+<pre><code class="language-java"></code></pre>
 
 
 
