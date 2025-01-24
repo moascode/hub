@@ -109,23 +109,9 @@ Java supports automatic type casting of integers to floating points, since there
 
 ## Class Types
 
-### Anonymous Classes
-
-Allows creating subclasses on the fly with overridden methods. The modification on the overriden method is applicable only to the current object, and not the class itself.
-
-```java
-Machine m = new Machine() {
-    @Override
-    public void start() {
-        System.out.println("Wooooo");
-    }
-};
-m.start();  // Outputs "Wooooo"
-```
-
 ### Inner Classes
 
-A class within another class. It Can be private, providing encapsulation. Once you declare an inner class private, it cannot be accessed from an object outside the class.
+A class within another class. It Can be private, providing encapsulation. Once you declare an inner class private, it cannot be accessed from an object outside the class. It can extend another class and can be marked abstract or final.
 
 ```java
 class Robot {
@@ -135,12 +121,47 @@ class Robot {
         Brain b = new Brain();
         b.think();
     }
-    private class Brain {
+    protected class Brain {
         public void think() {
             System.out.println(id + " is thinking");
         }
     }
 }
+//main method
+Robot a = new Robot(2); //create outer class
+Brain b = a.new Brain(); //create inner class
+```
+
+### Local class
+
+A class defined within method body. It does not have accesss modifier but can be declared abstract or final.
+
+```java
+public class PrintArea {
+  private int a = 10;
+  public void calculateArea () {
+    final int b = 15;
+    class Computer { //can access all members of the enclosing class
+      public void multiply() {
+        System.out.println(a*b); 
+      }
+    }
+  }
+}
+```
+
+### Anonymous Classes
+
+Local class without name. Allows creating subclasses on the fly with overridden methods. The modification on the overriden method is applicable only to the current object, and not the class itself.
+
+```java
+Machine m = new Machine() {
+    @Override
+    public void start() {
+        System.out.println("Wooooo");
+    }
+};
+m.start();  // Outputs "Wooooo"
 ```
 
 ### Sealed and Non-Sealed Classes
@@ -231,7 +252,15 @@ Compass.SOUTH.getPlanetName();
 
 ### Records
 
-Encapsulated classes but without boilerplate code. Encapsulation is secured. Constructor, getters, toStirng(), equals(), hashCode() are auto generated. Records can not have fields other than in constrcutor. Record can have static fields and methods.
+Encapsulated classes but without boilerplate code. Encapsulation is secured. Constructor (can be overridden), getters, toStirng(), equals(), hashCode() are auto generated. Records can not have fields other than in constrcutor. Record can have static fields and methods. Records are heavily used for datbase models.
 
 ```java
+public record Student (String firstName, String lastName, int id);
+
+//overrride default constructor
+public record Student (String firstName, String lastName, int id) {
+  public Student {
+    firstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1).toLowerCase();
+  }
+}
 ```
