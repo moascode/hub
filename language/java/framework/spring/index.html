@@ -1039,6 +1039,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#common-spring-porjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Spring porjects
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6644,6 +6653,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#common-spring-porjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Spring porjects
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6708,14 +6726,25 @@ public class AppConfig {
 }
 </code></pre>
 <h2 id="injecting-properties">Injecting properties</h2>
-<p>```java
-@Configuration
-@PropertySource("classpath:application.properties")
-@PropertySource("classpath:application-${spring.profiles.active}.properties") //load all environment specific properties (application-prod.properties), if same property, this overrides the default one
+<pre><code class="language-java">@Configuration
+@PropertySource(&quot;classpath:application.properties&quot;)
+@PropertySource(&quot;classpath:application-${spring.profiles.active}.properties&quot;) //load all environment specific properties (application-prod.properties), if same property, this overrides the default one
 public class AppConfig {
-    @Value("${default.interestRate}") //injected using annotation
+    @Value(&quot;${default.interestRate}&quot;) //injected using annotation
     private double defaultInterestRate;
-}</p>
+}
+</code></pre>
+<h2 id="common-spring-porjects">Common Spring porjects</h2>
+<ul>
+<li>Spring framewrok: The core of Spring including dependency injection, web applications, messaging, and more.</li>
+<li>Spring Batch: Used for batch processign applications.</li>
+<li>Spring Boot: Gets application running quickly.</li>
+<li>Spring Cloud: Supports cloud and microservices.</li>
+<li>Spring Data: Used for working with databases.</li>
+<li>Spring Integration: Supports popular enterprise integration patterns.</li>
+<li>Spring Security: Adds authenticationa and authorization support.</li>
+<li>Spring WebFlux: Provides reactive capabalities to web and REST endpoints.</li>
+</ul>
 
 
 
