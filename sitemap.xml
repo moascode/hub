@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://moascode.github.io/hub/interview/data_structure/array/</loc>
+         <lastmod>2025-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://moascode.github.io/hub/language/java/algorithm/</loc>
          <lastmod>2025-01-25</lastmod>
          <changefreq>daily</changefreq>

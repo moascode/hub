@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://moascode.github.io/hub/level102/system_design/scaling/">
+        <link rel="canonical" href="https://moascode.github.io/hub/interview/data_structure/array/">
       
       
-        <link rel="prev" href="../large-system-design/">
+        <link rel="prev" href="../../../level102/system_calls_and_signals/conclusion/">
       
-      
-        <link rel="next" href="../scaling-beyond-the-datacenter/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Scaling - Knowledge Hub</title>
+        <title>Array - Knowledge Hub</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#splitting-the-application" class="md-skip">
+        <a href="#array" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +107,7 @@
           </span>
           <span class="md-header__topic md-ellipsis">
             
-              Scaling
+              Array
             
           </span>
         </div>
@@ -2665,8 +2663,6 @@
   <!-- Determine classes -->
   
   
-    
-  
 
   <!-- Determine active page for paginated views -->
   
@@ -2692,7 +2688,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
 
@@ -2704,7 +2700,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_5"
-          checked
+          
         />
 
         <!-- Toggle to expand nested items -->
@@ -2740,7 +2736,7 @@
           class="md-nav"
           data-md-level="1"
           aria-labelledby="__nav_5_label"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
@@ -2755,8 +2751,6 @@
 
   <!-- Determine classes -->
   
-  
-    
   
 
   <!-- Determine active page for paginated views -->
@@ -2780,7 +2774,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
 
@@ -2792,7 +2786,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_5_1"
-          checked
+          
         />
 
         <!-- Toggle to expand nested items -->
@@ -2828,7 +2822,7 @@
           class="md-nav"
           data-md-level="2"
           aria-labelledby="__nav_5_1_label"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
@@ -2983,7 +2977,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../large-system-design/" class="md-nav__link">
+      <a href="../../../level102/system_design/large-system-design/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3009,51 +3003,14 @@
   <!-- Determine classes -->
   
   
-    
-  
 
   <!-- Determine active page for paginated views -->
   
 
   <!-- Navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- State toggle -->
-      <input
-        class="md-nav__toggle md-toggle"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-
-      <!-- Navigation link to table of contents -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-
-  <!-- Navigation link icon -->
-  
-
-  <!-- Navigation link title -->
-  <span class="md-ellipsis">
-    Scaling
-  </span>
-
-  <!-- Navigation link status -->
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../../../level102/system_design/scaling/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3068,98 +3025,7 @@
   
 
       </a>
-
-      <!-- Table of contents -->
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#splitting-the-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      Splitting the application
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stateful-vs-stateless-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stateful vs Stateless services
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sharding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sharding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      Caching
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Caching">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#in-memory-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      In-memory caching:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cache-managment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cache managment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Navigation item -->
   
 
               
@@ -3177,7 +3043,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../scaling-beyond-the-datacenter/" class="md-nav__link">
+      <a href="../../../level102/system_design/scaling-beyond-the-datacenter/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3210,7 +3076,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../resiliency/" class="md-nav__link">
+      <a href="../../../level102/system_design/resiliency/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3341,7 +3207,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../networking/introduction/" class="md-nav__link">
+      <a href="../../../level102/networking/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3374,7 +3240,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../networking/security/" class="md-nav__link">
+      <a href="../../../level102/networking/security/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3407,7 +3273,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../networking/scale/" class="md-nav__link">
+      <a href="../../../level102/networking/scale/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3440,7 +3306,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../networking/rtt/" class="md-nav__link">
+      <a href="../../../level102/networking/rtt/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3473,7 +3339,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../networking/infrastructure-features/" class="md-nav__link">
+      <a href="../../../level102/networking/infrastructure-features/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3506,7 +3372,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../networking/conclusion/" class="md-nav__link">
+      <a href="../../../level102/networking/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3933,7 +3799,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_troubleshooting_and_performance/introduction/" class="md-nav__link">
+      <a href="../../../level102/system_troubleshooting_and_performance/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3966,7 +3832,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_troubleshooting_and_performance/troubleshooting/" class="md-nav__link">
+      <a href="../../../level102/system_troubleshooting_and_performance/troubleshooting/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3999,7 +3865,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_troubleshooting_and_performance/important-tools/" class="md-nav__link">
+      <a href="../../../level102/system_troubleshooting_and_performance/important-tools/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4032,7 +3898,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_troubleshooting_and_performance/performance-improvements/" class="md-nav__link">
+      <a href="../../../level102/system_troubleshooting_and_performance/performance-improvements/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4065,7 +3931,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_troubleshooting_and_performance/troubleshooting-example/" class="md-nav__link">
+      <a href="../../../level102/system_troubleshooting_and_performance/troubleshooting-example/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4098,7 +3964,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_troubleshooting_and_performance/conclusion/" class="md-nav__link">
+      <a href="../../../level102/system_troubleshooting_and_performance/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4658,7 +4524,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../continuous_integration_and_continuous_delivery/introduction/" class="md-nav__link">
+      <a href="../../../level102/continuous_integration_and_continuous_delivery/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4691,7 +4557,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../continuous_integration_and_continuous_delivery/introduction_to_cicd/" class="md-nav__link">
+      <a href="../../../level102/continuous_integration_and_continuous_delivery/introduction_to_cicd/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4724,7 +4590,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../continuous_integration_and_continuous_delivery/cicd_brief_history/" class="md-nav__link">
+      <a href="../../../level102/continuous_integration_and_continuous_delivery/cicd_brief_history/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4757,7 +4623,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../continuous_integration_and_continuous_delivery/continuous_integration_build_pipeline/" class="md-nav__link">
+      <a href="../../../level102/continuous_integration_and_continuous_delivery/continuous_integration_build_pipeline/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4790,7 +4656,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../continuous_integration_and_continuous_delivery/continuous_delivery_release_pipeline/" class="md-nav__link">
+      <a href="../../../level102/continuous_integration_and_continuous_delivery/continuous_delivery_release_pipeline/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4823,7 +4689,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../continuous_integration_and_continuous_delivery/jenkins_cicd_pipeline_hands_on_lab/" class="md-nav__link">
+      <a href="../../../level102/continuous_integration_and_continuous_delivery/jenkins_cicd_pipeline_hands_on_lab/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4856,7 +4722,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../continuous_integration_and_continuous_delivery/conclusion/" class="md-nav__link">
+      <a href="../../../level102/continuous_integration_and_continuous_delivery/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4987,7 +4853,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../containerization_and_orchestration/intro/" class="md-nav__link">
+      <a href="../../../level102/containerization_and_orchestration/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5020,7 +4886,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../containerization_and_orchestration/intro_to_containers/" class="md-nav__link">
+      <a href="../../../level102/containerization_and_orchestration/intro_to_containers/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5053,7 +4919,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../containerization_and_orchestration/containerization_with_docker/" class="md-nav__link">
+      <a href="../../../level102/containerization_and_orchestration/containerization_with_docker/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5086,7 +4952,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../containerization_and_orchestration/orchestration_with_kubernetes/" class="md-nav__link">
+      <a href="../../../level102/containerization_and_orchestration/orchestration_with_kubernetes/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5119,7 +4985,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../containerization_and_orchestration/conclusion/" class="md-nav__link">
+      <a href="../../../level102/containerization_and_orchestration/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6225,7 +6091,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../linux_intermediate/introduction/" class="md-nav__link">
+      <a href="../../../level102/linux_intermediate/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6258,7 +6124,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../linux_intermediate/package_management/" class="md-nav__link">
+      <a href="../../../level102/linux_intermediate/package_management/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6291,7 +6157,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../linux_intermediate/storage_media/" class="md-nav__link">
+      <a href="../../../level102/linux_intermediate/storage_media/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6324,7 +6190,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../linux_intermediate/archiving_backup/" class="md-nav__link">
+      <a href="../../../level102/linux_intermediate/archiving_backup/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6357,7 +6223,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../linux_intermediate/introvim/" class="md-nav__link">
+      <a href="../../../level102/linux_intermediate/introvim/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6390,7 +6256,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../linux_intermediate/bashscripting/" class="md-nav__link">
+      <a href="../../../level102/linux_intermediate/bashscripting/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6423,7 +6289,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../linux_intermediate/conclusion/" class="md-nav__link">
+      <a href="../../../level102/linux_intermediate/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6554,7 +6420,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_calls_and_signals/intro/" class="md-nav__link">
+      <a href="../../../level102/system_calls_and_signals/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6587,7 +6453,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_calls_and_signals/signals/" class="md-nav__link">
+      <a href="../../../level102/system_calls_and_signals/signals/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6620,7 +6486,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_calls_and_signals/system_calls/" class="md-nav__link">
+      <a href="../../../level102/system_calls_and_signals/system_calls/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6653,7 +6519,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../system_calls_and_signals/conclusion/" class="md-nav__link">
+      <a href="../../../level102/system_calls_and_signals/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6714,6 +6580,8 @@
   <!-- Determine classes -->
   
   
+    
+  
 
   <!-- Determine active page for paginated views -->
   
@@ -6739,7 +6607,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
 
@@ -6751,7 +6619,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_8"
-          
+          checked
         />
 
         <!-- Toggle to expand nested items -->
@@ -6787,7 +6655,7 @@
           class="md-nav"
           data-md-level="1"
           aria-labelledby="__nav_8_label"
-          aria-expanded="false"
+          aria-expanded="true"
         >
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
@@ -6802,6 +6670,8 @@
 
   <!-- Determine classes -->
   
+  
+    
   
 
   <!-- Determine active page for paginated views -->
@@ -6825,7 +6695,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
 
@@ -6837,7 +6707,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_8_1"
-          
+          checked
         />
 
         <!-- Toggle to expand nested items -->
@@ -6873,7 +6743,7 @@
           class="md-nav"
           data-md-level="2"
           aria-labelledby="__nav_8_1_label"
-          aria-expanded="false"
+          aria-expanded="true"
         >
           <label class="md-nav__title" for="__nav_8_1">
             <span class="md-nav__icon md-icon"></span>
@@ -6889,14 +6759,36 @@
   <!-- Determine classes -->
   
   
+    
+  
 
   <!-- Determine active page for paginated views -->
   
 
   <!-- Navigation item with nested items -->
   
-    <li class="md-nav__item">
-      <a href="../../../interview/data_structure/array/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      
+
+      <!-- State toggle -->
+      <input
+        class="md-nav__toggle md-toggle"
+        type="checkbox"
+        id="__toc"
+      />
+
+      <!-- Hack: see partials/toc.html for more information -->
+      
+      
+        
+      
+
+      <!-- Navigation link to table of contents -->
+      
+      <a
+        href="./"
+        class="md-nav__link md-nav__link--active"
+      >
         
 
   <!-- Navigation link icon -->
@@ -6911,7 +6803,12 @@
   
 
       </a>
+
+      <!-- Table of contents -->
+      
     </li>
+
+  <!-- Navigation item -->
   
 
               
@@ -6956,83 +6853,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#splitting-the-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      Splitting the application
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stateful-vs-stateless-services" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stateful vs Stateless services
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sharding" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sharding
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      Caching
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Caching">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#in-memory-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      In-memory caching:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cache-managment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cache managment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -7047,130 +6869,8 @@
                   
 
 
-  <h1>Scaling</h1>
-
-<p>In the Phase 1 of this course, we had seen AKF <a href="https://akfpartners.com/growth-blog/scale-cube">scale cube</a> and how it can help in segmenting services, defining microservices and scaling the overall application. We will use a similar strategy to scale our application - while using the estimates from the previous section, so that we can have a data driven design rather than arbitrarily choosing scaling patterns.</p>
-<h2 id="splitting-the-application">Splitting the application</h2>
-<p>Considering the huge volume of traffic that might be generated by our application, and the related resource requirements in terms of memory and CPU, let us split the application into smaller chunks. One of the simplest ways to do this would be to simply divide the application along the endpoints, and spin them up as separate instances. In reality, this decision would probably be a little more complicated, and you might end up having multiple endpoints running from the same instance.</p>
-<p>The images can be stored in an <a href="https://en.wikipedia.org/wiki/Object_storage">object store</a> that can be scaled independently, rather than locating it on the servers where the application or the database resides. This would reduce the resource requirements for the servers.</p>
-<h2 id="stateful-vs-stateless-services">Stateful vs Stateless services</h2>
-<div class="callout callout-primary">
-A stateless process or service doesn’t rely on stored data of it’s past invocations. A stateful service on the other hand stores its state in a datastore, and typically uses the state on every call or transaction. In some cases, there are options for us to design services in such a way that certain components can be made stateless and this helps in multiple ways. Applications can be containerized easily if they are stateless. Containerized applications are also easier to scale. Stateful services require you to scale the datastore
-with the state as well. However, containerizing databases or scaling databases is out of the scope of this module.
-</div>
-
-<!--You are encouraged to refer to the containerisation module [here]()-->
-
-<p>The resulting design after such distribution of workloads might look
-something like this.</p>
-<p><img alt="Microservices diagram" src="../images/microservices.jpg" /></p>
-<p>You might notice that the diagram also has multiple databases. We will see more about this in the following sharding section.</p>
-<p>Now that we have split the application into smaller services, we need to
-look at scaling up the capacity of each of these endpoints. The popular
-Pareto principle states that “80% of consequences come from 20% of the
-causes”. Modifying it slightly, we can say that 80% of the traffic will
-be for 20% of images. The no. of images uploaded vs the no. of images
-seen by the user is going to be similarly skewed. An user is much more
-likely to view images on a daily basis than they are to upload new ones.</p>
-<p>In our simple design, generating the feed page with initial 5 images
-will be a matter of choosing 5 recently uploaded images from fellow
-users whom this user follows. While we can dynamically fetch the images
-from the database and generate the page on the fly once the user logs
-on, we might soon overwhelm the database in case a large number of users
-choose to login at the same time and load their feeds. There are two
-things we can do here, one is caching, and the other one is ahead of
-time generation of user feeds.</p>
-<p>An user with a million followers can potentially lead to hundreds of
-thousands of calls to the DB, simply to fetch the latest photoID that
-the user has uploaded. This can quickly overwhelm any DB, and can
-potentially bring down the DB itself.</p>
-<h2 id="sharding">Sharding</h2>
-<p>One way to solve the problem of DB limitation is scaling up the DB write
-and reads. Sharding is one way to scale the DB writes, where the DB
-would be split into parts that reside in different instances of the DB
-running on separate machines. DB reads can be scaled up similarly by
-using read replicas as we had seen in Phase 1 of this module.</p>
-<p>Compared to the number of images the popular user uploads, the number of
-views generated would be massive. In that case, we should cache the
-photoIDs of the user’s uploads, to be returned without having to perform
-a potentially expensive call to the DB.</p>
-<p>Let us consider another endpoint in our application named
-<code>/get_user_details</code>. It simply returns the page an user would see upon
-clicking another user’s name. This endpoint will return a list of posts
-that the user has created. Normally, a call to that endpoint will
-involve the application talking to the DB, fetching a list of all the
-posts by the user and returning the result. If someone’s profile is
-viewed thousands of times that means there are thousands of calls to the
-DB - which may result in issues like hot keys and hot partitions. As
-with all other systems, an increase in load may result in worsening
-response times, resulting in inconsistent and potentially bad user
-experience. A simple solution here would be a cache layer - one that
-would return the user’s profile with posts without having to call the DB everytime.</p>
-<h2 id="caching">Caching</h2>
-<p>A cache is used for the temporary storage of data that is likely to be
-accessed again, often repetitively. When the data requested is found in
-the cache, it is termed as a `cache hit’. A ‘cache miss’ is the obvious
-complement. A well positioned cache can greatly reduce the query
-response time as well as improve the scalability of a system. Caches can
-be placed at multiple levels between the user and the application. In
-Phase 1, we saw how we could use caches / CDNs to service static
-resources of the application, resulting in quicker response times as
-well as lesser burden on the application servers. Let us look at more
-situations where caching can play a role.</p>
-<h3 id="in-memory-caching">In-memory caching:</h3>
-<p>In memory caching is when the information to be cached is kept in the
-main memory of the server, allowing it to be retrieved much faster than
-a DB residing on a disk. We cache arbitrary text (which can be HTML
-fragments or may be JSON objects) and fetch it back really fast. An in
-memory cache is the quickest way to add a layer of fast cache that can
-optionally be persisted to disk as well.</p>
-<div class="callout callout-danger">
-While caching can aid significantly in scaling up and improving
-performance, there are situations where cache is suddenly not in place.
-It might be that the cache was accidentally wiped, leading to all the
-queries falling through to the DB layer, often multiple calls for the
-same piece of information. It is important to be aware of this potential
-‘thundering herd’ problem and design your system accordingly.
-</div>
-
-<p><strong>Caching proxies:</strong></p>
-<p>There are cases where you may want to cache entire webpages / responses
-of other upstream resources that you need to respond to requests. There
-are also cases where you want to let your upstream tell you what to
-cache and how long to cache it for. In such cases, it might be a good
-idea to have a caching solution that understands Cache related HTTP
-headers. One example for our usecase can be when users search for a
-specific term in our application - if there is a frequent enough search
-for a user or a term, it might be more efficient to cache the responses
-for some duration rather than performing the search anew everytime.  </p>
-<p>Let’s recap one of the goals - Atleast 50000 unique visitors should be
-able to visit the site at any given time and view their feed. With the
-implementation of caching, we have removed one potential bottleneck -
-the DB. We also decomposed the monolith into smaller chunks that provide
-individual services. Another step closer to our goal is to simply
-horizontally scale the services needed for feed viewing and putting them
-behind a load balancer. Please recall the scaling concepts discussed in
-Phase 1 of this module.</p>
-<h2 id="cache-managment">Cache managment</h2>
-<div class="callout callout-info">
-While caching sounds like a simple, easy solution for a hard problem, an
-even harder problem is to manage the cache efficiently. Like most things
-in your system, the cache layer is not infinite. Effective cache
-management means removing things from the cache at the right time, to
-ensure the cache hit rate remains high. There are many strategies to
-invalidate cache after a certain time period or below certain usage
-thresholds. It is important to keep an eye on cache-hit rate and fine
-tune your caching strategy accordingly.
-</div>
-
-<h2 id="references">References</h2>
-<ol>
-<li>There are many object storage solutions available.  <a href="https://github.com/minio/minio">Minio</a> is one self hosted solution. There are also vendor-specific solutions for the cloud like <a href="https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction">Azure Blob storage</a> and <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html">Amazon S3</a>.</li>
-<li>Microservices architecture style - <a href="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices">Azure architecture guide</a></li>
-<li>There are many in-memory caching solutions. Some of the most popular ones include <a href="https://redis.io">redis</a> and <a href="https://memcached.org">memcached</a>. Cloud vendors also have their managed cache solutions. </li>
-<li>Some of the most popular proxies include <a href="https://www.squid-cache.org">squid</a> and <a href="https://trafficserver.apache.org">Apache Traffic Server</a></li>
-<li>Thundering herd problem - how instagram <a href="https://instagram-engineering.com/thundering-herds-promises-82191c8af57d">tackled it</a>.</li>
-</ol>
+<h1 id="array">Array</h1>
+<p>Ordered data structure by insertion</p>
 
 
 
