@@ -71,3 +71,16 @@ public class AppConfig {
     @Value("${default.interestRate}") //injected using annotation
     private double defaultInterestRate;
 }
+```
+
+## Common Spring porjects
+
+- Spring framewrok: The core of Spring including dependency injection, web applications, messaging, and more.
+- Spring Batch: Used for batch processign applications.
+- Spring Boot: Gets application running quickly.
+- Spring Cloud: Supports cloud and microservices.
+- Spring Data: Used for working with databases.
+- Spring Integration: Supports popular enterprise integration patterns.
+- Spring Security: Adds authenticationa and authorization support.
+- Spring WebFlux: Provides reactive capabalities to web and REST endpoints.
+
