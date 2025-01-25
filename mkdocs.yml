@@ -17,25 +17,28 @@ nav:
 - Profile: profile/resume.md
 - Language:
     - Java: 
-        - language/java/introduction.md
-        - language/java/basics.md
-        - language/java/package.md
-        - language/java/class.md
-        - language/java/oop.md
-        - language/java/functional_programming.md
-        - language/java/exceptions.md
-        - language/java/generics.md
-        - language/java/jvm.md
-        - language/java/design_pattern.md
-        - language/java/data_structure.md
-        - language/java/algorithm.md
+        - Introduction: language/java/introduction.md
+        - Basics: language/java/basics.md
+        - Package: language/java/package.md
+        - Class: language/java/class.md
+        - OOP: language/java/oop.md
+        - Functional Programming: language/java/functional_programming.md
+        - Concurrency: language/java/concurrency.md
+        - Exceptions: language/java/exceptions.md
+        - Generics: language/java/generics.md
+        - JVM: language/java/jvm.md
+        - Design Pattern: language/java/design_pattern.md
+        - Data Structure: anguage/java/data_structure.md
+        - Algorithm: language/java/algorithm.md
         - Framework:
-            - language/java/framework/spring.md
-            - language/java/framework/springboot.md
-            - language/java/framework/spring_data.md
-            - language/java/framework/hibernate.md
-            - language/java/framework/junit.md
-            - anguage/java/framework/jboss_wildfly.md
+            - Spring: language/java/framework/spring.md
+            - Spring Boot: language/java/framework/springboot.md
+            - Spring Security: language/java/framework/spring_security.md
+            - Spring Data: language/java/framework/spring_data.md
+            - Hibernate: language/java/framework/hibernate.md
+            - Logging: language/java/framework/logging.md
+            - Junit: language/java/framework/junit.md
+            - Jboss and Wildfly: anguage/java/framework/jboss_wildfly.md
     - Python and Web:
         - Introduction: level101/python_web/intro.md
         - Some Python Concepts: level101/python_web/python-concepts.md
@@ -154,6 +157,9 @@ nav:
             - Signals: level102/system_calls_and_signals/signals.md
             - System Calls: level102/system_calls_and_signals/system_calls.md
             - Conclusion: level102/system_calls_and_signals/conclusion.md
+- Interview:
+    - Data Structure:
+        - Array: interview/data_structure/array.md
 copyright: "Copyright 2024. All Rights Reserved. Licensed under the Creative Commons Attribution 4.0 International Public License"
 extra:
     social:
