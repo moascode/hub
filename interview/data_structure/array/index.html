@@ -6785,6 +6785,23 @@
 
       <!-- Navigation link to table of contents -->
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Array
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a
         href="./"
         class="md-nav__link md-nav__link--active"
@@ -6805,6 +6822,34 @@
       </a>
 
       <!-- Table of contents -->
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
 
@@ -6856,6 +6901,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#time-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Complexity
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -6870,7 +6932,58 @@
 
 
 <h1 id="array">Array</h1>
-<p>Ordered data structure by insertion</p>
+<ul>
+<li>Ordered data structure by insertion</li>
+<li>In Java, arrays are static, it has fixed size</li>
+<li>Last element of the array is always n-1</li>
+<li>
+<p>Insertion from an array at any given position i</p>
+<ul>
+<li>Shift starting from end to i</li>
+<li>insert at i</li>
+</ul>
+<p><code>java
+  // Insert n into index i after shifting elements to the right.
+  // Assuming i is a valid index and arr is not full.
+  public void insertMiddle(int[] arr, int i, int n, int length) {
+      // Shift starting from the end to i.
+      for (int index = length - 1; index &gt; i - 1; index--) { //index &gt;= i
+          arr[index + 1] = arr[index]; //copy n-1 to n position
+      }
+      // Insert at i
+      arr[i] = n;
+  }</code></p>
+</li>
+</ul>
+<ul>
+<li>
+<p>Deletion from an array at any given position i</p>
+<ul>
+<li>Shift starting from i + 1 to end</li>
+<li>set n-1 to 0</li>
+</ul>
+<p><code>java
+  // Remove value at index i before shifting elements to the left.
+  // Assuming i is a valid index.
+  public void removeMiddle(int[] arr, int i, int length) {
+      // Shift starting from i + 1 to end.
+      for (int index = i + 1; index &lt; length; index++) {
+          arr[index - 1] = arr[index]; //copy i to i+1
+      }
+      // No need to 'remove' arr[i], since we already shifted
+      arr[length-1] = 0
+  }
+  //int[] arr = {2,3,4,5};
+  //removeMiddle(arr, 2, 4);
+  //2 3 5 0</code></p>
+</li>
+</ul>
+<h2 id="time-complexity">Time Complexity</h2>
+<ul>
+<li>Reading: O(1)</li>
+<li>Insertion: O(n), If inserting at the end of the array O(1)</li>
+<li>Deletion: O(n), If deleting at the end of the array O(1)</li>
+</ul>
 
 
 
