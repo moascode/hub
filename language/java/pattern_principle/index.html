@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://moascode.github.io/hub/language/java/design_pattern/">
+        <link rel="canonical" href="https://moascode.github.io/hub/language/java/pattern_principle/">
       
       
-        <link rel="prev" href="../jvm/">
-      
-      
-        <link rel="next" href="../algorithm/">
       
       
       <link rel="icon" href="../../../img/favicon.ico">
@@ -261,8 +257,6 @@
   <!-- Determine classes -->
   
   
-    
-  
 
   <!-- Determine active page for paginated views -->
   
@@ -288,7 +282,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
 
@@ -300,7 +294,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_3"
-          checked
+          
         />
 
         <!-- Toggle to expand nested items -->
@@ -336,7 +330,7 @@
           class="md-nav"
           data-md-level="1"
           aria-labelledby="__nav_3_label"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
@@ -351,8 +345,6 @@
 
   <!-- Determine classes -->
   
-  
-    
   
 
   <!-- Determine active page for paginated views -->
@@ -376,7 +368,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
 
@@ -388,7 +380,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_3_1"
-          checked
+          
         />
 
         <!-- Toggle to expand nested items -->
@@ -424,7 +416,7 @@
           class="md-nav"
           data-md-level="2"
           aria-labelledby="__nav_3_1_label"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
@@ -770,447 +762,6 @@
   <!-- Determine classes -->
   
   
-    
-  
-
-  <!-- Determine active page for paginated views -->
-  
-
-  <!-- Navigation item with nested items -->
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- State toggle -->
-      <input
-        class="md-nav__toggle md-toggle"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-        
-      
-
-      <!-- Navigation link to table of contents -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-
-  <!-- Navigation link icon -->
-  
-
-  <!-- Navigation link title -->
-  <span class="md-ellipsis">
-    Design Pattern
-  </span>
-
-  <!-- Navigation link status -->
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
-        
-
-  <!-- Navigation link icon -->
-  
-
-  <!-- Navigation link title -->
-  <span class="md-ellipsis">
-    Design Pattern
-  </span>
-
-  <!-- Navigation link status -->
-  
-
-      </a>
-
-      <!-- Table of contents -->
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#design-pattern-questions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design pattern questions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Design pattern questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-what-is-the-singleton-pattern-can-you-explain-its-use-cases-and-how-it-is-implemented-in-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. What is the Singleton Pattern? Can you explain its use cases and how it is implemented in Java?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-what-is-the-factory-method-pattern-how-does-it-differ-from-the-abstract-factory-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. What is the Factory Method Pattern? How does it differ from the Abstract Factory Pattern?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-explain-the-builder-pattern-and-its-application-in-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Explain the Builder Pattern and its application in Java.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-what-is-the-observer-pattern-how-do-you-implement-it-in-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. What is the Observer Pattern? How do you implement it in Java?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-what-is-the-strategy-pattern-can-you-explain-how-it-works-in-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. What is the Strategy Pattern? Can you explain how it works in Java?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-what-is-the-decorator-pattern-how-does-it-differ-from-the-proxy-pattern" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. What is the Decorator Pattern? How does it differ from the Proxy Pattern?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-what-is-the-adapter-pattern-provide-an-example-of-when-it-might-be-useful" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. What is the Adapter Pattern? Provide an example of when it might be useful.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-explain-the-proxy-pattern-with-an-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Explain the Proxy Pattern with an example.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-what-is-the-command-pattern-and-how-is-it-implemented-in-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. What is the Command Pattern, and how is it implemented in Java?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-what-is-the-state-pattern-how-is-it-useful-in-object-oriented-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. What is the State Pattern? How is it useful in object-oriented design?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-can-you-explain-the-chain-of-responsibility-pattern-and-its-java-implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. Can you explain the Chain of Responsibility Pattern and its Java implementation?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-what-is-the-composite-pattern-when-would-you-use-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. What is the Composite Pattern? When would you use it?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-what-is-the-memento-pattern-how-does-it-help-in-undo-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      13. What is the Memento Pattern? How does it help in undo functionality?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-what-is-the-interpreter-pattern-provide-a-real-world-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      14. What is the Interpreter Pattern? Provide a real-world example.
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-how-do-design-patterns-improve-code-flexibility-and-maintainability" class="md-nav__link">
-    <span class="md-ellipsis">
-      15. How do Design Patterns improve code flexibility and maintainability?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#design-principle-questions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design principle questions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Design principle questions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-what-are-the-solid-design-principles-and-why-are-they-important-in-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. What are the SOLID design principles, and why are they important in Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-how-does-the-single-responsibility-principle-srp-contribute-to-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. How does the Single Responsibility Principle (SRP) contribute to Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-what-is-the-openclosed-principle-ocp-and-how-does-it-help-in-software-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. What is the Open/Closed Principle (OCP), and how does it help in software design?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-what-is-the-liskov-substitution-principle-lsp-and-why-is-it-important" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. What is the Liskov Substitution Principle (LSP), and why is it important?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-how-do-you-apply-the-interface-segregation-principle-isp-in-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. How do you apply the Interface Segregation Principle (ISP) in Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-what-is-the-dependency-inversion-principle-dip-and-how-does-it-improve-flexibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. What is the Dependency Inversion Principle (DIP), and how does it improve flexibility?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-how-does-the-use-of-meaningful-variable-and-function-names-contribute-to-code-readability" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. How does the use of meaningful variable and function names contribute to code readability?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-what-are-magic-numbers-and-why-should-they-be-avoided-in-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. What are magic numbers, and why should they be avoided in Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-what-does-it-mean-to-keep-functions-small-and-why-is-it-important" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. What does it mean to keep functions small, and why is it important?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-how-does-the-use-of-comments-impact-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. How does the use of comments impact Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-what-is-the-dont-repeat-yourself-dry-principle" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. What is the "Don't Repeat Yourself" (DRY) principle?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-how-can-you-use-abstraction-to-simplify-complex-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. How can you use abstraction to simplify complex systems?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-how-do-you-apply-the-law-of-demeter-principle-of-least-knowledge-in-your-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      13. How do you apply the Law of Demeter (Principle of Least Knowledge) in your design?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-what-are-the-benefits-of-using-dependency-injection-di-in-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      14. What are the benefits of using Dependency Injection (DI) in Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-how-can-you-refactor-large-classes-or-functions-to-adhere-to-clean-code-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      15. How can you refactor large classes or functions to adhere to Clean Code principles?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-what-is-the-purpose-of-using-interfaces-in-object-oriented-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      16. What is the purpose of using interfaces in object-oriented design?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#17-why-is-it-important-to-handle-exceptions-properly-in-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      17. Why is it important to handle exceptions properly in Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#18-how-does-test-driven-development-tdd-contribute-to-clean-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      18. How does test-driven development (TDD) contribute to Clean Code?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#19-how-do-you-balance-between-adhering-to-design-principles-and-keeping-code-simple" class="md-nav__link">
-    <span class="md-ellipsis">
-      19. How do you balance between adhering to design principles and keeping code simple?
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#20-what-is-code-smell-and-how-do-you-detect-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      20. What is "Code Smell," and how do you detect it?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-
-  <!-- Navigation item -->
-  
-
-              
-            
-              
-                
-
-  <!-- Determine classes -->
-  
-  
 
   <!-- Determine active page for paginated views -->
   
@@ -1267,6 +818,137 @@
 
       </a>
     </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+
+    <!-- Determine all nested items that are index pages -->
+    
+    
+
+    <!-- Navigation tabs -->
+    
+
+      <!-- Render 1st level items with nested items as sections -->
+      
+    
+
+    <!-- Navigation pruning -->
+    
+
+    <!-- Nested navigation item -->
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+
+        <!-- Determine checked and indeterminate state -->
+        
+
+        <!-- Active checkbox expands items contained within nested section -->
+        <input
+          class="md-nav__toggle md-toggle "
+          type="checkbox"
+          id="__nav_3_1_13"
+          
+        />
+
+        <!-- Toggle to expand nested items -->
+        
+          
+          <label
+            class="md-nav__link"
+            for="__nav_3_1_13"
+            id="__nav_3_1_13_label"
+            tabindex="0"
+          >
+            
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Design Pattern
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+        <!-- Toggle to expand nested items with link to index page -->
+        
+
+        <!-- Nested navigation -->
+        <nav
+          class="md-nav"
+          data-md-level="3"
+          aria-labelledby="__nav_3_1_13_label"
+          aria-expanded="false"
+        >
+          <label class="md-nav__title" for="__nav_3_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            Design Pattern
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+
+            <!-- Nested navigation item -->
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../design_pattern/pattern_creational/" class="md-nav__link">
+        
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    Creational pattern
+  </span>
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+
+      <!-- Pruned navigation item -->
+      
+    </li>
+
+  <!-- Currently active page -->
   
 
               
