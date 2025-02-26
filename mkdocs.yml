@@ -27,9 +27,10 @@ nav:
         - Exceptions: language/java/exceptions.md
         - Generics: language/java/generics.md
         - JVM: language/java/jvm.md
-        - Design Pattern: language/java/design_pattern.md
         - Data Structure: anguage/java/data_structure.md
         - Algorithm: language/java/algorithm.md
+        - Design Pattern:
+            - Creational pattern: language/java/design_pattern/pattern_creational.md
         - Framework:
             - Spring: language/java/framework/spring.md
             - Spring Boot: language/java/framework/springboot.md
