@@ -162,6 +162,7 @@ Variables are containers for storing values during program execution. Their beha
 | `final` | A final field can only be assigned once. For reference types, the reference is constant, but the content can be modified.  | A final method cannot be overridden by subclasses. | A final class cannot be subclassed (inherited from). |
 
 - `static final field` must be initialized before use.
+- `effectively final field` don't change value within the scope
 - `static block` is used to initialize static variables. It runs once when the class is loaded.
 - `static method` can only call static field/method
   - fix1: make all field and method static
