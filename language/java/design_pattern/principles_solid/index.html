@@ -8,25 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://moascode.github.io/hub/language/java/basics/">
+        <link rel="canonical" href="https://moascode.github.io/hub/language/java/design_pattern/principles_solid/">
       
       
-        <link rel="prev" href="../introduction/">
       
       
-        <link rel="next" href="../package/">
-      
-      
-      <link rel="icon" href="../../../img/favicon.ico">
+      <link rel="icon" href="../../../../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
-        <title>Basics - Knowledge Hub</title>
+        <title>SOLID Design Principles - Knowledge Hub</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
       
 
@@ -45,9 +41,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../../stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basics" class="md-skip">
+        <a href="#solid-design-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="header.title">
     <a href="https://moascode.github.io/hub/" title="Knowledge Hub" class="md-header__button md-logo" aria-label="Knowledge Hub">
       
-  <img src="../../../img/sos.png" alt="logo">
+  <img src="../../../../img/sos.png" alt="logo">
 
     </a>
     <!-- Button to open drawer -->
@@ -109,7 +105,7 @@
           </span>
           <span class="md-header__topic md-ellipsis">
             
-              Basics
+              SOLID Design Principles
             
           </span>
         </div>
@@ -204,7 +200,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -236,7 +232,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../profile/resume/" class="md-nav__link">
+      <a href="../../../../profile/resume/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -260,8 +256,6 @@
 
   <!-- Determine classes -->
   
-  
-    
   
 
   <!-- Determine active page for paginated views -->
@@ -288,7 +282,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
 
@@ -300,7 +294,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_3"
-          checked
+          
         />
 
         <!-- Toggle to expand nested items -->
@@ -336,7 +330,7 @@
           class="md-nav"
           data-md-level="1"
           aria-labelledby="__nav_3_label"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
@@ -351,8 +345,6 @@
 
   <!-- Determine classes -->
   
-  
-    
   
 
   <!-- Determine active page for paginated views -->
@@ -376,7 +368,7 @@
     
 
     <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
 
@@ -388,7 +380,7 @@
           class="md-nav__toggle md-toggle "
           type="checkbox"
           id="__nav_3_1"
-          checked
+          
         />
 
         <!-- Toggle to expand nested items -->
@@ -424,7 +416,7 @@
           class="md-nav"
           data-md-level="2"
           aria-labelledby="__nav_3_1_label"
-          aria-expanded="true"
+          aria-expanded="false"
         >
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
@@ -447,7 +439,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../introduction/" class="md-nav__link">
+      <a href="../../introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -473,53 +465,14 @@
   <!-- Determine classes -->
   
   
-    
-  
 
   <!-- Determine active page for paginated views -->
   
 
   <!-- Navigation item with nested items -->
   
-    <li class="md-nav__item md-nav__item--active">
-      
-
-      <!-- State toggle -->
-      <input
-        class="md-nav__toggle md-toggle"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
-      
-      
-        
-      
-
-      <!-- Navigation link to table of contents -->
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-
-  <!-- Navigation link icon -->
-  
-
-  <!-- Navigation link title -->
-  <span class="md-ellipsis">
-    Basics
-  </span>
-
-  <!-- Navigation link status -->
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
+    <li class="md-nav__item">
+      <a href="../../basics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -534,199 +487,7 @@
   
 
       </a>
-
-      <!-- Table of contents -->
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#primitive-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primitive Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#non-primitive-reference-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Non-Primitive/ Reference Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Non-Primitive/ Reference Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
-    <span class="md-ellipsis">
-      String
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparison-string-vs-stringbuilder-vs-stringbuffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comparison: String vs. StringBuilder vs. StringBuffer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-casting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Casting
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#boxing-and-unboxing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boxing and Unboxing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
-    <span class="md-ellipsis">
-      Operators
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Flow Control
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Flow Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conditional-constructs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditional Constructs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loops" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loops
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#special-keywords" class="md-nav__link">
-    <span class="md-ellipsis">
-      Special Keywords
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Special Keywords">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-specifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional specifier
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#access-modifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access Modifier
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
-
-  <!-- Navigation item -->
   
 
               
@@ -744,7 +505,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../package/" class="md-nav__link">
+      <a href="../../package/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -777,7 +538,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../class/" class="md-nav__link">
+      <a href="../../class/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -810,7 +571,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../oop/" class="md-nav__link">
+      <a href="../../oop/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -843,7 +604,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../functional_programming/" class="md-nav__link">
+      <a href="../../functional_programming/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -876,7 +637,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../concurrency/" class="md-nav__link">
+      <a href="../../concurrency/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -909,7 +670,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../exceptions/" class="md-nav__link">
+      <a href="../../exceptions/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -942,7 +703,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../generics/" class="md-nav__link">
+      <a href="../../generics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -975,7 +736,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../jvm/" class="md-nav__link">
+      <a href="../../jvm/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1008,7 +769,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../anguage/java/data_structure.md" class="md-nav__link">
+      <a href="../../../../anguage/java/data_structure.md" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1041,7 +802,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../algorithm/" class="md-nav__link">
+      <a href="../../algorithm/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1160,7 +921,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../design_pattern/pattern_creational/" class="md-nav__link">
+      <a href="../pattern_creational/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1291,7 +1052,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../framework/spring/" class="md-nav__link">
+      <a href="../../framework/spring/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1324,7 +1085,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../framework/springboot/" class="md-nav__link">
+      <a href="../../framework/springboot/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1357,7 +1118,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../framework/spring_security/" class="md-nav__link">
+      <a href="../../framework/spring_security/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1390,7 +1151,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../framework/spring_data/" class="md-nav__link">
+      <a href="../../framework/spring_data/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1423,7 +1184,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../framework/hibernate/" class="md-nav__link">
+      <a href="../../framework/hibernate/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1456,7 +1217,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../framework/logging/" class="md-nav__link">
+      <a href="../../framework/logging/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1489,7 +1250,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../framework/junit/" class="md-nav__link">
+      <a href="../../framework/junit/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1522,7 +1283,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../anguage/java/framework/jboss_wildfly.md" class="md-nav__link">
+      <a href="../../../../anguage/java/framework/jboss_wildfly.md" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1665,7 +1426,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/python_web/intro/" class="md-nav__link">
+      <a href="../../../../level101/python_web/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1698,7 +1459,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/python_web/python-concepts/" class="md-nav__link">
+      <a href="../../../../level101/python_web/python-concepts/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1731,7 +1492,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/python_web/python-web-flask/" class="md-nav__link">
+      <a href="../../../../level101/python_web/python-web-flask/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1764,7 +1525,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/python_web/url-shorten-app/" class="md-nav__link">
+      <a href="../../../../level101/python_web/url-shorten-app/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -1797,7 +1558,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/python_web/sre-conclusion/" class="md-nav__link">
+      <a href="../../../../level101/python_web/sre-conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2028,7 +1789,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/intro/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2061,7 +1822,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/concepts/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/concepts/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2094,7 +1855,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/mysql/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/mysql/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2127,7 +1888,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/innodb/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/innodb/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2160,7 +1921,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/backup_recovery/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/backup_recovery/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2193,7 +1954,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/replication/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/replication/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2226,7 +1987,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/operations/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/operations/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2259,7 +2020,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/select_query/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/select_query/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2292,7 +2053,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/query_performance/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/query_performance/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2325,7 +2086,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/lab/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/lab/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2358,7 +2119,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_sql/conclusion/" class="md-nav__link">
+      <a href="../../../../level101/databases_sql/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2489,7 +2250,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_nosql/intro/" class="md-nav__link">
+      <a href="../../../../level101/databases_nosql/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2522,7 +2283,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_nosql/key_concepts/" class="md-nav__link">
+      <a href="../../../../level101/databases_nosql/key_concepts/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2555,7 +2316,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/databases_nosql/further_reading/" class="md-nav__link">
+      <a href="../../../../level101/databases_nosql/further_reading/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2686,7 +2447,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/messagequeue/intro/" class="md-nav__link">
+      <a href="../../../../level101/messagequeue/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2719,7 +2480,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/messagequeue/key_concepts/" class="md-nav__link">
+      <a href="../../../../level101/messagequeue/key_concepts/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2752,7 +2513,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/messagequeue/further_reading/" class="md-nav__link">
+      <a href="../../../../level101/messagequeue/further_reading/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2883,7 +2644,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/big_data/intro/" class="md-nav__link">
+      <a href="../../../../level101/big_data/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2916,7 +2677,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/big_data/evolution/" class="md-nav__link">
+      <a href="../../../../level101/big_data/evolution/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -2949,7 +2710,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/big_data/tasks/" class="md-nav__link">
+      <a href="../../../../level101/big_data/tasks/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3180,7 +2941,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/systems_design/intro/" class="md-nav__link">
+      <a href="../../../../level101/systems_design/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3213,7 +2974,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/systems_design/scalability/" class="md-nav__link">
+      <a href="../../../../level101/systems_design/scalability/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3246,7 +3007,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/systems_design/availability/" class="md-nav__link">
+      <a href="../../../../level101/systems_design/availability/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3279,7 +3040,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/systems_design/fault-tolerance/" class="md-nav__link">
+      <a href="../../../../level101/systems_design/fault-tolerance/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3312,7 +3073,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_design/large-system-design/" class="md-nav__link">
+      <a href="../../../../level102/system_design/large-system-design/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3345,7 +3106,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_design/scaling/" class="md-nav__link">
+      <a href="../../../../level102/system_design/scaling/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3378,7 +3139,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_design/scaling-beyond-the-datacenter/" class="md-nav__link">
+      <a href="../../../../level102/system_design/scaling-beyond-the-datacenter/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3411,7 +3172,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_design/resiliency/" class="md-nav__link">
+      <a href="../../../../level102/system_design/resiliency/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3542,7 +3303,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/networking/introduction/" class="md-nav__link">
+      <a href="../../../../level102/networking/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3575,7 +3336,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/networking/security/" class="md-nav__link">
+      <a href="../../../../level102/networking/security/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3608,7 +3369,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/networking/scale/" class="md-nav__link">
+      <a href="../../../../level102/networking/scale/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3641,7 +3402,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/networking/rtt/" class="md-nav__link">
+      <a href="../../../../level102/networking/rtt/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3674,7 +3435,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/networking/infrastructure-features/" class="md-nav__link">
+      <a href="../../../../level102/networking/infrastructure-features/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3707,7 +3468,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/networking/conclusion/" class="md-nav__link">
+      <a href="../../../../level102/networking/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3838,7 +3599,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/security/intro/" class="md-nav__link">
+      <a href="../../../../level101/security/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3871,7 +3632,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/security/fundamentals/" class="md-nav__link">
+      <a href="../../../../level101/security/fundamentals/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3904,7 +3665,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/security/network_security/" class="md-nav__link">
+      <a href="../../../../level101/security/network_security/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3937,7 +3698,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/security/threats_attacks_defences/" class="md-nav__link">
+      <a href="../../../../level101/security/threats_attacks_defences/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -3970,7 +3731,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/security/writing_secure_code/" class="md-nav__link">
+      <a href="../../../../level101/security/writing_secure_code/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4003,7 +3764,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/security/conclusion/" class="md-nav__link">
+      <a href="../../../../level101/security/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4134,7 +3895,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_troubleshooting_and_performance/introduction/" class="md-nav__link">
+      <a href="../../../../level102/system_troubleshooting_and_performance/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4167,7 +3928,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_troubleshooting_and_performance/troubleshooting/" class="md-nav__link">
+      <a href="../../../../level102/system_troubleshooting_and_performance/troubleshooting/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4200,7 +3961,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_troubleshooting_and_performance/important-tools/" class="md-nav__link">
+      <a href="../../../../level102/system_troubleshooting_and_performance/important-tools/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4233,7 +3994,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_troubleshooting_and_performance/performance-improvements/" class="md-nav__link">
+      <a href="../../../../level102/system_troubleshooting_and_performance/performance-improvements/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4266,7 +4027,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_troubleshooting_and_performance/troubleshooting-example/" class="md-nav__link">
+      <a href="../../../../level102/system_troubleshooting_and_performance/troubleshooting-example/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4299,7 +4060,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_troubleshooting_and_performance/conclusion/" class="md-nav__link">
+      <a href="../../../../level102/system_troubleshooting_and_performance/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4430,7 +4191,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/metrics_and_monitoring/introduction/" class="md-nav__link">
+      <a href="../../../../level101/metrics_and_monitoring/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4463,7 +4224,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/metrics_and_monitoring/command-line_tools/" class="md-nav__link">
+      <a href="../../../../level101/metrics_and_monitoring/command-line_tools/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4496,7 +4257,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/metrics_and_monitoring/third-party_monitoring/" class="md-nav__link">
+      <a href="../../../../level101/metrics_and_monitoring/third-party_monitoring/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4529,7 +4290,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/metrics_and_monitoring/alerts/" class="md-nav__link">
+      <a href="../../../../level101/metrics_and_monitoring/alerts/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4562,7 +4323,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/metrics_and_monitoring/best_practices/" class="md-nav__link">
+      <a href="../../../../level101/metrics_and_monitoring/best_practices/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4595,7 +4356,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/metrics_and_monitoring/observability/" class="md-nav__link">
+      <a href="../../../../level101/metrics_and_monitoring/observability/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4628,7 +4389,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/metrics_and_monitoring/conclusion/" class="md-nav__link">
+      <a href="../../../../level101/metrics_and_monitoring/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4859,7 +4620,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/continuous_integration_and_continuous_delivery/introduction/" class="md-nav__link">
+      <a href="../../../../level102/continuous_integration_and_continuous_delivery/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4892,7 +4653,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/continuous_integration_and_continuous_delivery/introduction_to_cicd/" class="md-nav__link">
+      <a href="../../../../level102/continuous_integration_and_continuous_delivery/introduction_to_cicd/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4925,7 +4686,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/continuous_integration_and_continuous_delivery/cicd_brief_history/" class="md-nav__link">
+      <a href="../../../../level102/continuous_integration_and_continuous_delivery/cicd_brief_history/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4958,7 +4719,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/continuous_integration_and_continuous_delivery/continuous_integration_build_pipeline/" class="md-nav__link">
+      <a href="../../../../level102/continuous_integration_and_continuous_delivery/continuous_integration_build_pipeline/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -4991,7 +4752,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/continuous_integration_and_continuous_delivery/continuous_delivery_release_pipeline/" class="md-nav__link">
+      <a href="../../../../level102/continuous_integration_and_continuous_delivery/continuous_delivery_release_pipeline/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5024,7 +4785,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/continuous_integration_and_continuous_delivery/jenkins_cicd_pipeline_hands_on_lab/" class="md-nav__link">
+      <a href="../../../../level102/continuous_integration_and_continuous_delivery/jenkins_cicd_pipeline_hands_on_lab/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5057,7 +4818,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/continuous_integration_and_continuous_delivery/conclusion/" class="md-nav__link">
+      <a href="../../../../level102/continuous_integration_and_continuous_delivery/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5188,7 +4949,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/containerization_and_orchestration/intro/" class="md-nav__link">
+      <a href="../../../../level102/containerization_and_orchestration/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5221,7 +4982,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/containerization_and_orchestration/intro_to_containers/" class="md-nav__link">
+      <a href="../../../../level102/containerization_and_orchestration/intro_to_containers/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5254,7 +5015,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/containerization_and_orchestration/containerization_with_docker/" class="md-nav__link">
+      <a href="../../../../level102/containerization_and_orchestration/containerization_with_docker/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5287,7 +5048,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/containerization_and_orchestration/orchestration_with_kubernetes/" class="md-nav__link">
+      <a href="../../../../level102/containerization_and_orchestration/orchestration_with_kubernetes/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5320,7 +5081,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/containerization_and_orchestration/conclusion/" class="md-nav__link">
+      <a href="../../../../level102/containerization_and_orchestration/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5551,7 +5312,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/git/git-basics/" class="md-nav__link">
+      <a href="../../../../level101/git/git-basics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5584,7 +5345,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/git/branches/" class="md-nav__link">
+      <a href="../../../../level101/git/branches/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5617,7 +5378,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/git/github-hooks/" class="md-nav__link">
+      <a href="../../../../level101/git/github-hooks/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5650,7 +5411,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/git/conclusion/" class="md-nav__link">
+      <a href="../../../../level101/git/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5867,7 +5628,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_basics/intro/" class="md-nav__link">
+      <a href="../../../../level101/linux_basics/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5900,7 +5661,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_basics/command_line_basics/" class="md-nav__link">
+      <a href="../../../../level101/linux_basics/command_line_basics/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5933,7 +5694,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_basics/linux_server_administration/" class="md-nav__link">
+      <a href="../../../../level101/linux_basics/linux_server_administration/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -5966,7 +5727,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_basics/conclusion/" class="md-nav__link">
+      <a href="../../../../level101/linux_basics/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6097,7 +5858,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_networking/intro/" class="md-nav__link">
+      <a href="../../../../level101/linux_networking/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6130,7 +5891,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_networking/dns/" class="md-nav__link">
+      <a href="../../../../level101/linux_networking/dns/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6163,7 +5924,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_networking/udp/" class="md-nav__link">
+      <a href="../../../../level101/linux_networking/udp/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6196,7 +5957,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_networking/http/" class="md-nav__link">
+      <a href="../../../../level101/linux_networking/http/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6229,7 +5990,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_networking/tcp/" class="md-nav__link">
+      <a href="../../../../level101/linux_networking/tcp/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6262,7 +6023,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_networking/ipr/" class="md-nav__link">
+      <a href="../../../../level101/linux_networking/ipr/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6295,7 +6056,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level101/linux_networking/conclusion/" class="md-nav__link">
+      <a href="../../../../level101/linux_networking/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6426,7 +6187,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/linux_intermediate/introduction/" class="md-nav__link">
+      <a href="../../../../level102/linux_intermediate/introduction/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6459,7 +6220,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/linux_intermediate/package_management/" class="md-nav__link">
+      <a href="../../../../level102/linux_intermediate/package_management/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6492,7 +6253,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/linux_intermediate/storage_media/" class="md-nav__link">
+      <a href="../../../../level102/linux_intermediate/storage_media/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6525,7 +6286,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/linux_intermediate/archiving_backup/" class="md-nav__link">
+      <a href="../../../../level102/linux_intermediate/archiving_backup/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6558,7 +6319,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/linux_intermediate/introvim/" class="md-nav__link">
+      <a href="../../../../level102/linux_intermediate/introvim/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6591,7 +6352,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/linux_intermediate/bashscripting/" class="md-nav__link">
+      <a href="../../../../level102/linux_intermediate/bashscripting/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6624,7 +6385,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/linux_intermediate/conclusion/" class="md-nav__link">
+      <a href="../../../../level102/linux_intermediate/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6755,7 +6516,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_calls_and_signals/intro/" class="md-nav__link">
+      <a href="../../../../level102/system_calls_and_signals/intro/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6788,7 +6549,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_calls_and_signals/signals/" class="md-nav__link">
+      <a href="../../../../level102/system_calls_and_signals/signals/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6821,7 +6582,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_calls_and_signals/system_calls/" class="md-nav__link">
+      <a href="../../../../level102/system_calls_and_signals/system_calls/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -6854,7 +6615,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../level102/system_calls_and_signals/conclusion/" class="md-nav__link">
+      <a href="../../../../level102/system_calls_and_signals/conclusion/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -7097,7 +6858,7 @@
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../interview/data_structure/array/" class="md-nav__link">
+      <a href="../../../../interview/data_structure/array/" class="md-nav__link">
         
 
   <!-- Navigation link icon -->
@@ -7167,170 +6928,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
+  <a href="#single-responsibility-principle-srp" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#primitive-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Primitive Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#non-primitive-reference-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Non-Primitive/ Reference Types
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Non-Primitive/ Reference Types">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
-    <span class="md-ellipsis">
-      String
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comparison-string-vs-stringbuilder-vs-stringbuffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Comparison: String vs. StringBuilder vs. StringBuffer
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#type-casting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Type Casting
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#boxing-and-unboxing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Boxing and Unboxing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Variables
+      Single Responsibility Principle (SRP)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#operators" class="md-nav__link">
+  <a href="#open-closed-principle-ocp" class="md-nav__link">
     <span class="md-ellipsis">
-      Operators
+      Open-Closed Principle (OCP)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#flow-control" class="md-nav__link">
+  <a href="#liskov-substitution-principle-lsp" class="md-nav__link">
     <span class="md-ellipsis">
-      Flow Control
+      Liskov Substitution Principle (LSP)
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Flow Control">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#conditional-constructs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conditional Constructs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loops" class="md-nav__link">
-    <span class="md-ellipsis">
-      Loops
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#special-keywords" class="md-nav__link">
+  <a href="#interface-seggregation-principle-isp" class="md-nav__link">
     <span class="md-ellipsis">
-      Special Keywords
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Special Keywords">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-specifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional specifier
+      Interface Seggregation Principle (ISP)
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#access-modifier" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#dependency-inversion-principle-dip" class="md-nav__link">
     <span class="md-ellipsis">
-      Access Modifier
+      Dependency Inversion Principle (DIP)
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -7349,335 +6987,46 @@
                   
 
 
-<h1 id="basics">Basics</h1>
-<h2 id="data-types">Data Types</h2>
-<p>Java supports two categories of data types:</p>
-<h3 id="primitive-types">Primitive Types</h3>
-<p>Store simple values directly in memory. Primitive types are faster and memory efficient. (Ex: int, long, float, double, char, boolean..)</p>
-<h3 id="non-primitive-reference-types">Non-Primitive/ Reference Types</h3>
-<p>Objects contains addresses of locations in memory (Arrays, Strings, Object). It is useful for generics or allowing null values.</p>
+<h1 id="solid-design-principles">SOLID Design Principles</h1>
+<p>Bad code slows down developers. Symptoms of bad code</p>
 <ul>
-<li><strong>Wrapper Classes</strong>: Provide object equivalents of primitives. (Ex: Byte, Short, Integer..)</li>
+<li>Introducing new features requires rewriting the code</li>
+<li>Changing the code breaks the application</li>
+<li>Fixing the code requires changes in many places</li>
 </ul>
-<p>Primitive and Wrapper Classes summary</p>
-<table>
-<thead>
-<tr>
-<th>Primitive Type</th>
-<th>Wrapper Class</th>
-<th>Range</th>
-<th>Primitive Example</th>
-<th>Wrapper Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>byte</code></td>
-<td><code>Byte</code></td>
-<td>-128 to 127</td>
-<td><code>byte b = 100;</code></td>
-<td><code>Byte bObj = Byte.valueOf("100");</code></td>
-</tr>
-<tr>
-<td><code>short</code></td>
-<td><code>Short</code></td>
-<td>-32,768 to 32,767</td>
-<td><code>short s = 20000;</code></td>
-<td><code>Short sObj = Short.valueOf("20000");</code></td>
-</tr>
-<tr>
-<td><code>int</code></td>
-<td><code>Integer</code></td>
-<td>-2^31 to 2^31-1</td>
-<td><code>int i = 12345;</code></td>
-<td><code>Integer iObj = Integer.valueOf("12345");</code></td>
-</tr>
-<tr>
-<td><code>long</code></td>
-<td><code>Long</code></td>
-<td>-2^63 to 2^63-1</td>
-<td><code>long l = 123456789L;</code></td>
-<td><code>Long lObj = Long.valueOf("123456789");</code></td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td><code>Float</code></td>
-<td>±1.4E-45 to ±3.4E38</td>
-<td><code>float f = 3.14f;</code></td>
-<td><code>Float fObj = Float.valueOf("3.14");</code></td>
-</tr>
-<tr>
-<td><code>double</code></td>
-<td><code>Double</code></td>
-<td>±4.9E-324 to ±1.7E308</td>
-<td><code>double d = 2.71828;</code></td>
-<td><code>Double dObj = Double.valueOf("2.71828");</code></td>
-</tr>
-<tr>
-<td><code>char</code></td>
-<td><code>Character</code></td>
-<td>0 to 65,535 (Unicode characters)</td>
-<td><code>char c = 'A';</code></td>
-<td><code>Character cObj = Character.valueOf('A');</code></td>
-</tr>
-<tr>
-<td><code>boolean</code></td>
-<td><code>Boolean</code></td>
-<td><code>true</code> or <code>false</code></td>
-<td><code>boolean b = true;</code></td>
-<td><code>Boolean bObj = Boolean.valueOf(true);</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="string">String</h4>
-<ul>
-<li>Strings in Java are immutable, meaning once created, their values cannot be changed. Any modification (e.g., concatenation or replacement) creates a new <code>String</code> object.</li>
-<li>The <strong>String Pool</strong> is a special memory region in the heap where <strong>string literals</strong> are stored. The pool is created at <strong>runtime</strong>, but its content is determined by <strong>compile-time literals</strong> and runtime additions via <code>intern()</code>. When a string literal is created (e.g., <code>String str = "Hello";</code>), Java checks the pool:<ul>
-<li><strong>If the string already exists in the pool</strong>, its reference is reused.</li>
-<li><strong>If not</strong>, a new string is added to the pool.</li>
-</ul>
-</li>
-<li>Strings created with the <code>new</code> keyword are stored in the heap, not the pool. However, these can be added to the pool manually using the <code>intern()</code> method.</li>
-</ul>
-<pre><code class="language-java">String str = &quot;first&quot; //create string &quot;first&quot; and point str to it
-str.concat(&quot; second&quot;)//create string &quot;first second &quot; and nothing points at it, so no change to str!!
-str = str.concat(&quot; second&quot;) //create string &quot;first second&quot; and point str to it
-String str2 = &quot;  first  &quot;.trim().intern(); //points to &quot;first&quot; from string pool which was created with &quot;str&quot; 
-</code></pre>
-<h4 id="comparison-string-vs-stringbuilder-vs-stringbuffer">Comparison: <code>String</code> vs. <code>StringBuilder</code> vs. <code>StringBuffer</code></h4>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th><code>String</code></th>
-<th><code>StringBuilder</code></th>
-<th><code>StringBuffer</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Mutability</strong></td>
-<td>Immutable</td>
-<td>Mutable</td>
-<td>Mutable</td>
-</tr>
-<tr>
-<td><strong>Thread Safety</strong></td>
-<td>Thread-safe (immutability)</td>
-<td>Not thread-safe</td>
-<td>Thread-safe</td>
-</tr>
-<tr>
-<td><strong>Performance</strong></td>
-<td>Slower (due to immutability)</td>
-<td>Faster (no synchronization)</td>
-<td>Slower (synchronization overhead)</td>
-</tr>
-<tr>
-<td><strong>Use Case</strong></td>
-<td>Read-only strings or fewer modifications</td>
-<td>Frequent string operations in a single thread</td>
-<td>String operations in multi-threaded environments</td>
-</tr>
-<tr>
-<td><strong>Memory Usage</strong></td>
-<td>Creates new objects for modifications</td>
-<td>Modifies in place, reducing memory overhead</td>
-<td>Modifies in place with synchronization</td>
-</tr>
-</tbody>
-</table>
-<h3 id="type-casting">Type Casting</h3>
-<ul>
-<li><strong>Auto Casting/ Upcasting (Numeric Promotion):</strong> Numeric promotion automatically converts smaller data types into larger ones during operations. <code>byte</code>, <code>short</code>, and <code>char</code> are first promoted to <code>int</code> before any operation, and the result is <code>int</code>.</li>
-<li><strong>Explicit Casting/ Downcasting:</strong> Explicit casting is required when assigning a value of a larger data type to a smaller data type. Use explicit casting to avoid type mismatch errors. Possible loss of precision or overflow/underflow may occur.</li>
-</ul>
-<pre><code class="language-java">int x = 5;
-double y = 3.2;
-double result = x + y; // x is promoted to double
-
-double largeNumber = 123.45;
-int smallerNumber = (int) largeNumber; // Explicit cast
-System.out.println(smallerNumber); // Output: 123 (truncated)
-</code></pre>
-<h3 id="boxing-and-unboxing">Boxing and Unboxing</h3>
-<ul>
-<li><strong>Boxing</strong> is converting primitive into wrapper class</li>
-<li><strong>Unboxing</strong> is converting wrapper class into primitive</li>
-<li><strong>Autoboxing</strong> is when boxing is done autometically</li>
-<li><strong>Java can not do autocast and autobox at the same time</strong></li>
-</ul>
-<pre><code class="language-java">int a = 5;
-Integer b = Interger.valueOf(a) //boxing
-int c = b.intValue() //unboxing
-Integer d = c //autoboxing
-
-int x = 7;
-long y = x //autocasting - ok
-Long z = x //autocasting and autoboxing can not be done together - nok
-Long z = Long.valueOf(x) // explicit boxing - ok
-Long z = (long) x //explicit casting - ok
-</code></pre>
-<h3 id="notes">Notes</h3>
-<ul>
-<li><strong>What is the problem with double precision in Java, and what are the alternatives to handle it efficiently in terms of memory and performance?</strong><ul>
-<li><strong>Problem:</strong> <code>double</code> has precision limitations due to floating-point representation in binary. Not all decimal numbers can be exactly represented in binary, leading to rounding errors in calculations.</li>
-<li><strong>Solution:</strong><ul>
-<li>Alternative - BigDecimal: <code>BigDecimal</code> provides arbitrary precision but is slower and more memory-intensive than <code>double</code>.</li>
-<li>Efficient Alternative - Fixed-Point Arithmetic: Fixed-point arithmetic scales decimals to integers (e.g., multiplying by 100) to avoid floating-point errors while maintaining performance and memory efficiency, similar to <code>double</code>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="variables">Variables</h2>
-<p>Variables are containers for storing values during program execution. Their behavior and lifecycle are determined by their type and scope.</p>
-<ul>
-<li><strong>Local Variables</strong>: Must be initialized explicitly. Declared inside methods or blocks and destroyed after block execution.</li>
-<li><strong>Instance Variables</strong>: Exist as long as the object is alive.</li>
-<li><strong>Class Variables</strong>: Declared with the <code>static</code> keyword and exist throughout the program lifecycle.</li>
-<li><strong>Final Variables</strong>: Cannot reassign a reference, but the object contents can change.</li>
-</ul>
-<hr />
-<h2 id="operators">Operators</h2>
-<ul>
-<li>Operator Types<ul>
-<li><strong>Unary</strong>: Requires a single operand (e.g., <code>!</code>, <code>++</code>, <code>--</code>).</li>
-<li><strong>Binary</strong>: Operates on two operands (e.g., <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>).</li>
-<li><strong>Ternary</strong>: Simplifies conditional expressions (e.g., <code>x = (a &gt; b) ? a : b;</code>).</li>
-</ul>
-</li>
-<li>Special Operators<ul>
-<li><strong><code>instanceof</code> operator</strong>: Determines if an object is an instance of a class or subclass.</li>
-<li><strong><code>==</code> operator</strong>: Determines if values are equal in primitive and if references are equal in object.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="flow-control">Flow Control</h2>
-<h3 id="conditional-constructs">Conditional Constructs</h3>
-<ul>
-<li><strong><code>if-else</code></strong>: Basic decision-making structure.</li>
-<li><strong><code>switch</code></strong>:<ul>
-<li>Supports <code>byte</code>, <code>short</code>, <code>char</code>, <code>int</code>, <code>String</code>, and enums.</li>
-<li>Uses <code>yield</code> for returning values from a switch block.</li>
-<li>
-<p>Example:</p>
-<p><code>java
-String dayType = switch(day) {
-    case MONDAY, TUESDAY, WEDNESDAY -&gt; "Weekday";
-    case SATURDAY, SUNDAY -&gt; "Weekend";
-    default -&gt; "Unknown";
-};</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="loops">Loops</h3>
-<ul>
-<li><strong>For Loops</strong>:<ul>
-<li>Infinite loop: <code>for(;;)</code></li>
-<li>Multiple indices: <code>for (int i = 0, j = 5; i &lt; j; i++, j--)</code></li>
-</ul>
-</li>
-<li><strong>While Loop</strong>: Repeats as long as the condition is <code>true</code>.</li>
-<li>
-<p><strong>Break and Continue</strong>:</p>
-<ul>
-<li>Labeled breaks to exit nested loops.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<h2 id="special-keywords">Special Keywords</h2>
-<h3 id="optional-specifier">Optional specifier</h3>
-<table>
-<thead>
-<tr>
-<th><strong>Keyword</strong></th>
-<th><strong>Field</strong></th>
-<th><strong>Method</strong></th>
-<th><strong>Class</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>volatile</code></td>
-<td>Used to indicate that a variable's value may be changed by multiple threads. Guarantees visibility of changes to variables across threads.</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><code>transient</code></td>
-<td>Fields marked as <code>transient</code> are not serialized when an object is converted to a byte stream.</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><code>static</code></td>
-<td>A static field belongs to the class, not instances. Changing its value affects all instances of the class.</td>
-<td>A static method belongs to the class and can be called without creating an instance. It can only access static fields or methods. The main method must always be static.</td>
-<td>A static class can only be a nested class (non-top-level), allowing organization of code.</td>
-</tr>
-<tr>
-<td><code>final</code></td>
-<td>A final field can only be assigned once. For reference types, the reference is constant, but the content can be modified.</td>
-<td>A final method cannot be overridden by subclasses.</td>
-<td>A final class cannot be subclassed (inherited from).</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><code>static final field</code> must be initialized before use.</li>
-<li><code>effectively final field</code> don't change value within the scope</li>
-<li><code>static block</code> is used to initialize static variables. It runs once when the class is loaded.</li>
-<li><code>static method</code> can only call static field/method<ul>
-<li>fix1: make all field and method static</li>
-<li>fix2: create instance every time to access non-statis field and method</li>
-<li>fix3: create a static instance and use it everywhere</li>
-</ul>
-</li>
-<li><code>static import</code> is used to import static members of another class, enabling direct access without class reference (e.g., <code>import static java.lang.Math.pow</code>).</li>
-<li><code>void</code> indicates that a method does not need to return any value</li>
-</ul>
-<h3 id="access-modifier">Access Modifier</h3>
-<table>
-<thead>
-<tr>
-<th><strong>Access Modifier</strong></th>
-<th><strong>Field</strong></th>
-<th><strong>Method</strong></th>
-<th><strong>Class</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>private</code></td>
-<td>Field can only be accessed within the same class.</td>
-<td>Method can only be accessed within the same class.</td>
-<td>Only inner/nested class can be declared <code>private</code> and it can only be accessed within the outer class</td>
-</tr>
-<tr>
-<td><code>default</code> (no modifier)</td>
-<td>Field can be accessed within the same package.</td>
-<td>Method can be accessed within the same package.</td>
-<td>Class can be accessed within the same package.</td>
-</tr>
-<tr>
-<td><code>protected</code></td>
-<td>Field can be accessed within the same package and by subclasses outside the package.</td>
-<td>Method can be accessed within the same package and by subclasses outside the package.</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td><code>public</code></td>
-<td>Field can be accessed from anywhere in the program.</td>
-<td>Method can be accessed from anywhere in the program.</td>
-<td>Class can be accessed from anywhere in the program.</td>
-</tr>
-</tbody>
-</table>
+<p>OO is about managing dependencies to prevent rigidity, fragility and non-reusability</p>
+<h2 id="single-responsibility-principle-srp">Single Responsibility Principle (SRP)</h2>
+<p>"A class should have one, and only one, reason to change."</p>
+<p>Payroll -&gt; Employee
+            + CalcPay
+            + ReportHours
+            + WriteEmployee</p>
+<p>Employee has three responsibilities.</p>
+<p>Payroll -&gt; Employee
+            + CalcPay
+        -&gt; ReportWriter
+            + ReportHours
+        -&gt; EmployeeRepository
+            + WriteEmployee</p>
+<p>That's why a good code should have only a single reason to change.</p>
+<h2 id="open-closed-principle-ocp">Open-Closed Principle (OCP)</h2>
+<p>"Modules should be open for extension, but closed for modification."</p>
+<p>You should be able to change the behavior of the module without changing the module.
+For new feature, extend the beahvior by writing new code instead of changing the existing code.</p>
+<p>When developers tries to modify existing bad code, they may break the application. That's why a good code should be closed for modification but open for extension.</p>
+<h2 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h2>
+<p>"Derived classes must be usable through the base class interface, without the need for the user to know the difference."</p>
+<p>Client -&gt; AbstractServer -&gt; ConcreteServer</p>
+<p>Square is not substitutable for rectangle..</p>
+<p>Rectangle(Height, Width)
+Square(Side)</p>
+<p>Whenver LSP principle is violated, there is an 'If' statement checking the the instance of the object to prevent crashing the system.</p>
+<p>Child class should always be substituted by it's base class.</p>
+<h2 id="interface-seggregation-principle-isp">Interface Seggregation Principle (ISP)</h2>
+<p>Interface should not be too generic that many are forced to implement functionalities that are not required. It's best to have small, related and meaningful interfaces.</p>
+<h2 id="dependency-inversion-principle-dip">Dependency Inversion Principle (DIP)</h2>
+<p>When developers try to fix a bug in one place, other breaks - leading to change in so many places. That's why code should not have concrete dependency on the implementation rather depend on abstractions.</p>
+<p>High level module to call a low level module directly, it has a source code dependency. Change in dependent module forces to recompile all high level modules dependent on it. That's why high level modules should not depend on low level modules rather depend on interfaces.</p>
 
 
 
@@ -7743,10 +7092,10 @@ String dayType = switch(day) {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
   </body>
