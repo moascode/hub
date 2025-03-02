@@ -29,7 +29,8 @@ nav:
         - JVM: language/java/jvm.md
         - Data Structure: anguage/java/data_structure.md
         - Algorithm: language/java/algorithm.md
-        - Design Pattern: language/java/design_pattern/design_pattern.md
+        - Design Pattern and Principles: 
+            - Design Pattern: language/java/design_pattern/design_pattern.md
             - Creational Pattern: language/java/design_pattern/pattern_creational.md
             - Structural Pattern: language/java/design_pattern/pattern_structural.md
             - Behavioral Pattern: language/java/design_pattern/pattern_behavioural.md
