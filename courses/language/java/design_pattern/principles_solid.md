@@ -8,6 +8,16 @@ Bad code slows down developers. Symptoms of bad code
 
 OO is about managing dependencies to prevent rigidity, fragility and non-reusability
 
+## Summary
+
+| **Principle**        | **Description** | **Key Idea** |
+|----------------------|----------------|-------------|
+| **Single Responsibility Principle (SRP)** | A class should have only one reason to change, meaning it should only have one job. | Keep each class focused on a single task to improve maintainability. |
+| **Open/Closed Principle (OCP)** | Software entities (classes, modules, functions) should be open for extension but closed for modification. | Allow adding new functionality without altering existing code. |
+| **Liskov Substitution Principle (LSP)** | Subtypes must be substitutable for their base types without altering the correctness of the program. | Derived classes should extend behavior without breaking parent class expectations. |
+| **Interface Segregation Principle (ISP)** | Clients should not be forced to depend on interfaces they do not use. | Prefer small, specific interfaces over large, general ones. |
+| **Dependency Inversion Principle (DIP)** | High-level modules should not depend on low-level modules. Both should depend on abstractions. | Depend on abstractions (interfaces) rather than concrete implementations. |
+
 
 ## Single Responsibility Principle (SRP)
 

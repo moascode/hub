@@ -29,8 +29,11 @@ nav:
         - JVM: language/java/jvm.md
         - Data Structure: anguage/java/data_structure.md
         - Algorithm: language/java/algorithm.md
-        - Design Pattern:
-            - Creational pattern: language/java/design_pattern/pattern_creational.md
+        - Design Pattern: language/java/design_pattern/design_pattern.md
+            - Creational Pattern: language/java/design_pattern/pattern_creational.md
+            - Structural Pattern: language/java/design_pattern/pattern_structural.md
+            - Behavioral Pattern: language/java/design_pattern/pattern_behavioural.md
+            - SOLID Principles: language/java/design_pattern/principles_solid.md
         - Framework:
             - Spring: language/java/framework/spring.md
             - Spring Boot: language/java/framework/springboot.md
