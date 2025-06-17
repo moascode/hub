@@ -661,12 +661,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://moascode.github.io/hub/tools/development_tools/</loc>
+         <loc>https://moascode.github.io/hub/resources/links/development/</loc>
          <lastmod>2025-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://moascode.github.io/hub/tools/general_purpose_tools/</loc>
+         <loc>https://moascode.github.io/hub/resources/notes/ai_agentic_copilot/</loc>
+         <lastmod>2025-06-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://moascode.github.io/hub/resources/tools/development_tools/</loc>
+         <lastmod>2025-06-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://moascode.github.io/hub/resources/tools/general_purpose_tools/</loc>
          <lastmod>2025-06-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
