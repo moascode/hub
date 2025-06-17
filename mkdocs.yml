@@ -165,9 +165,14 @@ nav:
 - Interview:
     - Data Structure:
         - Array: interview/data_structure/array.md
-- Tools:
-    - Development Tools: tools/development_tools.md
-    - General Purpose Tools: tools/general_purpose_tools.md
+- Resources:
+    - Tools:
+        - Development Tools: resources/tools/development_tools.md
+        - General Purpose Tools: resources/tools/general_purpose_tools.md
+    - Notes:
+        - AI Agentic Developer: resources/notes/ai_agentic_copilot.md
+    - Links:
+        - Development: resources/links/development.md
 copyright: "Copyright 2024. All Rights Reserved. Licensed under the Creative Commons Attribution 4.0 International Public License"
 extra:
     social:
